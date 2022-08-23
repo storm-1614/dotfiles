@@ -123,7 +123,7 @@ static const char *emoji[] = {"rofi", "-show", "emoji", "-modi", "emoji", NULL};
 static const char *window[] = {"rofi", "-show", "window", NULL};
 static const char *music[] = {"mconfig", NULL};
 static const char *baidu[] = {"baidu-translate-client", NULL};
-static const char *trayer[] = {"/home/storm/.trayer.sh", NULL};
+static const char *trayer[] = {"trayer.sh", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,"-g", "120x34", NULL};
 
