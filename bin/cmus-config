@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Status
+status="$(cmus-remote -C status | grep status)"
+if [[ $status == "status playing" ]]; then
+  play_pause="暂停"
+  playpause="Play"
+else
+  play_pause="开始"
+  playpause="Pause"
+fi
+active=""
+urgent=""
+
+# Icons
+next="怜下一首"
+previous="玲上一首"
+music="音乐"
+tog_random="无序播放"
+tog_repeat="重复播放"
+
+# Variable passed to rofi
+options="$previous\n$play_pause\n$next\n$tog_repeat\n$tog_random"
+
+# Get the current playing song
+current=$(cmus-remote -C status | grep "tag artist " | cut -c 12-)
+current+=" - "
+current+=$(echo -n $(cmus-remote -C status | grep title | cut -c 11-))
+# If mpd isn't running it will return an empty string, we don't want to display that
+if [[ -z "$current" ]]; then
+    current="$(echo -n $(cmus-remote -C status | grep "file" | cut -c 34-))"
+fi
+
+if [[ $(cmus-remote -C status | grep "tag artist" | cut -c 12-) ]]; then
+  echo ;
+else
+  current=$(cmus-remote -C status | grep "file" | awk -F '/' '{print $NF}')
+fi
+
+# Spawn the mpd menu with the "Play / Pause" entry selected by default
+if [[ -n "$1" ]];then
+  chosen="$(echo -e "$options" | rofi -theme "$1" -p "$current" -dmenu $active $urgent -selected-row 1)"
+else
+  chosen="$(echo -e "$options" | rofi -p "$current" -dmenu $active $urgent -selected-row 1)"
+fi
+case $chosen in
+    $previous)
+        cmus-remote --prev
+        ;;
+    $play_pause)
+        cmus-remote --pause
+        ;;
+    $stop)
+        cmus-remote --stop
+        ;;
+    $next)
+        cmus-remote --next
+        ;;
+    $tog_repeat)
+        cmus-remote -C "toggle repeat_current" 
+        ;;
+    $tog_random)
+        cmus-remote --shuffle
+        ;;
+esac
