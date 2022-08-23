@@ -41,6 +41,7 @@ static const char *const autostart[] = {
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
 	"slstatus", NULL,
+	"libinput-gestures-setup", "start", NULL,
 	"dunst", NULL,
 	"conky", NULL,
 	"xset", "s", "3600", NULL,
