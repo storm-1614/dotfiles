@@ -65,7 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const char get_cpu_temp[] = "echo $[$(cat /sys/class/thermal/thermal_zone0/temp)/1000]°C";
 //static const char get_cpu_temp[] = "sensors coretemp-isa-0000 | awk -F: '{ print $2 }' | sed -n '3p' | sed -r 's/[^0-9]*([0-9](.*)°C  ).*/\\1/'";
-static const char get_time[] = "date '+%T'";
+static const char get_time[] = "date '+%Y年%b%e日 周%a %T'";
 static const char get_song_name[] = "echo $(mpc | sed '2,10d')";
 
 static const struct arg args[] = {
@@ -74,12 +74,12 @@ static const struct arg args[] = {
 	{battery_state, "[%s", "BAT1"},
 	{battery_perc, " %s%%]", "BAT1"},
 	{cpu_perc, "[ %s%%]", NULL},
-  {run_command, "[ %s]", get_cpu_temp},
+    {run_command, "[ %s]", get_cpu_temp},
 	{ram_perc, "[﬙ %s%%]", NULL},
-//	{disk_perc, " %s%% ", "/"},
-//	{netspeed_rx, " %s", "wlan0"},
-//	{netspeed_tx, " %s", "wlan0"},
+	{disk_perc, "[ %s%%]", "/"},
+	{netspeed_rx, "[ %s]", "wlp0s20f3"},
+	{netspeed_tx, "[ %s]", "wlp0s20f3"},
 	/*{wifi_essid, " \uf1eb %s|", "wlan0"},*/
 //	{datetime, "  %s|",           "%F %T" },
-  {run_command, "[ %s]", get_time},
+    {run_command, "[ %s]", get_time},
 };
