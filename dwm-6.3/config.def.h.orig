@@ -75,6 +75,7 @@ static const Rule rules[] = {
 	{ "VirtualBox Machine", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "icalingua", NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
 	{ "Wine",     NULL,       NULL, 	  1 << 4, 		1, 			 -1 },
+	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 3, 		0, 			 -1 },
 	{ "Thunderbird", NULL,    NULL, 	  1 << 8, 		0, 			 -1 },
 };
@@ -89,8 +90,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "﬿",      tile },    /* first entry is default */
-	{ "缾",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "缾",     NULL },    /* no layout function means floating behavior */
+	{ "[M]",    monocle },
+
 };
 
 /* key definitions */
