@@ -76,7 +76,7 @@ static const struct arg args[] = {
 	{cpu_perc, "[ %s%%]", NULL},
     {run_command, "[ %s]", get_cpu_temp},
 	{ram_perc, "[﬙ %s%%]", NULL},
-	{disk_perc, "[ %s%%]", "/"},
+//	{disk_perc, "[ %s%%]", "/"},
 	{netspeed_rx, "[ %s]", "wlp0s20f3"},
 	{netspeed_tx, "[ %s]", "wlp0s20f3"},
 	/*{wifi_essid, " \uf1eb %s|", "wlan0"},*/
