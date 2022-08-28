@@ -7,13 +7,13 @@ static const char *mutevol[] = { "pulseaudio-ctl", "mute", NULL };
 static const char *downvol[] = { "pulseaudio-ctl", "down", "5", NULL };
 static const char *upvol[]   = { "pulseaudio-ctl", "up", "5", NULL };
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int gappx     = 10;        /* gaps between windows 窗口间隙*/
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 10;       /* vertical padding of bar */
-static const int sidepad            = 10;       /* horizontal padding of bar */
+static const int vertpad            = 10;       /* vertical padding of bar */     //这两项都是bar间隙
+static const int sidepad            = 10;       /* horizontal padding of bar */   //这两项都是bar间隙
 static const char *fonts[]          = { "Hack NF:size=14", "Source Han Sans CN:size=14" };
 //static const char *fonts[]          = { "Hack NF:size=14", "LXGW WenKai:style=Regular:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
@@ -57,11 +57,12 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
+//tag显示图标，用的nerd
 static const char *tags[] = { "¹", "²", "³","⁴", "⁵", "⁶","⁷", "⁸", "⁹" };
 
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
-
+//窗口规则，tags mask指定打开的tag,isfloating指定是否浮动，monitor指定屏幕
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -153,9 +154,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          {.v = radomchwp } },/*随机切换壁纸*/
   	{ Mod1Mask,                     XK_f,      spawn,          {.v = firefoxcmd } },/*打开firefox*/
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, //终端
-    {MODKEY, 						XK_r, 	   togglescratch,  {.v = scratchpadcmd}},
+    {MODKEY, 						XK_r, 	   togglescratch,  {.v = scratchpadcmd}},  //打开st
 	{ MODKEY,                       XK_b,      togglebar,      {0} },  //隐藏状态栏
-    { MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
+    { MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },   
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
     {MODKEY | ShiftMask, 			XK_j, 	   focusstackhid,  {.i = +1}},
     {MODKEY | ShiftMask, 			XK_k, 	   focusstackhid,  {.i = -1}},
@@ -190,8 +191,8 @@ static Key keys[] = {
 	{ MODKEY, 			            XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY|ShiftMask,             XK_b,      rotatestack,    {.i = +1 } },
 //	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
-	{MODKEY, 						XK_y, 	   incnmaster, 	   {.i = +1}}, //将窗口回复垂直逻辑
-    {MODKEY | ShiftMask, 			XK_y, 	   incnmaster, 	   {.i = -1}}, //将窗口改为横着
+	{MODKEY, 						XK_y, 	   incnmaster, 	   {.i = +1}}, //左侧窗口+1
+    {MODKEY | ShiftMask, 			XK_y, 	   incnmaster, 	   {.i = -1}}, //左侧窗口-1
 	{ MODKEY,                       XK_s,      show,           {0} },
 	{ MODKEY,                       XK_v,      hide,           {0} },
 	{ MODKEY, 			            XK_s,      showall,        {0} },
