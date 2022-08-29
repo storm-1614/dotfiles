@@ -52,7 +52,7 @@ static const char *const autostart[] = {
 	"pasystray", NULL,
 	"thunderbird", NULL,
 	"telegram-desktop", NULL,
-	"icalingua", NULL,
+	"virtualBox", NULL,
 	NULL
 };
 
@@ -72,8 +72,8 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       1 << 7,       1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Zathura",  NULL, 	  NULL, 	  1 << 1,  		0, 			 -1 },
-	{ "VirtualBox Manager", NULL, NULL,   1 << 5, 		0, 			 -1 },
-	{ "VirtualBox Machine", NULL, NULL,   1 << 5, 		0, 			 -1 },
+	{ "VirtualBox Manager", NULL, NULL,   1 << 4, 		0, 			 -1 },
+	{ "VirtualBox Machine", NULL, NULL,   1 << 4, 		0, 			 -1 },
 	{ "icalingua", NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
 	{ "Wine",     NULL,       NULL, 	  1 << 4, 		1, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
