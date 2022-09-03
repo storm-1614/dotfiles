@@ -63,9 +63,9 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
-static const char get_cpu_temp[] = "echo $[$(cat /sys/class/thermal/thermal_zone0/temp)/1000]°C";
-//static const char get_cpu_temp[] = "sensors coretemp-isa-0000 | awk -F: '{ print $2 }' | sed -n '3p' | sed -r 's/[^0-9]*([0-9](.*)°C  ).*/\\1/'";
-static const char get_time[] = "date '+%Y年%b%e日 周%a %T'";
+//static const char get_cpu_temp[] = "echo $[$(cat /sys/class/thermal/thermal_zone0/temp)/1000]°C";
+static const char get_cpu_temp[] = "sensors coretemp-isa-0000 | awk -F: '{ print $2 }' | sed -n '3p' | sed -r 's/[^0-9]*([0-9](.*)°C  ).*/\\1/'";
+static const char get_time[] = "date '+%Y年%b%d日 周%a %T'";
 static const char get_song_name[] = "echo $(mpc | sed '2,10d')";
 
 static const struct arg args[] = {
