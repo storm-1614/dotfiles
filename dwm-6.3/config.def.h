@@ -78,7 +78,7 @@ static const Rule rules[] = {
 	{ "Wine",     NULL,       NULL, 	  1 << 4, 		1, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 3, 		0, 			 -1 },
-	{ "Thunderbird", NULL,    NULL, 	  1 << 8, 		0, 			 -1 },
+	{ "thunderbird", NULL,    NULL, 	  1 << 8, 		0, 			 -1 },
 };
 
 /* layout(s) */
