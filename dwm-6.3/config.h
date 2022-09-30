@@ -6,6 +6,9 @@ static const char *lightdown[] = { "xbacklight", "-dec", "10",  NULL };
 static const char *mutevol[] = { "pulseaudio-ctl", "mute", NULL };
 static const char *downvol[] = { "pulseaudio-ctl", "down", "5", NULL };
 static const char *upvol[]   = { "pulseaudio-ctl", "up", "5", NULL };
+static const char *mpc_toggle[]= { "mpc", "toggle", NULL };
+static const char *mpc_next[]= { "mpc", "next", NULL };
+static const char *mpc_prev[]= { "mpc", "prev", NULL };
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gaps between windows 窗口间隙*/
@@ -135,10 +138,13 @@ static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,"-g", "120x
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_F5,     spawn,          {.v = downvol } },/*减小音量*/
-	{ MODKEY,                       XK_F1,     spawn,          {.v = lightdown } },/*减小亮度*/
-	{ MODKEY,                       XK_F2,     spawn,          {.v = lightup } },/*增大亮度*/
-	{ MODKEY,                       XK_F4,     spawn,          {.v = mutevol } },/*静音*/
-	{ MODKEY,                       XK_F6,     spawn,          {.v = upvol   } },/*增加音量*/
+	{ MODKEY,                       XK_F7,     spawn,          {.v = lightdown } },/*减小亮度*/
+	{ MODKEY,                       XK_F8,     spawn,          {.v = lightup } },/*增大亮度*/
+	{ MODKEY,                       XK_F6,     spawn,          {.v = mutevol } },/*静音*/
+	{ MODKEY,                       XK_F4,     spawn,          {.v = upvol   } },/*增加音量*/
+	{ MODKEY,                       XK_F1,     spawn,          {.v = mpc_toggle } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = mpc_prev } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = mpc_next } },
 	{ MODKEY|ShiftMask,           	XK_z,      spawn,          {.v = lock}},  /*锁屏*/
 	{ MODKEY, 			           	XK_f,      spawn,          {.v = baidu}},  /*翻译*/
 	{ MODKEY, 			           	XK_z,      spawn,          {.v = trayer}},  /*trayer*/
