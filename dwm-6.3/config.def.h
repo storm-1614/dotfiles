@@ -6,8 +6,6 @@ static const unsigned int gappx     = 10;        /* gaps between windows 窗口�
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 0;       /* vertical padding of bar */     //这两项都是bar间隙
-static const int sidepad            = 0;       /* horizontal padding of bar */   //这两项都是bar间隙
 static const char *fonts[]          = { "Hack NF:size=14", "Source Han Sans CN:size=14" };
 //static const char *fonts[]          = { "Hack NF:size=14", "LXGW WenKai:style=Regular:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
@@ -15,16 +13,23 @@ static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#4c566a";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#2e3440";
-static const char col_cyan[]        = "#81a1c1";
+static const char col_cyan[]        = "#5e81ac";
+static const unsigned int baralpha = 0x85;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 	[SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
 };
+static const unsigned int alphas[][3]      = {
+   /*               fg      bg        border     */
+   [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+   [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
 //打开dwm启动的命令
 static const char *const autostart[] = {
-	//	"picom", NULL,
+	"picom", NULL,
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
 	"slstatus", NULL,
