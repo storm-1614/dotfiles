@@ -6,8 +6,6 @@ static const unsigned int gappx     = 10;        /* gaps between windows 窗口�
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 10;       /* vertical padding of bar */     //这两项都是bar间隙
-static const int sidepad            = 10;       /* horizontal padding of bar */   //这两项都是bar间隙
 static const char *fonts[]          = { "Hack NF:size=14", "Source Han Sans CN:size=14" };
 //static const char *fonts[]          = { "Hack NF:size=14", "LXGW WenKai:style=Regular:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
