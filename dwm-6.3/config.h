@@ -32,7 +32,7 @@ static const char *const autostart[] = {
 	"picom", NULL,
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
-	"slstatus", NULL,
+	"/home/storm/dotfiles/dwm-bar/dwm_bar.sh", NULL,
 	"libinput-gestures-setup", "start", NULL,
 	"dunst", NULL,
 	"conky", NULL,
