@@ -32,19 +32,17 @@ static const char *const autostart[] = {
 	"picom", NULL,
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
-	"/home/storm/dotfiles/dwm-bar/dwm_bar.sh", NULL,
-	"libinput-gestures-setup", "start", NULL,
+	"/home/storm/dotfiles/dwm-bar/dwm_bar.sh", NULL,   //storm自行改成自己的用户名，需要要求dotfiles在~下
+	//"libinput-gestures-setup", "start", NULL, 	/*已废弃*/
 	"dunst", NULL,
 	"conky", NULL,
 	"xset", "s", "3600", NULL,
 	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O", "4500", NULL,
 	"feh", "--recursive", "--bg-fill", "Pictures/wallpapers/.", NULL,
-	"libinput-gestures", NULL,
 	"pasystray", NULL,
 	"thunderbird", NULL,
 	"telegram-desktop", NULL,
-	"virtualBox", NULL,
 	NULL
 };
 

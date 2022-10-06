@@ -72,7 +72,7 @@ do
     #upperbar="$upperbar$(dwm_loadavg)"
 #    upperbar="$upperbar$(dwm_mail)"
     upperbar="$upperbar$(dwm_mpc)"
-    upperbar="$upperbar$(dwm_backlight)"
+    #upperbar="$upperbar$(dwm_backlight)"
     upperbar="$upperbar$(dwm_pulse)"
     upperbar="$upperbar$(dwm_resources)"
     #upperbar="$upperbar$(dwm_spotify)"
