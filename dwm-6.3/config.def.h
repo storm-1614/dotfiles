@@ -6,6 +6,7 @@ static const unsigned int gappx     = 10;        /* gaps between windows 窗口�
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const char buttonbar[]       = "";
 static const char *fonts[]          = { "Hack NF:size=14", "Source Han Sans CN:size=14" };
 //static const char *fonts[]          = { "Hack NF:size=14", "LXGW WenKai:style=Regular:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
@@ -32,7 +33,8 @@ static const char *const autostart[] = {
 	"picom", NULL,
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
-	"/home/storm/dotfiles/dwm-bar/dwm_bar.sh", NULL,   //storm自行改成自己的用户名，需要要求dotfiles在~下
+	"slstatus", NULL,
+//	"/home/storm/dotfiles/dwm-bar/dwm_bar.sh", NULL,   //storm自行改成自己的用户名，需要要求dotfiles在~下
 	//"libinput-gestures-setup", "start", NULL, 	/*已废弃*/
 	"dunst", NULL,
 	"conky", NULL,
@@ -212,6 +214,7 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
+	{ ClkButton,		0,		Button1,	spawn,		{.v = roficmd } },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
