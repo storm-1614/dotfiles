@@ -34,7 +34,6 @@ static const char *const autostart[] = {
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
 	"slstatus", NULL,
-//	"/home/storm/dotfiles/dwm-bar/dwm_bar.sh", NULL,   //storm自行改成自己的用户名，需要要求dotfiles在~下
 	//"libinput-gestures-setup", "start", NULL, 	/*已废弃*/
 	"dunst", NULL,
 	"conky", NULL,
@@ -50,7 +49,7 @@ static const char *const autostart[] = {
 
 /* tagging */
 //tag显示图标，用的nerd
-static const char *tags[] = { "¹", "²", "³","⁴", "⁵", "⁶","⁷", "⁸", "⁹" };
+static const char *tags[] = { "¹", "²", "³","⁴", "⁵", "⁶","⁷", "⁸", "⁹" };
 
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";

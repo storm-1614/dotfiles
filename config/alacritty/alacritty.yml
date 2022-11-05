@@ -68,7 +68,7 @@ font:
     family: "Hack NF"
 
   # 字大小
-  size: 10.0 
+  size: 11.0 
 
   offset:
     x: 0
