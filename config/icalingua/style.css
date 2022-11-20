@@ -1,0 +1,122 @@
+/* 改自 https://shop.fdpclient.club/ii.css */
+
+.root>.head { /*左上角头像和搜索*/
+    border-radius: 6px;
+}
+
+.el-input--prefix .el-input__inner { /*Search*/
+    border-radius: 10px;
+}
+
+*{
+    transition: all 0.5s;
+}
+
+.panel>.bg>.head { /*表情面板*/
+    height: 35px;
+    min-height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.panel>.bg { /*表情面板*/
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    margin-left: 0px;
+    padding: 10px;
+}
+
+.el-message {
+    min-width: auto;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    margin-top: 5px;
+    padding: 10px 10px 10px 10px;
+}
+
+.panel-right {
+    background: rgba(0,0,0,0)!important;
+    border: none!important;
+}
+
+.icalingua-theme-holder {
+    background: rgba(0,0,0,0)!important;
+    backdrop-filter: blur(10px);
+}
+
+.root {
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.selected {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1)!important;
+}
+
+
+
+.entry {
+    border: none!important;
+}
+
+.content {
+    padding-right: 10px;
+}
+.root {
+    border: none!important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.el-main.multipane.layout-v {
+    margin: 0!important;
+    overflow: hidden;
+}
+
+.vac-room-header.vac-app-border-b { /*对话名显示*/
+    position: absolute;
+    top: 0px;
+    height: 69px;
+    backdrop-filter: blur(10px);
+    left: 0px;
+}
+
+.vac-container-scroll {
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+.vac-card-window {
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: auto;
+}
+
+.el-dialog {
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.v-modal {
+    display: none;
+}
+
+.panel.rooms-panel {
+    margin: 10px 0px;
+    border-radius: 10px;
+    margin-left: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.vac-room-footer {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    bottom: 0px;
+}
