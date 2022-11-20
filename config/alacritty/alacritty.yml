@@ -59,13 +59,13 @@ colors:
 # 设置字体
 font:
   normal:
-    family: "Hack NF"
+    family: "Hack Nerd Font"
   bold:
-    family: "Hack NF"
+    family: "Hack Nerd Font"
   italic:
-    family: "Hack NF"
+    family: "Hack Nerd Font"
   bold_italic:
-    family: "Hack NF"
+    family: "Hack Nerd Font"
 
   # 字大小
   size: 11.0 

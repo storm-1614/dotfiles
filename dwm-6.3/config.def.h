@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
-static const char *fonts[]          = { "Hack NF:size=14", "Source Han Sans CN:size=14" };
+static const char *fonts[]          = { "Hack Nerd Font:size=14", "Source Han Sans CN:size=14" };
 //static const char *fonts[]          = { "Hack NF:size=14", "LXGW WenKai:style=Regular:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#2e3440";
@@ -30,7 +30,7 @@ static const unsigned int alphas[][3]      = {
 };
 //打开dwm启动的命令
 static const char *const autostart[] = {
-	"picom", NULL,
+	//"picom", NULL,
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
 	"slstatus", NULL,
