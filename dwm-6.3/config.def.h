@@ -41,7 +41,7 @@ static const char *const autostart[] = {
 	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O", "4500", NULL,
 	"feh", "--recursive", "--bg-fill", "Pictures/wallpapers/.", NULL,
-	"pasystray", NULL,
+//	"pasystray", NULL,
 	"thunderbird", NULL,
 	"telegram-desktop", NULL,
 	NULL
@@ -63,8 +63,8 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       1 << 7,       1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Zathura",  NULL, 	  NULL, 	  1 << 1,  		0, 			 -1 },
-	{ "VirtualBox Manager", NULL, NULL,   1 << 4, 		0, 			 -1 },
-	{ "VirtualBox Machine", NULL, NULL,   1 << 4, 		0, 			 -1 },
+	{ "VirtualBox Manager", NULL, NULL,   1 << 5, 		0, 			 -1 },
+	{ "VirtualBox Machine", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "icalingua", NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
 	{ "Wine",     NULL,       NULL, 	  1 << 4, 		1, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
@@ -127,9 +127,9 @@ static const char *lightdown[] = { "xbacklight", "-dec", "10",  NULL };
 static const char *mutevol[] = { "pulseaudio-ctl", "mute", NULL };
 static const char *downvol[] = { "pulseaudio-ctl", "down", "5", NULL };
 static const char *upvol[]   = { "pulseaudio-ctl", "up", "5", NULL };
-static const char *mpc_toggle[]= { "mpc", "toggle", NULL };
-static const char *mpc_next[]= { "mpc", "next", NULL };
-static const char *mpc_prev[]= { "mpc", "prev", NULL };
+static const char *mpc_toggle[]= { "playerctl", "play-pause", NULL };
+static const char *mpc_next[]= { "playerctl", "next", NULL };
+static const char *mpc_prev[]= { "playerctl", "previous", NULL };
 
 
 static Key keys[] = {
