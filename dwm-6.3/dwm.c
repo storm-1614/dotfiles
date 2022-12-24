@@ -2759,7 +2759,7 @@ xerrordummy(Display *dpy, XErrorEvent *ee)
 int
 xerrorstart(Display *dpy, XErrorEvent *ee)
 {
-	die("dwm: another window manager is already running");
+	die("dwm: 其他窗口管理器已经在运行");
 	return -1;
 }
 
