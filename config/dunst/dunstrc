@@ -1,6 +1,8 @@
 [colors]
-	background = "#eceff4"
-    frame = "#d8dee9"
+#	background = "#2d4a66"
+	background = "4c566a"
+    frame = "#4c566a"
+	foreground = "#4c566a"
 
 [global]
     ### Display ###
@@ -28,7 +30,7 @@
 
     ### Text ###
     font = Source Han Sans CN Medium 16
-    line_height = 0
+	line_height = 0
 
     markup = full
 
@@ -55,7 +57,7 @@
     ### Icons ###
     icon_position = left
     max_icon_size = 64
-    icon_path = /usr/share/icons/Tela/32/status/:/usr/share/icons/Tela/32/devices/:/usr/share/icons/Tela/16/apps
+    icon_path = /usr/share/icons/Tela/32/status/:/usr/share/icons/Nord-Icon/48x48/devices/:/usr/share/icons/Tela/16/apps
 
     ### History ###
     sticky_history = yes
@@ -76,22 +78,21 @@
     close_all = ctrl+shift+space
     history = ctrl+backspace
 
+
 [urgency_low]
-    background = colors.background
-    foreground = "#5e81ac"
-    frame_color = colors.frame
-    timeout = 5
+    msg_urgency = low
+    background = "#2E3440"
+	foreground = "#D8DEE9"
+	timeout= 4 
 
 [urgency_normal]
-    background = colors.background
-    foreground = "#2e3440"
-    frame_color = colors.frame
-    timeout = 5
+	msg_urgency = normal
+	background = "#3B4252"
+	foreground = "#E5E9F0"
+	timeout = 4 
 
 [urgency_critical]
-    background = colors.background
-    foreground = "#bf616a"
-    frame_color = colors.frame
-    timeout = 0
-
-# vim: ft=conf
+	msg_urgency = critical
+	background = "#2E3440"
+	foreground = "#D08770"
+	timeout = 0 

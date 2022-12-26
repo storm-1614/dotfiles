@@ -15,7 +15,7 @@ static const char col_gray2[]       = "#4c566a";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#2e3440";
 static const char col_cyan[]        = "#5e81ac";
-static const unsigned int baralpha = 0xff;
+static const unsigned int baralpha = 0xaa;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -30,19 +30,20 @@ static const unsigned int alphas[][3]      = {
 };
 //打开dwm启动的命令
 static const char *const autostart[] = {
-	//"picom", NULL,
+	"picom", NULL,
 	"fcitx5", "-d", NULL,
 	"cfw", NULL,
 	"slstatus", NULL,
 	//"libinput-gestures-setup", "start", NULL, 	/*已废弃*/
 	"dunst", NULL,
-	"conky", NULL,
+	//"conky", NULL,
 	"xset", "s", "3600", NULL,
 	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O", "4500", NULL,
-	"feh", "--recursive", "--bg-fill", "Pictures/wallpapers/.", NULL,
+//	"feh", "--recursive", "--bg-fill", "Pictures/wallpapers/.", NULL,
+	"wallpaper.sh", NULL,	
 //	"pasystray", NULL,
-	"thunderbird", NULL,
+	"geary", NULL,
 	"telegram-desktop", NULL,
 	NULL
 };
@@ -69,7 +70,7 @@ static const Rule rules[] = {
 	{ "Wine",     NULL,       NULL, 	  1 << 4, 		1, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 3, 		0, 			 -1 },
-	{ "thunderbird", NULL,    NULL, 	  1 << 8, 		0, 			 -1 },
+	{ "geary",    NULL,       NULL, 	  1 << 8, 		0, 			 -1 },
 };
 
 /* layout(s) */
@@ -113,7 +114,7 @@ static const char *lock[] = {"i3lock-fancy", NULL};
 static const char *power[] = {"power.sh", NULL};
 static const char *emoji[] = {"rofi", "-show", "emoji", "-modi", "emoji", NULL};
 static const char *window[] = {"rofi", "-show", "window", NULL};
-static const char *music[] = {"mconfig", NULL};
+static const char *music[] = {"cmus-config", NULL};
 static const char *trayer[] = {"trayer.sh", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,"-g", "120x34", NULL};
