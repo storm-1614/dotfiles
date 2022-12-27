@@ -50,6 +50,10 @@ static const char *const autostart[] = {
 /* tagging */
 static const char *tags[] = { "¹", "²", "³","⁴", "⁵", "⁶","⁷", "⁸", "⁹" };
 
+/* Lockfile */
+static char lockfile[] = "/tmp/dwm.lock";
+
+
 //窗口规则，tags mask指定打开的tag,isfloating指定是否浮动，monitor指定屏幕
 static const Rule rules[] = {
 	/* xprop(1):
@@ -178,7 +182,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,                       XK_s,      show,           {0} },
 	{ MODKEY|ShiftMask,             XK_s,      showall,        {0} },
-	{ MODKEY,                       XK_h,      hide,           {0} },
+	{ MODKEY,                       XK_v,      hide,           {0} },
 	{ MODKEY,                       XK_Left,   viewtoleft,     {0} },
 	{ MODKEY,                       XK_Right,  viewtoright,    {0} },
 	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },

@@ -72,8 +72,8 @@ static const char get_song_name[] = "playerctl metadata --format '{{ artist }}-{
 static const struct arg args[] = {
 	/* function format          argument */
 	{run_command, "[﫭 %s]", get_song_name}, 
-	{battery_state, "[%s", "BAT1"},
-	{battery_perc, " %s%%]", "BAT1"},
+//	{battery_state, "[%s", "BAT1"},
+//	{battery_perc, " %s%%]", "BAT1"},
 	{cpu_perc, "[ %s%%]", NULL},
     {run_command, "[ %s]", get_cpu_temp},
 	{ram_perc, "[﬙ %s%%]", NULL},

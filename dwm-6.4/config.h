@@ -38,12 +38,14 @@ static const char *const autostart[] = {
 	"cfw", NULL,
 	"slstatus", NULL,
 	"dunst", NULL,
-	//"conky", NULL,
+	"qbat", NULL,
 	"xset", "s", "3600", NULL,
 	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O", "4500", NULL,
 	"wallpaper.sh", NULL,	
 	"telegram-desktop", NULL,
+	"pasystray", NULL,
+	"nm-applet", NULL,
 	NULL
 };
 
@@ -113,6 +115,8 @@ static const char *power[] = {"power.sh", NULL};
 static const char *emoji[] = {"rofi", "-show", "emoji", "-modi", "emoji", NULL};
 static const char *window[] = {"rofi", "-show", "window", NULL};
 static const char *music[] = {"cmus-config", NULL};
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 /*-----------------------*/
 /*声音需要安装pulseaudio-ctl
  *音乐播放用的moc
@@ -151,6 +155,7 @@ static const Key keys[] = {
   	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },/*打开firefox*/
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, //终端
 	{ MODKEY | ShiftMask,           XK_Return, spawn,          {.v = termcmd2 } }, //终端
+	{ MODKEY,                       XK_r,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
@@ -182,7 +187,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,                       XK_s,      show,           {0} },
 	{ MODKEY|ShiftMask,             XK_s,      showall,        {0} },
-	{ MODKEY,                       XK_h,      hide,           {0} },
+	{ MODKEY,                       XK_v,      hide,           {0} },
 	{ MODKEY,                       XK_Left,   viewtoleft,     {0} },
 	{ MODKEY,                       XK_Right,  viewtoright,    {0} },
 	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },
