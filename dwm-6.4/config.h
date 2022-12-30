@@ -53,6 +53,11 @@ static const char *const autostart[] = {
 /* tagging */
 static const char *tags[] = { "¹", "²", "³","⁴", "⁵", "⁶","⁷", "⁸", "⁹" };
 
+static const int overviewgappi           = 24;        /* overview时 窗口与边缘 缝隙大小 */
+static const int overviewgappo           = 60;        /* overview时 窗口与窗口 缝隙大小 */
+static const char *overviewtag = "OVERVIEW";
+static const Layout overviewlayout = { "",  overview };
+
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
 
@@ -87,6 +92,7 @@ static const Layout layouts[] = {
 	{ "﬿",      tile },    /* first entry is default */
 	{ "缾",     NULL },    /* no layout function means floating behavior */
 	{ "[M]",    monocle },
+	{ "[G]",      magicgrid },
 
 };
 
@@ -120,8 +126,8 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 /*-----------------------*/
 /*声音需要安装pulseaudio-ctl
- *音乐播放用的moc
- *亮度控制用的xorg自带
+ *音乐播放用的playerctl
+ *亮度控制需要acpilight
  * */
 static const char *lightup[] = { "xbacklight", "-inc", "10",  NULL };
 static const char *lightdown[] = { "xbacklight", "-dec", "10",  NULL };
@@ -134,6 +140,8 @@ static const char *mpc_prev[]= { "playerctl", "previous", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_a,      toggleoverview, {0} },
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_F7,     spawn,          {.v = lightdown } },/*减小亮度*/
 	{ MODKEY,                       XK_F8,     spawn,          {.v = lightup } },/*增大亮度*/
@@ -150,14 +158,14 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = roficmd1 } },/*以命令模式打开rofi*/
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = screenshotcmd } },/*截图*/
 	{ MODKEY,                       XK_c,      spawn,          {.v = chromecmd } },/*打开firefox*/
-	{ MODKEY | ShiftMask,           XK_l,      spawn,          {.v = power}}, /*电源*/
-	{ MODKEY | ShiftMask,           XK_m,      spawn,          {.v = emoji}}, /*emoji*/
-	{ MODKEY | ShiftMask,           XK_w,      spawn,          {.v = window}}, /*window*/
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = power}}, /*电源*/
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = emoji}}, /*emoji*/
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = window}}, /*window*/
   	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },/*打开firefox*/
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, //终端
-	{ MODKEY | ShiftMask,           XK_Return, spawn,          {.v = termcmd2 } }, //终端
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } }, //终端
 	{ MODKEY,                       XK_r,      togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
