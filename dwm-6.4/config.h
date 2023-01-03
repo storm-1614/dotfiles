@@ -37,7 +37,7 @@ static const char *const autostart[] = {
 	"picom", NULL,
 	"fcitx5", "-d", NULL,
 	//"cfw", NULL,
-	"clash-verge", NULL,
+	"cfw", NULL,
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
@@ -165,8 +165,10 @@ static const Key keys[] = {
   	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },/*打开firefox*/
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, //终端
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } }, //终端
+	{ MODKEY|ShiftMask,             XK_n,      rotatestack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_b,      rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_r,      togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
+	{ MODKEY, 		                XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
@@ -178,7 +180,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_i,      setcfact,       {.f = +0.25} },
 	{ MODKEY,                       XK_p,      setcfact,       {.f = -0.25} },
 	{ MODKEY,                       XK_o,      setcfact,       {.f =  0.00} },
-	{ MODKEY,                       XK_b,  	   zoom,           {0} },
+	{ MODKEY,                       XK_z,  	   zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,   			        XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
