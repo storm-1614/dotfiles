@@ -11,7 +11,7 @@ static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows sel
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
-static const char *fonts[]          = { "Hack Nerd Font:size=14", "Source Han Sans CN:size=14" };
+static const char *fonts[]          = { "Hack Nerd Font:size=15", "Source Han Sans CN:size=15" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#4c566a";
@@ -36,23 +36,26 @@ static const unsigned int alphas[][3]      = {
 static const char *const autostart[] = {
 	"picom", NULL,
 	"fcitx5", "-d", NULL,
-	//"cfw", NULL,
-	"cfw", NULL,
+//	"birdtray", NULL,
+//	"cfw", NULL,
+	"clash", NULL,
+//	"thunderbird", NULL,
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
+//	"dida", "--force-device-scale-factor=1.5", NULL,
 	"xset", "s", "3600", NULL,
 	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O", "4500", NULL,
 	"wallpaper.sh", NULL,	
-	"telegram-desktop", NULL,
+//	"telegram-desktop", NULL,
 	"pasystray", NULL,
-	"nm-applet", NULL,
+//	"nm-applet", NULL,
 	NULL
 };
 
 /* tagging */
-static const char *tags[] = { "¹", "²", "³","⁴", "⁵", "⁶","⁷", "⁸", "⁹" };
+static const char *tags[] = { "¹", "²", "³","切⁴", "﬐⁵", "⁶","⁷", "ﱘ⁸", "⁹" };
 
 static const int overviewgappi           = 24;        /* overview时 窗口与边缘 缝隙大小 */
 static const int overviewgappo           = 60;        /* overview时 窗口与窗口 缝隙大小 */
@@ -71,15 +74,17 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       1 << 7,       1,           -1 },
+	{ "Vmware",   NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "dida",     NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Zathura",  NULL, 	  NULL, 	  1 << 1,  		0, 			 -1 },
 	{ "VirtualBox Manager", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "VirtualBox Machine", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "icalingua", NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
-	{ "Wine",     NULL,       NULL, 	  1 << 4, 		1, 			 -1 },
+	{ "Virt-manager", NULL,   NULL, 	  1 << 5, 		0, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 3, 		0, 			 -1 },
-	{ "geary",    NULL,       NULL, 	  1 << 8, 		0, 			 -1 },
+	{ "thunderbird",    NULL,       NULL, 	  1 << 8, 		0, 			 -1 },
 };
 
 /* layout(s) */
@@ -127,17 +132,19 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 /*-----------------------*/
 /*声音需要安装pulseaudio-ctl
- *音乐播放用的playerctl
+ *音乐播放用的mpd,mpc
  *亮度控制需要acpilight
  * */
 static const char *lightup[] = { "xbacklight", "-inc", "10",  NULL };
 static const char *lightdown[] = { "xbacklight", "-dec", "10",  NULL };
+
 static const char *mutevol[] = { "pulseaudio-ctl", "mute", NULL };
 static const char *downvol[] = { "pulseaudio-ctl", "down", "5", NULL };
 static const char *upvol[]   = { "pulseaudio-ctl", "up", "5", NULL };
-static const char *mpc_toggle[]= { "playerctl", "play-pause", NULL };
-static const char *mpc_next[]= { "playerctl", "next", NULL };
-static const char *mpc_prev[]= { "playerctl", "previous", NULL };
+
+static const char *mpc_toggle[]= { "mpc", "toggle", NULL };
+static const char *mpc_next[]= { "mpc", "next", NULL };
+static const char *mpc_prev[]= { "mpc", "prev", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
