@@ -2133,3 +2133,1360 @@ Aug 23 14:20 : player: played "星空剪影.mp3"
 Aug 23 14:24 : player: played "生来倔强-南征北战NZBZ.mp3"
 Aug 23 14:29 : player: played "心似烟火.mp3"
 Aug 23 14:33 : player: played "无名的人-毛不易.mp3"
+Jan 10 12:54 : exception: Failed to decode /home/storm/Music/our_music/极光-于果.mp3; Failed to open '/home/storm/Music/our_music/极光-于果.mp3': No such file or directory
+Jan 10 12:54 : exception: Failed to decode /home/storm/Music/our_music/有梦可待-陈立农.mp3; Failed to open '/home/storm/Music/our_music/有梦可待-陈立农.mp3': No such file or directory
+Jan 10 12:54 : player: played "极光-于果.mp3"
+Jan 10 12:54 : exception: inotify_add_watch() has failed: No such file or directory
+Jan 10 12:54 : config: option 'buffer_time' on line 219 was not recognized
+Jan 10 12:55 : config: option 'buffer_time' on line 219 was not recognized
+Jan 10 12:56 : config: option 'buffer_time' on line 219 was not recognized
+Jan 10 12:56 : player: played "极光-于果.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/极光-于果.mp3; Failed to open '/home/storm/Music/our_music/极光-于果.mp3': No such file or directory
+Jan 10 12:56 : player: played "极光-于果.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/love story.mp3; Failed to open '/home/storm/Music/our_music/love story.mp3': No such file or directory
+Jan 10 12:56 : player: played "love story.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/可不可以.mp3; Failed to open '/home/storm/Music/our_music/可不可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "可不可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/NCF-艾力,Bater Offical - 黎明前的黑暗.mp3; Failed to open '/home/storm/Music/our_music/NCF-艾力,Bater Offical - 黎明前的黑暗.mp3': No such file or directory
+Jan 10 12:56 : player: played "NCF-艾力,Bater Offical - 黎明前的黑暗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/飞得更高.mp3; Failed to open '/home/storm/Music/our_music/飞得更高.mp3': No such file or directory
+Jan 10 12:56 : player: played "飞得更高.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/那女孩对我说.mp3; Failed to open '/home/storm/Music/our_music/那女孩对我说.mp3': No such file or directory
+Jan 10 12:56 : player: played "那女孩对我说.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力 - F_yy.mp3; Failed to open '/home/storm/Music/our_music/万有引力 - F_yy.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力 - F_yy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/来自.mp3; Failed to open '/home/storm/Music/our_music/来自.mp3': No such file or directory
+Jan 10 12:56 : player: played "来自.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最初的梦想.mp3; Failed to open '/home/storm/Music/our_music/最初的梦想.mp3': No such file or directory
+Jan 10 12:56 : player: played "最初的梦想.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/游山恋.mp3; Failed to open '/home/storm/Music/our_music/游山恋.mp3': No such file or directory
+Jan 10 12:56 : player: played "游山恋.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小蓝背心 - 微风与你.mp3; Failed to open '/home/storm/Music/our_music/小蓝背心 - 微风与你.mp3': No such file or directory
+Jan 10 12:56 : player: played "小蓝背心 - 微风与你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/沙漠骆驼-展展与罗罗.mp3; Failed to open '/home/storm/Music/our_music/沙漠骆驼-展展与罗罗.mp3': No such file or directory
+Jan 10 12:56 : player: played "沙漠骆驼-展展与罗罗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/一起去风里吧-小蓝背心.mp3; Failed to open '/home/storm/Music/our_music/一起去风里吧-小蓝背心.mp3': No such file or directory
+Jan 10 12:56 : player: played "一起去风里吧-小蓝背心.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有梦的人别怕-陆思恒.mp3; Failed to open '/home/storm/Music/our_music/有梦的人别怕-陆思恒.mp3': No such file or directory
+Jan 10 12:56 : player: played "有梦的人别怕-陆思恒.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/7 Years-Lukas Graham.mp3; Failed to open '/home/storm/Music/our_music/7 Years-Lukas Graham.mp3': No such file or directory
+Jan 10 12:56 : player: played "7 Years-Lukas Graham.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去流浪.mp3; Failed to open '/home/storm/Music/our_music/去流浪.mp3': No such file or directory
+Jan 10 12:56 : player: played "去流浪.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我与青春在赛跑-刘惜君.mp3; Failed to open '/home/storm/Music/our_music/我与青春在赛跑-刘惜君.mp3': No such file or directory
+Jan 10 12:56 : player: played "我与青春在赛跑-刘惜君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/命运.mp3; Failed to open '/home/storm/Music/our_music/命运.mp3': No such file or directory
+Jan 10 12:56 : player: played "命运.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3; Failed to open '/home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3': No such file or directory
+Jan 10 12:56 : player: played "南征北战NZBZ - 我的天空(不插电版).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/那时初夏.mp3; Failed to open '/home/storm/Music/our_music/那时初夏.mp3': No such file or directory
+Jan 10 12:56 : player: played "那时初夏.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星辰大海.mp3; Failed to open '/home/storm/Music/our_music/星辰大海.mp3': No such file or directory
+Jan 10 12:56 : player: played "星辰大海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小蓝背心 - 星空与你.mp3; Failed to open '/home/storm/Music/our_music/小蓝背心 - 星空与你.mp3': No such file or directory
+Jan 10 12:56 : player: played "小蓝背心 - 星空与你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/勇气.mp3; Failed to open '/home/storm/Music/our_music/勇气.mp3': No such file or directory
+Jan 10 12:56 : player: played "勇气.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最美的期待.mp3; Failed to open '/home/storm/Music/our_music/最美的期待.mp3': No such file or directory
+Jan 10 12:56 : player: played "最美的期待.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/千千万万.mp3; Failed to open '/home/storm/Music/our_music/千千万万.mp3': No such file or directory
+Jan 10 12:56 : player: played "千千万万.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/飞鸟和蝉.mp3; Failed to open '/home/storm/Music/our_music/飞鸟和蝉.mp3': No such file or directory
+Jan 10 12:56 : player: played "飞鸟和蝉.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/回到夏天.mp3; Failed to open '/home/storm/Music/our_music/回到夏天.mp3': No such file or directory
+Jan 10 12:56 : player: played "回到夏天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/银河与星斗.mp3; Failed to open '/home/storm/Music/our_music/银河与星斗.mp3': No such file or directory
+Jan 10 12:56 : player: played "银河与星斗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力.mp3; Failed to open '/home/storm/Music/our_music/万有引力.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小雨天气.mp3; Failed to open '/home/storm/Music/our_music/小雨天气.mp3': No such file or directory
+Jan 10 12:56 : player: played "小雨天气.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追光者-岑宁儿.mp3; Failed to open '/home/storm/Music/our_music/追光者-岑宁儿.mp3': No such file or directory
+Jan 10 12:56 : player: played "追光者-岑宁儿.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3; Failed to open '/home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3': No such file or directory
+Jan 10 12:56 : player: played "爱与狂想-新乐尘符、谣君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/奔赴-司南.mp3; Failed to open '/home/storm/Music/our_music/奔赴-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "奔赴-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/朱砂.mp3; Failed to open '/home/storm/Music/our_music/朱砂.mp3': No such file or directory
+Jan 10 12:56 : player: played "朱砂.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/和风赴你-司南.mp3; Failed to open '/home/storm/Music/our_music/和风赴你-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "和风赴你-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/冬眠.mp3; Failed to open '/home/storm/Music/our_music/冬眠.mp3': No such file or directory
+Jan 10 12:56 : player: played "冬眠.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不是花火呀、小田音乐社 - 如一.mp3; Failed to open '/home/storm/Music/our_music/不是花火呀、小田音乐社 - 如一.mp3': No such file or directory
+Jan 10 12:56 : player: played "不是花火呀、小田音乐社 - 如一.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3; Failed to open '/home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3': No such file or directory
+Jan 10 12:56 : player: played "提拉米苏-新乐尘符、李思雨.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星火.mp3; Failed to open '/home/storm/Music/our_music/星火.mp3': No such file or directory
+Jan 10 12:56 : player: played "星火.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你曾是少年.mp3; Failed to open '/home/storm/Music/our_music/你曾是少年.mp3': No such file or directory
+Jan 10 12:56 : player: played "你曾是少年.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的轮廓.mp3; Failed to open '/home/storm/Music/our_music/你的轮廓.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的轮廓.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 如果呢（女声版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/The Weather Man.mp3; Failed to open '/home/storm/Music/our_music/The Weather Man.mp3': No such file or directory
+Jan 10 12:56 : player: played "The Weather Man.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Alan Walker - Faded.mp3; Failed to open '/home/storm/Music/our_music/Alan Walker - Faded.mp3': No such file or directory
+Jan 10 12:56 : player: played "Alan Walker - Faded.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你从未离去.mp3; Failed to open '/home/storm/Music/our_music/你从未离去.mp3': No such file or directory
+Jan 10 12:56 : player: played "你从未离去.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/坠落星空-小星星Aurora.mp3; Failed to open '/home/storm/Music/our_music/坠落星空-小星星Aurora.mp3': No such file or directory
+Jan 10 12:56 : player: played "坠落星空-小星星Aurora.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/华晨宇 - 好想爱这个世界啊.mp3; Failed to open '/home/storm/Music/our_music/华晨宇 - 好想爱这个世界啊.mp3': No such file or directory
+Jan 10 12:56 : player: played "华晨宇 - 好想爱这个世界啊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/篝火旁.mp3; Failed to open '/home/storm/Music/our_music/篝火旁.mp3': No such file or directory
+Jan 10 12:56 : player: played "篝火旁.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Umbrella (Matte Remix).mp3; Failed to open '/home/storm/Music/our_music/Umbrella (Matte Remix).mp3': No such file or directory
+Jan 10 12:56 : player: played "Umbrella (Matte Remix).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/听妈妈的话-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/听妈妈的话-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "听妈妈的话-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不喜欢下雨天.mp3; Failed to open '/home/storm/Music/our_music/不喜欢下雨天.mp3': No such file or directory
+Jan 10 12:56 : player: played "不喜欢下雨天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/光.mp3; Failed to open '/home/storm/Music/our_music/光.mp3': No such file or directory
+Jan 10 12:56 : player: played "光.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/迷失幻境-IN.mp3; Failed to open '/home/storm/Music/our_music/迷失幻境-IN.mp3': No such file or directory
+Jan 10 12:56 : player: played "迷失幻境-IN.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你是人间四月天.mp3; Failed to open '/home/storm/Music/our_music/你是人间四月天.mp3': No such file or directory
+Jan 10 12:56 : player: played "你是人间四月天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的星环.mp3; Failed to open '/home/storm/Music/our_music/你的星环.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的星环.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夏天的风.mp3; Failed to open '/home/storm/Music/our_music/夏天的风.mp3': No such file or directory
+Jan 10 12:56 : player: played "夏天的风.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/孤勇者.mp3; Failed to open '/home/storm/Music/our_music/孤勇者.mp3': No such file or directory
+Jan 10 12:56 : player: played "孤勇者.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/所念皆星河-房东的猫.mp3; Failed to open '/home/storm/Music/our_music/所念皆星河-房东的猫.mp3': No such file or directory
+Jan 10 12:56 : player: played "所念皆星河-房东的猫.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/致你-yihuik苡慧.mp3; Failed to open '/home/storm/Music/our_music/致你-yihuik苡慧.mp3': No such file or directory
+Jan 10 12:56 : player: played "致你-yihuik苡慧.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无名的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/无名的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "无名的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/dream it possible.mp3; Failed to open '/home/storm/Music/our_music/dream it possible.mp3': No such file or directory
+Jan 10 12:56 : player: played "dream it possible.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/起风了.mp3; Failed to open '/home/storm/Music/our_music/起风了.mp3': No such file or directory
+Jan 10 12:56 : player: played "起风了.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/22秒.mp3; Failed to open '/home/storm/Music/our_music/22秒.mp3': No such file or directory
+Jan 10 12:56 : player: played "22秒.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/湖-李棒棒Muti.mp3; Failed to open '/home/storm/Music/our_music/湖-李棒棒Muti.mp3': No such file or directory
+Jan 10 12:56 : player: played "湖-李棒棒Muti.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/任然 - 疑心病.mp3; Failed to open '/home/storm/Music/our_music/任然 - 疑心病.mp3': No such file or directory
+Jan 10 12:56 : player: played "任然 - 疑心病.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/水星记.mp3; Failed to open '/home/storm/Music/our_music/水星记.mp3': No such file or directory
+Jan 10 12:56 : player: played "水星记.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/树洞-欧阳娜娜.mp3; Failed to open '/home/storm/Music/our_music/树洞-欧阳娜娜.mp3': No such file or directory
+Jan 10 12:56 : player: played "树洞-欧阳娜娜.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/像我这样的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/像我这样的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "像我这样的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3; Failed to open '/home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3': No such file or directory
+Jan 10 12:56 : player: played "JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/国际歌-唐朝乐队.mp3; Failed to open '/home/storm/Music/our_music/国际歌-唐朝乐队.mp3': No such file or directory
+Jan 10 12:56 : player: played "国际歌-唐朝乐队.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3; Failed to open '/home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3': No such file or directory
+Jan 10 12:56 : player: played "My Heart Will Go On - 满舒克、MuSik I.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/天与海-Kiki.mp3; Failed to open '/home/storm/Music/our_music/天与海-Kiki.mp3': No such file or directory
+Jan 10 12:56 : player: played "天与海-Kiki.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我在未来等你-好妹妹.mp3; Failed to open '/home/storm/Music/our_music/我在未来等你-好妹妹.mp3': No such file or directory
+Jan 10 12:56 : player: played "我在未来等你-好妹妹.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/微微.mp3; Failed to open '/home/storm/Music/our_music/微微.mp3': No such file or directory
+Jan 10 12:56 : player: played "微微.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星空剪影.mp3; Failed to open '/home/storm/Music/our_music/星空剪影.mp3': No such file or directory
+Jan 10 12:56 : player: played "星空剪影.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/距离高考还有.mp3; Failed to open '/home/storm/Music/our_music/距离高考还有.mp3': No such file or directory
+Jan 10 12:56 : player: played "距离高考还有.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/I Feel So Close To The Sweet Hall Of Fame.mp3; Failed to open '/home/storm/Music/our_music/I Feel So Close To The Sweet Hall Of Fame.mp3': No such file or directory
+Jan 10 12:56 : player: played "I Feel So Close To The Sweet Hall Of Fame.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去流浪-周笔畅.mp3; Failed to open '/home/storm/Music/our_music/去流浪-周笔畅.mp3': No such file or directory
+Jan 10 12:56 : player: played "去流浪-周笔畅.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小虎队 - 爱.mp3; Failed to open '/home/storm/Music/our_music/小虎队 - 爱.mp3': No such file or directory
+Jan 10 12:56 : player: played "小虎队 - 爱.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/告白气球-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/告白气球-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "告白气球-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/like1999.mp3; Failed to open '/home/storm/Music/our_music/like1999.mp3': No such file or directory
+Jan 10 12:56 : player: played "like1999.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/趁你还年轻.mp3; Failed to open '/home/storm/Music/our_music/趁你还年轻.mp3': No such file or directory
+Jan 10 12:56 : player: played "趁你还年轻.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夏夜灯塔.mp3; Failed to open '/home/storm/Music/our_music/夏夜灯塔.mp3': No such file or directory
+Jan 10 12:56 : player: played "夏夜灯塔.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 麦浪.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/刘大壮 - 后来.mp3; Failed to open '/home/storm/Music/our_music/刘大壮 - 后来.mp3': No such file or directory
+Jan 10 12:56 : player: played "刘大壮 - 后来.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不知所措.mp3; Failed to open '/home/storm/Music/our_music/不知所措.mp3': No such file or directory
+Jan 10 12:56 : player: played "不知所措.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Carry You Home(feat.Maruja Retana&RUI).mp3; Failed to open '/home/storm/Music/our_music/Carry You Home(feat.Maruja Retana&RUI).mp3': No such file or directory
+Jan 10 12:56 : player: played "Carry You Home(feat.Maruja Retana&RUI).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/王淇-可可托海的牧羊人.mp3; Failed to open '/home/storm/Music/our_music/王淇-可可托海的牧羊人.mp3': No such file or directory
+Jan 10 12:56 : player: played "王淇-可可托海的牧羊人.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/世界这么大还是遇见你-清新的小女孩（中文版）.mp3; Failed to open '/home/storm/Music/our_music/世界这么大还是遇见你-清新的小女孩（中文版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "世界这么大还是遇见你-清新的小女孩（中文版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/四季予你.mp3; Failed to open '/home/storm/Music/our_music/四季予你.mp3': No such file or directory
+Jan 10 12:56 : player: played "四季予你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/没有理由.mp3; Failed to open '/home/storm/Music/our_music/没有理由.mp3': No such file or directory
+Jan 10 12:56 : player: played "没有理由.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/祖国-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/祖国-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "祖国-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/One And Only (唯你)-满舒克.mp3; Failed to open '/home/storm/Music/our_music/One And Only (唯你)-满舒克.mp3': No such file or directory
+Jan 10 12:56 : player: played "One And Only (唯你)-满舒克.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/一百万个可能-Christine Welch.mp3; Failed to open '/home/storm/Music/our_music/一百万个可能-Christine Welch.mp3': No such file or directory
+Jan 10 12:56 : player: played "一百万个可能-Christine Welch.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有梦可待-陈立农.mp3; Failed to open '/home/storm/Music/our_music/有梦可待-陈立农.mp3': No such file or directory
+Jan 10 12:56 : player: played "有梦可待-陈立农.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白羊.mp3; Failed to open '/home/storm/Music/our_music/白羊.mp3': No such file or directory
+Jan 10 12:56 : player: played "白羊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追梦赤子心.mp3; Failed to open '/home/storm/Music/our_music/追梦赤子心.mp3': No such file or directory
+Jan 10 12:56 : player: played "追梦赤子心.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/李白.mp3; Failed to open '/home/storm/Music/our_music/李白.mp3': No such file or directory
+Jan 10 12:56 : player: played "李白.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "我的天空-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/气象站台.mp3; Failed to open '/home/storm/Music/our_music/气象站台.mp3': No such file or directory
+Jan 10 12:56 : player: played "气象站台.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有理想.mp3; Failed to open '/home/storm/Music/our_music/有理想.mp3': No such file or directory
+Jan 10 12:56 : player: played "有理想.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有种-孟美岐.mp3; Failed to open '/home/storm/Music/our_music/有种-孟美岐.mp3': No such file or directory
+Jan 10 12:56 : player: played "有种-孟美岐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有些.mp3; Failed to open '/home/storm/Music/our_music/有些.mp3': No such file or directory
+Jan 10 12:56 : player: played "有些.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海-毛不易.mp3; Failed to open '/home/storm/Music/our_music/入海-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不舍-颜人中.mp3; Failed to open '/home/storm/Music/our_music/不舍-颜人中.mp3': No such file or directory
+Jan 10 12:56 : player: played "不舍-颜人中.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/MOM.mp3; Failed to open '/home/storm/Music/our_music/MOM.mp3': No such file or directory
+Jan 10 12:56 : player: played "MOM.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无人之岛.mp3; Failed to open '/home/storm/Music/our_music/无人之岛.mp3': No such file or directory
+Jan 10 12:56 : player: played "无人之岛.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/生来倔强-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/生来倔强-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "生来倔强-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Grew Up At Midnight.mp3; Failed to open '/home/storm/Music/our_music/Grew Up At Midnight.mp3': No such file or directory
+Jan 10 12:56 : player: played "Grew Up At Midnight.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/恋爱画板.mp3; Failed to open '/home/storm/Music/our_music/恋爱画板.mp3': No such file or directory
+Jan 10 12:56 : player: played "恋爱画板.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我可以.mp3; Failed to open '/home/storm/Music/our_music/我可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "我可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/嘲笑声-Big Daddy.mp3; Failed to open '/home/storm/Music/our_music/嘲笑声-Big Daddy.mp3': No such file or directory
+Jan 10 12:56 : player: played "嘲笑声-Big Daddy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/心似烟火.mp3; Failed to open '/home/storm/Music/our_music/心似烟火.mp3': No such file or directory
+Jan 10 12:56 : player: played "心似烟火.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的答案.mp3; Failed to open '/home/storm/Music/our_music/你的答案.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的答案.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/雨爱（雨上晴空）.mp3; Failed to open '/home/storm/Music/our_music/雨爱（雨上晴空）.mp3': No such file or directory
+Jan 10 12:56 : player: played "雨爱（雨上晴空）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/会不会.mp3; Failed to open '/home/storm/Music/our_music/会不会.mp3': No such file or directory
+Jan 10 12:56 : player: played "会不会.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/范倪Liu - 南半球与北海道.mp3; Failed to open '/home/storm/Music/our_music/范倪Liu - 南半球与北海道.mp3': No such file or directory
+Jan 10 12:56 : player: played "范倪Liu - 南半球与北海道.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你相信平行时空吗-司南.mp3; Failed to open '/home/storm/Music/our_music/你相信平行时空吗-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "你相信平行时空吗-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/空山新雨后-音阙诗听、锦零.mp3; Failed to open '/home/storm/Music/our_music/空山新雨后-音阙诗听、锦零.mp3': No such file or directory
+Jan 10 12:56 : player: played "空山新雨后-音阙诗听、锦零.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/晴时多云-F_yy.mp3; Failed to open '/home/storm/Music/our_music/晴时多云-F_yy.mp3': No such file or directory
+Jan 10 12:56 : player: played "晴时多云-F_yy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你对你的潜力一无所知.mp3; Failed to open '/home/storm/Music/our_music/你对你的潜力一无所知.mp3': No such file or directory
+Jan 10 12:56 : player: played "你对你的潜力一无所知.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/阿拉斯加海湾.mp3; Failed to open '/home/storm/Music/our_music/阿拉斯加海湾.mp3': No such file or directory
+Jan 10 12:56 : player: played "阿拉斯加海湾.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3; Failed to open '/home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3': No such file or directory
+Jan 10 12:56 : player: played "白月光与朱砂痣-大籽.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夜空中最亮的星.mp3; Failed to open '/home/storm/Music/our_music/夜空中最亮的星.mp3': No such file or directory
+Jan 10 12:56 : player: played "夜空中最亮的星.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/患失-小好14、金奕彤Kim$J.mp3; Failed to open '/home/storm/Music/our_music/患失-小好14、金奕彤Kim$J.mp3': No such file or directory
+Jan 10 12:56 : player: played "患失-小好14、金奕彤Kim$J.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/着迷.mp3; Failed to open '/home/storm/Music/our_music/着迷.mp3': No such file or directory
+Jan 10 12:56 : player: played "着迷.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/代名词.mp3; Failed to open '/home/storm/Music/our_music/代名词.mp3': No such file or directory
+Jan 10 12:56 : player: played "代名词.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无名之辈-陈雪燃.mp3; Failed to open '/home/storm/Music/our_music/无名之辈-陈雪燃.mp3': No such file or directory
+Jan 10 12:56 : player: played "无名之辈-陈雪燃.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/粉色星球.mp3; Failed to open '/home/storm/Music/our_music/粉色星球.mp3': No such file or directory
+Jan 10 12:56 : player: played "粉色星球.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/七里香-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/七里香-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "七里香-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/将你归还于人海-妍狗.mp3; Failed to open '/home/storm/Music/our_music/将你归还于人海-妍狗.mp3': No such file or directory
+Jan 10 12:56 : player: played "将你归还于人海-妍狗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追风-颜人中.mp3; Failed to open '/home/storm/Music/our_music/追风-颜人中.mp3': No such file or directory
+Jan 10 12:56 : player: played "追风-颜人中.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Beyond-光辉岁月.mp3; Failed to open '/home/storm/Music/our_music/Beyond-光辉岁月.mp3': No such file or directory
+Jan 10 12:56 : player: played "Beyond-光辉岁月.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/耳朵.mp3; Failed to open '/home/storm/Music/our_music/耳朵.mp3': No such file or directory
+Jan 10 12:56 : player: played "耳朵.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/潮汐.mp3; Failed to open '/home/storm/Music/our_music/潮汐.mp3': No such file or directory
+Jan 10 12:56 : player: played "潮汐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/执迷不悟.mp3; Failed to open '/home/storm/Music/our_music/执迷不悟.mp3': No such file or directory
+Jan 10 12:56 : player: played "执迷不悟.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/喀秋莎.mp3; Failed to open '/home/storm/Music/our_music/喀秋莎.mp3': No such file or directory
+Jan 10 12:56 : player: played "喀秋莎.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/大鱼.mp3; Failed to open '/home/storm/Music/our_music/大鱼.mp3': No such file or directory
+Jan 10 12:56 : player: played "大鱼.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海.mp3; Failed to open '/home/storm/Music/our_music/入海.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最初的梦想-井柏然.mp3; Failed to open '/home/storm/Music/our_music/最初的梦想-井柏然.mp3': No such file or directory
+Jan 10 12:56 : player: played "最初的梦想-井柏然.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/放空.mp3; Failed to open '/home/storm/Music/our_music/放空.mp3': No such file or directory
+Jan 10 12:56 : player: played "放空.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/陪你走过一年四季.mp3; Failed to open '/home/storm/Music/our_music/陪你走过一年四季.mp3': No such file or directory
+Jan 10 12:56 : player: played "陪你走过一年四季.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/璨乐团 - 飞-致我们的星辰大海.mp3; Failed to open '/home/storm/Music/our_music/璨乐团 - 飞-致我们的星辰大海.mp3': No such file or directory
+Jan 10 12:56 : player: played "璨乐团 - 飞-致我们的星辰大海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星星才唱歌.mp3; Failed to open '/home/storm/Music/our_music/星星才唱歌.mp3': No such file or directory
+Jan 10 12:56 : player: played "星星才唱歌.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/厚颜无耻.mp3; Failed to open '/home/storm/Music/our_music/厚颜无耻.mp3': No such file or directory
+Jan 10 12:56 : player: played "厚颜无耻.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/谜底.mp3; Failed to open '/home/storm/Music/our_music/谜底.mp3': No such file or directory
+Jan 10 12:56 : player: played "谜底.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/五四版错位时空.mp3; Failed to open '/home/storm/Music/our_music/五四版错位时空.mp3': No such file or directory
+Jan 10 12:56 : player: played "五四版错位时空.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3; Failed to open '/home/storm/Music/our_music/我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3': No such file or directory
+Jan 10 12:56 : player: played "我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/青葱岁月.mp3; Failed to open '/home/storm/Music/our_music/青葱岁月.mp3': No such file or directory
+Jan 10 12:56 : player: played "青葱岁月.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我都明白.mp3; Failed to open '/home/storm/Music/our_music/我都明白.mp3': No such file or directory
+Jan 10 12:56 : player: played "我都明白.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去年夏天-王大毛.mp3; Failed to open '/home/storm/Music/our_music/去年夏天-王大毛.mp3': No such file or directory
+Jan 10 12:56 : player: played "去年夏天-王大毛.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/等风吹-不是花火呀、小田音乐社.mp3; Failed to open '/home/storm/Music/our_music/等风吹-不是花火呀、小田音乐社.mp3': No such file or directory
+Jan 10 12:56 : player: played "等风吹-不是花火呀、小田音乐社.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/要不要买菜-下山.mp3; Failed to open '/home/storm/Music/our_music/要不要买菜-下山.mp3': No such file or directory
+Jan 10 12:56 : player: played "要不要买菜-下山.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/平凡的一天-毛不易.mp3; Failed to open '/home/storm/Music/our_music/平凡的一天-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "平凡的一天-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/世间美好与你环环相扣.mp3; Failed to open '/home/storm/Music/our_music/世间美好与你环环相扣.mp3': No such file or directory
+Jan 10 12:56 : player: played "世间美好与你环环相扣.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/梦然 - 少年.mp3; Failed to open '/home/storm/Music/our_music/梦然 - 少年.mp3': No such file or directory
+Jan 10 12:56 : player: played "梦然 - 少年.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我的名字-袁小葳.mp3; Failed to open '/home/storm/Music/our_music/我的名字-袁小葳.mp3': No such file or directory
+Jan 10 12:56 : player: played "我的名字-袁小葳.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/See You Again-See You Again.mp3; Failed to open '/home/storm/Music/our_music/See You Again-See You Again.mp3': No such file or directory
+Jan 10 12:56 : player: played "See You Again-See You Again.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/怒放的生命.mp3; Failed to open '/home/storm/Music/our_music/怒放的生命.mp3': No such file or directory
+Jan 10 12:56 : player: played "怒放的生命.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/晴天-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/晴天-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "晴天-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/目及皆是你.mp3; Failed to open '/home/storm/Music/our_music/目及皆是你.mp3': No such file or directory
+Jan 10 12:56 : player: played "目及皆是你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星河万里.mp3; Failed to open '/home/storm/Music/our_music/星河万里.mp3': No such file or directory
+Jan 10 12:56 : player: played "星河万里.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/妈妈的话.mp3; Failed to open '/home/storm/Music/our_music/妈妈的话.mp3': No such file or directory
+Jan 10 12:56 : player: played "妈妈的话.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/余生皆是你-小蓝背心.mp3; Failed to open '/home/storm/Music/our_music/余生皆是你-小蓝背心.mp3': No such file or directory
+Jan 10 12:56 : player: played "余生皆是你-小蓝背心.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不是花火呀 - 记·念.mp3; Failed to open '/home/storm/Music/our_music/不是花火呀 - 记·念.mp3': No such file or directory
+Jan 10 12:56 : player: played "不是花火呀 - 记·念.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/稻香-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/稻香-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "稻香-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3; Failed to open '/home/storm/Music/our_music/冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3': No such file or directory
+Jan 10 12:56 : player: played "冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/骄傲的少年-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/骄傲的少年-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力 - F_yy.mp3; Failed to open '/home/storm/Music/our_music/万有引力 - F_yy.mp3': No such file or directory
+Jan 10 12:56 : player: played "骄傲的少年-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/光.mp3; Failed to open '/home/storm/Music/our_music/光.mp3': No such file or directory
+Jan 10 12:56 : player: played "光.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/目及皆是你.mp3; Failed to open '/home/storm/Music/our_music/目及皆是你.mp3': No such file or directory
+Jan 10 12:56 : player: played "目及皆是你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星星才唱歌.mp3; Failed to open '/home/storm/Music/our_music/星星才唱歌.mp3': No such file or directory
+Jan 10 12:56 : player: played "星星才唱歌.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/极光-于果.mp3; Failed to open '/home/storm/Music/our_music/极光-于果.mp3': No such file or directory
+Jan 10 12:56 : player: played "极光-于果.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星星才唱歌.mp3; Failed to open '/home/storm/Music/our_music/星星才唱歌.mp3': No such file or directory
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不喜欢下雨天.mp3; Failed to open '/home/storm/Music/our_music/不喜欢下雨天.mp3': No such file or directory
+Jan 10 12:56 : player: played "星星才唱歌.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不喜欢下雨天.mp3; Failed to open '/home/storm/Music/our_music/不喜欢下雨天.mp3': No such file or directory
+Jan 10 12:56 : player: played "不喜欢下雨天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你相信平行时空吗-司南.mp3; Failed to open '/home/storm/Music/our_music/你相信平行时空吗-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "你相信平行时空吗-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/陪你走过一年四季.mp3; Failed to open '/home/storm/Music/our_music/陪你走过一年四季.mp3': No such file or directory
+Jan 10 12:56 : player: played "陪你走过一年四季.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/潮汐.mp3; Failed to open '/home/storm/Music/our_music/潮汐.mp3': No such file or directory
+Jan 10 12:56 : player: played "潮汐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/所念皆星河-房东的猫.mp3; Failed to open '/home/storm/Music/our_music/所念皆星河-房东的猫.mp3': No such file or directory
+Jan 10 12:56 : player: played "所念皆星河-房东的猫.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/华晨宇 - 好想爱这个世界啊.mp3; Failed to open '/home/storm/Music/our_music/华晨宇 - 好想爱这个世界啊.mp3': No such file or directory
+Jan 10 12:56 : player: played "华晨宇 - 好想爱这个世界啊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有种-孟美岐.mp3; Failed to open '/home/storm/Music/our_music/有种-孟美岐.mp3': No such file or directory
+Jan 10 12:56 : player: played "有种-孟美岐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小蓝背心 - 微风与你.mp3; Failed to open '/home/storm/Music/our_music/小蓝背心 - 微风与你.mp3': No such file or directory
+Jan 10 12:56 : player: played "小蓝背心 - 微风与你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白羊.mp3; Failed to open '/home/storm/Music/our_music/白羊.mp3': No such file or directory
+Jan 10 12:56 : player: played "白羊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我的名字-袁小葳.mp3; Failed to open '/home/storm/Music/our_music/我的名字-袁小葳.mp3': No such file or directory
+Jan 10 12:56 : player: played "我的名字-袁小葳.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/和风赴你-司南.mp3; Failed to open '/home/storm/Music/our_music/和风赴你-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "和风赴你-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/世间美好与你环环相扣.mp3; Failed to open '/home/storm/Music/our_music/世间美好与你环环相扣.mp3': No such file or directory
+Jan 10 12:56 : player: played "世间美好与你环环相扣.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夜空中最亮的星.mp3; Failed to open '/home/storm/Music/our_music/夜空中最亮的星.mp3': No such file or directory
+Jan 10 12:56 : player: played "夜空中最亮的星.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/飞得更高.mp3; Failed to open '/home/storm/Music/our_music/飞得更高.mp3': No such file or directory
+Jan 10 12:56 : player: played "飞得更高.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3; Failed to open '/home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3': No such file or directory
+Jan 10 12:56 : player: played "爱与狂想-新乐尘符、谣君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Umbrella (Matte Remix).mp3; Failed to open '/home/storm/Music/our_music/Umbrella (Matte Remix).mp3': No such file or directory
+Jan 10 12:56 : player: played "Umbrella (Matte Remix).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 如果呢（女声版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/妈妈的话.mp3; Failed to open '/home/storm/Music/our_music/妈妈的话.mp3': No such file or directory
+Jan 10 12:56 : player: played "妈妈的话.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/国际歌-唐朝乐队.mp3; Failed to open '/home/storm/Music/our_music/国际歌-唐朝乐队.mp3': No such file or directory
+Jan 10 12:56 : player: played "国际歌-唐朝乐队.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/可不可以.mp3; Failed to open '/home/storm/Music/our_music/可不可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "可不可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/嘲笑声-Big Daddy.mp3; Failed to open '/home/storm/Music/our_music/嘲笑声-Big Daddy.mp3': No such file or directory
+Jan 10 12:56 : player: played "嘲笑声-Big Daddy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/坠落星空-小星星Aurora.mp3; Failed to open '/home/storm/Music/our_music/坠落星空-小星星Aurora.mp3': No such file or directory
+Jan 10 12:56 : player: played "坠落星空-小星星Aurora.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/听妈妈的话-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/听妈妈的话-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "听妈妈的话-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/dream it possible.mp3; Failed to open '/home/storm/Music/our_music/dream it possible.mp3': No such file or directory
+Jan 10 12:56 : player: played "dream it possible.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/7 Years-Lukas Graham.mp3; Failed to open '/home/storm/Music/our_music/7 Years-Lukas Graham.mp3': No such file or directory
+Jan 10 12:56 : player: played "7 Years-Lukas Graham.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我可以.mp3; Failed to open '/home/storm/Music/our_music/我可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "我可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的轮廓.mp3; Failed to open '/home/storm/Music/our_music/你的轮廓.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的轮廓.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/篝火旁.mp3; Failed to open '/home/storm/Music/our_music/篝火旁.mp3': No such file or directory
+Jan 10 12:56 : player: played "篝火旁.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3; Failed to open '/home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3': No such file or directory
+Jan 10 12:56 : player: played "JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/平凡的一天-毛不易.mp3; Failed to open '/home/storm/Music/our_music/平凡的一天-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "平凡的一天-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 麦浪.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/四季予你.mp3; Failed to open '/home/storm/Music/our_music/四季予你.mp3': No such file or directory
+Jan 10 12:56 : player: played "四季予你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/心似烟火.mp3; Failed to open '/home/storm/Music/our_music/心似烟火.mp3': No such file or directory
+Jan 10 12:56 : player: played "心似烟火.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/MOM.mp3; Failed to open '/home/storm/Music/our_music/MOM.mp3': No such file or directory
+Jan 10 12:56 : player: played "MOM.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/love story.mp3; Failed to open '/home/storm/Music/our_music/love story.mp3': No such file or directory
+Jan 10 12:56 : player: played "love story.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Beyond-光辉岁月.mp3; Failed to open '/home/storm/Music/our_music/Beyond-光辉岁月.mp3': No such file or directory
+Jan 10 12:56 : player: played "Beyond-光辉岁月.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3; Failed to open '/home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3': No such file or directory
+Jan 10 12:56 : player: played "My Heart Will Go On - 满舒克、MuSik I.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 如果呢（女声版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/没有理由.mp3; Failed to open '/home/storm/Music/our_music/没有理由.mp3': No such file or directory
+Jan 10 12:56 : player: played "没有理由.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/像我这样的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/像我这样的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "像我这样的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/生来倔强-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/生来倔强-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "生来倔强-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你相信平行时空吗-司南.mp3; Failed to open '/home/storm/Music/our_music/你相信平行时空吗-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "你相信平行时空吗-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/NCF-艾力,Bater Offical - 黎明前的黑暗.mp3; Failed to open '/home/storm/Music/our_music/NCF-艾力,Bater Offical - 黎明前的黑暗.mp3': No such file or directory
+Jan 10 12:56 : player: played "NCF-艾力,Bater Offical - 黎明前的黑暗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3; Failed to open '/home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3': No such file or directory
+Jan 10 12:56 : player: played "提拉米苏-新乐尘符、李思雨.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/妈妈的话.mp3; Failed to open '/home/storm/Music/our_music/妈妈的话.mp3': No such file or directory
+Jan 10 12:56 : player: played "妈妈的话.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的答案.mp3; Failed to open '/home/storm/Music/our_music/你的答案.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的答案.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/一起去风里吧-小蓝背心.mp3; Failed to open '/home/storm/Music/our_music/一起去风里吧-小蓝背心.mp3': No such file or directory
+Jan 10 12:56 : player: played "一起去风里吧-小蓝背心.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/天与海-Kiki.mp3; Failed to open '/home/storm/Music/our_music/天与海-Kiki.mp3': No such file or directory
+Jan 10 12:56 : player: played "天与海-Kiki.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "我的天空-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我可以.mp3; Failed to open '/home/storm/Music/our_music/我可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "我可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/水星记.mp3; Failed to open '/home/storm/Music/our_music/水星记.mp3': No such file or directory
+Jan 10 12:56 : player: played "水星记.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夜空中最亮的星.mp3; Failed to open '/home/storm/Music/our_music/夜空中最亮的星.mp3': No such file or directory
+Jan 10 12:56 : player: played "夜空中最亮的星.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/朱砂.mp3; Failed to open '/home/storm/Music/our_music/朱砂.mp3': No such file or directory
+Jan 10 12:56 : player: played "朱砂.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3; Failed to open '/home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3': No such file or directory
+Jan 10 12:56 : player: played "南征北战NZBZ - 我的天空(不插电版).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无名的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/无名的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "无名的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/阿拉斯加海湾.mp3; Failed to open '/home/storm/Music/our_music/阿拉斯加海湾.mp3': No such file or directory
+Jan 10 12:56 : player: played "阿拉斯加海湾.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/One And Only (唯你)-满舒克.mp3; Failed to open '/home/storm/Music/our_music/One And Only (唯你)-满舒克.mp3': No such file or directory
+Jan 10 12:56 : player: played "One And Only (唯你)-满舒克.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/目及皆是你.mp3; Failed to open '/home/storm/Music/our_music/目及皆是你.mp3': No such file or directory
+Jan 10 12:56 : player: played "目及皆是你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/那时初夏.mp3; Failed to open '/home/storm/Music/our_music/那时初夏.mp3': No such file or directory
+Jan 10 12:56 : player: played "那时初夏.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力.mp3; Failed to open '/home/storm/Music/our_music/万有引力.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追光者-岑宁儿.mp3; Failed to open '/home/storm/Music/our_music/追光者-岑宁儿.mp3': No such file or directory
+Jan 10 12:56 : player: played "追光者-岑宁儿.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/会不会.mp3; Failed to open '/home/storm/Music/our_music/会不会.mp3': No such file or directory
+Jan 10 12:56 : player: played "会不会.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/患失-小好14、金奕彤Kim$J.mp3; Failed to open '/home/storm/Music/our_music/患失-小好14、金奕彤Kim$J.mp3': No such file or directory
+Jan 10 12:56 : player: played "患失-小好14、金奕彤Kim$J.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/可不可以.mp3; Failed to open '/home/storm/Music/our_music/可不可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "可不可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/恋爱画板.mp3; Failed to open '/home/storm/Music/our_music/恋爱画板.mp3': No such file or directory
+Jan 10 12:56 : player: played "恋爱画板.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海-毛不易.mp3; Failed to open '/home/storm/Music/our_music/入海-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/起风了.mp3; Failed to open '/home/storm/Music/our_music/起风了.mp3': No such file or directory
+Jan 10 12:56 : player: played "起风了.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/奔赴-司南.mp3; Failed to open '/home/storm/Music/our_music/奔赴-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "奔赴-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有些.mp3; Failed to open '/home/storm/Music/our_music/有些.mp3': No such file or directory
+Jan 10 12:56 : player: played "有些.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小蓝背心 - 微风与你.mp3; Failed to open '/home/storm/Music/our_music/小蓝背心 - 微风与你.mp3': No such file or directory
+Jan 10 12:56 : player: played "小蓝背心 - 微风与你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Alan Walker - Faded.mp3; Failed to open '/home/storm/Music/our_music/Alan Walker - Faded.mp3': No such file or directory
+Jan 10 12:56 : player: played "Alan Walker - Faded.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有梦的人别怕-陆思恒.mp3; Failed to open '/home/storm/Music/our_music/有梦的人别怕-陆思恒.mp3': No such file or directory
+Jan 10 12:56 : player: played "有梦的人别怕-陆思恒.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3; Failed to open '/home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3': No such file or directory
+Jan 10 12:56 : player: played "爱与狂想-新乐尘符、谣君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Carry You Home(feat.Maruja Retana&RUI).mp3; Failed to open '/home/storm/Music/our_music/Carry You Home(feat.Maruja Retana&RUI).mp3': No such file or directory
+Jan 10 12:56 : player: played "Carry You Home(feat.Maruja Retana&RUI).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我在未来等你-好妹妹.mp3; Failed to open '/home/storm/Music/our_music/我在未来等你-好妹妹.mp3': No such file or directory
+Jan 10 12:56 : player: played "我在未来等你-好妹妹.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/告白气球-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/告白气球-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "告白气球-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力.mp3; Failed to open '/home/storm/Music/our_music/万有引力.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/和风赴你-司南.mp3; Failed to open '/home/storm/Music/our_music/和风赴你-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "和风赴你-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/空山新雨后-音阙诗听、锦零.mp3; Failed to open '/home/storm/Music/our_music/空山新雨后-音阙诗听、锦零.mp3': No such file or directory
+Jan 10 12:56 : player: played "空山新雨后-音阙诗听、锦零.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夜空中最亮的星.mp3; Failed to open '/home/storm/Music/our_music/夜空中最亮的星.mp3': No such file or directory
+Jan 10 12:56 : player: played "夜空中最亮的星.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Beyond-光辉岁月.mp3; Failed to open '/home/storm/Music/our_music/Beyond-光辉岁月.mp3': No such file or directory
+Jan 10 12:56 : player: played "Beyond-光辉岁月.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有梦的人别怕-陆思恒.mp3; Failed to open '/home/storm/Music/our_music/有梦的人别怕-陆思恒.mp3': No such file or directory
+Jan 10 12:56 : player: played "有梦的人别怕-陆思恒.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3; Failed to open '/home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3': No such file or directory
+Jan 10 12:56 : player: played "JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/妈妈的话.mp3; Failed to open '/home/storm/Music/our_music/妈妈的话.mp3': No such file or directory
+Jan 10 12:56 : player: played "妈妈的话.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/心似烟火.mp3; Failed to open '/home/storm/Music/our_music/心似烟火.mp3': No such file or directory
+Jan 10 12:56 : player: played "心似烟火.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小虎队 - 爱.mp3; Failed to open '/home/storm/Music/our_music/小虎队 - 爱.mp3': No such file or directory
+Jan 10 12:56 : player: played "小虎队 - 爱.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/湖-李棒棒Muti.mp3; Failed to open '/home/storm/Music/our_music/湖-李棒棒Muti.mp3': No such file or directory
+Jan 10 12:56 : player: played "湖-李棒棒Muti.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/骄傲的少年-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/骄傲的少年-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "骄傲的少年-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有梦可待-陈立农.mp3; Failed to open '/home/storm/Music/our_music/有梦可待-陈立农.mp3': No such file or directory
+Jan 10 12:56 : player: played "有梦可待-陈立农.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最美的期待.mp3; Failed to open '/home/storm/Music/our_music/最美的期待.mp3': No such file or directory
+Jan 10 12:56 : player: played "最美的期待.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有些.mp3; Failed to open '/home/storm/Music/our_music/有些.mp3': No such file or directory
+Jan 10 12:56 : player: played "有些.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不是花火呀、小田音乐社 - 如一.mp3; Failed to open '/home/storm/Music/our_music/不是花火呀、小田音乐社 - 如一.mp3': No such file or directory
+Jan 10 12:56 : player: played "不是花火呀、小田音乐社 - 如一.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有种-孟美岐.mp3; Failed to open '/home/storm/Music/our_music/有种-孟美岐.mp3': No such file or directory
+Jan 10 12:56 : player: played "有种-孟美岐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3; Failed to open '/home/storm/Music/our_music/冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3': No such file or directory
+Jan 10 12:56 : player: played "冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去流浪-周笔畅.mp3; Failed to open '/home/storm/Music/our_music/去流浪-周笔畅.mp3': No such file or directory
+Jan 10 12:56 : player: played "去流浪-周笔畅.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/陪你走过一年四季.mp3; Failed to open '/home/storm/Music/our_music/陪你走过一年四季.mp3': No such file or directory
+Jan 10 12:56 : player: played "陪你走过一年四季.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追风-颜人中.mp3; Failed to open '/home/storm/Music/our_music/追风-颜人中.mp3': No such file or directory
+Jan 10 12:56 : player: played "追风-颜人中.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有理想.mp3; Failed to open '/home/storm/Music/our_music/有理想.mp3': No such file or directory
+Jan 10 12:56 : player: played "有理想.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/7 Years-Lukas Graham.mp3; Failed to open '/home/storm/Music/our_music/7 Years-Lukas Graham.mp3': No such file or directory
+Jan 10 12:56 : player: played "7 Years-Lukas Graham.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 如果呢（女声版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/刘大壮 - 后来.mp3; Failed to open '/home/storm/Music/our_music/刘大壮 - 后来.mp3': No such file or directory
+Jan 10 12:56 : player: played "刘大壮 - 后来.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/来自.mp3; Failed to open '/home/storm/Music/our_music/来自.mp3': No such file or directory
+Jan 10 12:56 : player: played "来自.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3; Failed to open '/home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3': No such file or directory
+Jan 10 12:56 : player: played "白月光与朱砂痣-大籽.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/烟火里的尘埃.mp3; Failed to open '/home/storm/Music/our_music/烟火里的尘埃.mp3': No such file or directory
+Jan 10 12:56 : player: played "烟火里的尘埃.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/like1999.mp3; Failed to open '/home/storm/Music/our_music/like1999.mp3': No such file or directory
+Jan 10 12:56 : player: played "like1999.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/迷失幻境-IN.mp3; Failed to open '/home/storm/Music/our_music/迷失幻境-IN.mp3': No such file or directory
+Jan 10 12:56 : player: played "迷失幻境-IN.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/祖国-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/祖国-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "祖国-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无人之岛.mp3; Failed to open '/home/storm/Music/our_music/无人之岛.mp3': No such file or directory
+Jan 10 12:56 : player: played "无人之岛.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/嘲笑声-Big Daddy.mp3; Failed to open '/home/storm/Music/our_music/嘲笑声-Big Daddy.mp3': No such file or directory
+Jan 10 12:56 : player: played "嘲笑声-Big Daddy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星辰大海.mp3; Failed to open '/home/storm/Music/our_music/星辰大海.mp3': No such file or directory
+Jan 10 12:56 : player: played "星辰大海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不知所措.mp3; Failed to open '/home/storm/Music/our_music/不知所措.mp3': No such file or directory
+Jan 10 12:56 : player: played "不知所措.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你对你的潜力一无所知.mp3; Failed to open '/home/storm/Music/our_music/你对你的潜力一无所知.mp3': No such file or directory
+Jan 10 12:56 : player: played "你对你的潜力一无所知.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海-毛不易.mp3; Failed to open '/home/storm/Music/our_music/入海-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/距离高考还有.mp3; Failed to open '/home/storm/Music/our_music/距离高考还有.mp3': No such file or directory
+Jan 10 12:56 : player: played "距离高考还有.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小蓝背心 - 微风与你.mp3; Failed to open '/home/storm/Music/our_music/小蓝背心 - 微风与你.mp3': No such file or directory
+Jan 10 12:56 : player: played "小蓝背心 - 微风与你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/没有理由.mp3; Failed to open '/home/storm/Music/our_music/没有理由.mp3': No such file or directory
+Jan 10 12:56 : player: played "没有理由.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/极光-于果.mp3; Failed to open '/home/storm/Music/our_music/极光-于果.mp3': No such file or directory
+Jan 10 12:56 : player: played "极光-于果.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/喀秋莎.mp3; Failed to open '/home/storm/Music/our_music/喀秋莎.mp3': No such file or directory
+Jan 10 12:56 : player: played "喀秋莎.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3; Failed to open '/home/storm/Music/our_music/我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3': No such file or directory
+Jan 10 12:56 : player: played "我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/晴时多云-F_yy.mp3; Failed to open '/home/storm/Music/our_music/晴时多云-F_yy.mp3': No such file or directory
+Jan 10 12:56 : player: played "晴时多云-F_yy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力 - F_yy.mp3; Failed to open '/home/storm/Music/our_music/万有引力 - F_yy.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力 - F_yy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Grew Up At Midnight.mp3; Failed to open '/home/storm/Music/our_music/Grew Up At Midnight.mp3': No such file or directory
+Jan 10 12:56 : player: played "Grew Up At Midnight.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/生来倔强-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/生来倔强-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "生来倔强-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3; Failed to open '/home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3': No such file or directory
+Jan 10 12:56 : player: played "爱与狂想-新乐尘符、谣君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/飞得更高.mp3; Failed to open '/home/storm/Music/our_music/飞得更高.mp3': No such file or directory
+Jan 10 12:56 : player: played "飞得更高.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星空剪影.mp3; Failed to open '/home/storm/Music/our_music/星空剪影.mp3': No such file or directory
+Jan 10 12:56 : player: played "星空剪影.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追梦赤子心.mp3; Failed to open '/home/storm/Music/our_music/追梦赤子心.mp3': No such file or directory
+Jan 10 12:56 : player: played "追梦赤子心.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/游山恋.mp3; Failed to open '/home/storm/Music/our_music/游山恋.mp3': No such file or directory
+Jan 10 12:56 : player: played "游山恋.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/目及皆是你.mp3; Failed to open '/home/storm/Music/our_music/目及皆是你.mp3': No such file or directory
+Jan 10 12:56 : player: played "目及皆是你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/致你-yihuik苡慧.mp3; Failed to open '/home/storm/Music/our_music/致你-yihuik苡慧.mp3': No such file or directory
+Jan 10 12:56 : player: played "致你-yihuik苡慧.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/云端飞行-是二智呀.mp3; Failed to open '/home/storm/Music/our_music/云端飞行-是二智呀.mp3': No such file or directory
+Jan 10 12:56 : player: played "云端飞行-是二智呀.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/那女孩对我说.mp3; Failed to open '/home/storm/Music/our_music/那女孩对我说.mp3': No such file or directory
+Jan 10 12:56 : player: played "那女孩对我说.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/起风了.mp3; Failed to open '/home/storm/Music/our_music/起风了.mp3': No such file or directory
+Jan 10 12:56 : player: played "起风了.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Alan Walker - Faded.mp3; Failed to open '/home/storm/Music/our_music/Alan Walker - Faded.mp3': No such file or directory
+Jan 10 12:56 : player: played "Alan Walker - Faded.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/一百万个可能-Christine Welch.mp3; Failed to open '/home/storm/Music/our_music/一百万个可能-Christine Welch.mp3': No such file or directory
+Jan 10 12:56 : player: played "一百万个可能-Christine Welch.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/love story.mp3; Failed to open '/home/storm/Music/our_music/love story.mp3': No such file or directory
+Jan 10 12:56 : player: played "love story.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夏夜灯塔.mp3; Failed to open '/home/storm/Music/our_music/夏夜灯塔.mp3': No such file or directory
+Jan 10 12:56 : player: played "夏夜灯塔.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/厚颜无耻.mp3; Failed to open '/home/storm/Music/our_music/厚颜无耻.mp3': No such file or directory
+Jan 10 12:56 : player: played "厚颜无耻.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 麦浪.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/平凡的一天-毛不易.mp3; Failed to open '/home/storm/Music/our_music/平凡的一天-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "平凡的一天-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/那时初夏.mp3; Failed to open '/home/storm/Music/our_music/那时初夏.mp3': No such file or directory
+Jan 10 12:56 : player: played "那时初夏.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/任然 - 疑心病.mp3; Failed to open '/home/storm/Music/our_music/任然 - 疑心病.mp3': No such file or directory
+Jan 10 12:56 : player: played "任然 - 疑心病.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/等风吹-不是花火呀、小田音乐社.mp3; Failed to open '/home/storm/Music/our_music/等风吹-不是花火呀、小田音乐社.mp3': No such file or directory
+Jan 10 12:56 : player: played "等风吹-不是花火呀、小田音乐社.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/阿拉斯加海湾.mp3; Failed to open '/home/storm/Music/our_music/阿拉斯加海湾.mp3': No such file or directory
+Jan 10 12:56 : player: played "阿拉斯加海湾.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/粉色星球.mp3; Failed to open '/home/storm/Music/our_music/粉色星球.mp3': No such file or directory
+Jan 10 12:56 : player: played "粉色星球.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/回到夏天.mp3; Failed to open '/home/storm/Music/our_music/回到夏天.mp3': No such file or directory
+Jan 10 12:56 : player: played "回到夏天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最初的梦想.mp3; Failed to open '/home/storm/Music/our_music/最初的梦想.mp3': No such file or directory
+Jan 10 12:56 : player: played "最初的梦想.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "我的天空-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/朱砂.mp3; Failed to open '/home/storm/Music/our_music/朱砂.mp3': No such file or directory
+Jan 10 12:56 : player: played "朱砂.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最初的梦想-井柏然.mp3; Failed to open '/home/storm/Music/our_music/最初的梦想-井柏然.mp3': No such file or directory
+Jan 10 12:56 : player: played "最初的梦想-井柏然.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追光者-岑宁儿.mp3; Failed to open '/home/storm/Music/our_music/追光者-岑宁儿.mp3': No such file or directory
+Jan 10 12:56 : player: played "追光者-岑宁儿.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/dream it possible.mp3; Failed to open '/home/storm/Music/our_music/dream it possible.mp3': No such file or directory
+Jan 10 12:56 : player: played "dream it possible.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/勇气.mp3; Failed to open '/home/storm/Music/our_music/勇气.mp3': No such file or directory
+Jan 10 12:56 : player: played "勇气.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/余生皆是你-小蓝背心.mp3; Failed to open '/home/storm/Music/our_music/余生皆是你-小蓝背心.mp3': No such file or directory
+Jan 10 12:56 : player: played "余生皆是你-小蓝背心.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去流浪.mp3; Failed to open '/home/storm/Music/our_music/去流浪.mp3': No such file or directory
+Jan 10 12:56 : player: played "去流浪.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不舍-颜人中.mp3; Failed to open '/home/storm/Music/our_music/不舍-颜人中.mp3': No such file or directory
+Jan 10 12:56 : player: played "不舍-颜人中.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/听妈妈的话-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/听妈妈的话-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "听妈妈的话-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的星环.mp3; Failed to open '/home/storm/Music/our_music/你的星环.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的星环.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你曾是少年.mp3; Failed to open '/home/storm/Music/our_music/你曾是少年.mp3': No such file or directory
+Jan 10 12:56 : player: played "你曾是少年.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/水星记.mp3; Failed to open '/home/storm/Music/our_music/水星记.mp3': No such file or directory
+Jan 10 12:56 : player: played "水星记.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/气象站台.mp3; Failed to open '/home/storm/Music/our_music/气象站台.mp3': No such file or directory
+Jan 10 12:56 : player: played "气象站台.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/国际歌-唐朝乐队.mp3; Failed to open '/home/storm/Music/our_music/国际歌-唐朝乐队.mp3': No such file or directory
+Jan 10 12:56 : player: played "国际歌-唐朝乐队.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/所念皆星河-房东的猫.mp3; Failed to open '/home/storm/Music/our_music/所念皆星河-房东的猫.mp3': No such file or directory
+Jan 10 12:56 : player: played "所念皆星河-房东的猫.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你从未离去.mp3; Failed to open '/home/storm/Music/our_music/你从未离去.mp3': No such file or directory
+Jan 10 12:56 : player: played "你从未离去.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/奔赴-司南.mp3; Failed to open '/home/storm/Music/our_music/奔赴-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "奔赴-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/飞鸟和蝉.mp3; Failed to open '/home/storm/Music/our_music/飞鸟和蝉.mp3': No such file or directory
+Jan 10 12:56 : player: played "飞鸟和蝉.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/可不可以.mp3; Failed to open '/home/storm/Music/our_music/可不可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "可不可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/像我这样的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/像我这样的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "像我这样的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海.mp3; Failed to open '/home/storm/Music/our_music/入海.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/极光-于果.mp3; Failed to open '/home/storm/Music/our_music/极光-于果.mp3': No such file or directory
+Jan 10 12:56 : player: played "极光-于果.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海.mp3; Failed to open '/home/storm/Music/our_music/入海.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/李白.mp3; Failed to open '/home/storm/Music/our_music/李白.mp3': No such file or directory
+Jan 10 12:56 : player: played "李白.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/The Weather Man.mp3; Failed to open '/home/storm/Music/our_music/The Weather Man.mp3': No such file or directory
+Jan 10 12:56 : player: played "The Weather Man.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Carry You Home(feat.Maruja Retana&RUI).mp3; Failed to open '/home/storm/Music/our_music/Carry You Home(feat.Maruja Retana&RUI).mp3': No such file or directory
+Jan 10 12:56 : player: played "Carry You Home(feat.Maruja Retana&RUI).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/平凡的一天-毛不易.mp3; Failed to open '/home/storm/Music/our_music/平凡的一天-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "平凡的一天-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夏夜灯塔.mp3; Failed to open '/home/storm/Music/our_music/夏夜灯塔.mp3': No such file or directory
+Jan 10 12:56 : player: played "夏夜灯塔.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/要不要买菜-下山.mp3; Failed to open '/home/storm/Music/our_music/要不要买菜-下山.mp3': No such file or directory
+Jan 10 12:56 : player: played "要不要买菜-下山.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你对你的潜力一无所知.mp3; Failed to open '/home/storm/Music/our_music/你对你的潜力一无所知.mp3': No such file or directory
+Jan 10 12:56 : player: played "你对你的潜力一无所知.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 如果呢（女声版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不是花火呀 - 记·念.mp3; Failed to open '/home/storm/Music/our_music/不是花火呀 - 记·念.mp3': No such file or directory
+Jan 10 12:56 : player: played "不是花火呀 - 记·念.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3; Failed to open '/home/storm/Music/our_music/我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3': No such file or directory
+Jan 10 12:56 : player: played "我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有些.mp3; Failed to open '/home/storm/Music/our_music/有些.mp3': No such file or directory
+Jan 10 12:56 : player: played "有些.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我在未来等你-好妹妹.mp3; Failed to open '/home/storm/Music/our_music/我在未来等你-好妹妹.mp3': No such file or directory
+Jan 10 12:56 : player: played "我在未来等你-好妹妹.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/晴天-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/晴天-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "晴天-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小虎队 - 爱.mp3; Failed to open '/home/storm/Music/our_music/小虎队 - 爱.mp3': No such file or directory
+Jan 10 12:56 : player: played "小虎队 - 爱.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/like1999.mp3; Failed to open '/home/storm/Music/our_music/like1999.mp3': No such file or directory
+Jan 10 12:56 : player: played "like1999.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3; Failed to open '/home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3': No such file or directory
+Jan 10 12:56 : player: played "提拉米苏-新乐尘符、李思雨.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/璨乐团 - 飞-致我们的星辰大海.mp3; Failed to open '/home/storm/Music/our_music/璨乐团 - 飞-致我们的星辰大海.mp3': No such file or directory
+Jan 10 12:56 : player: played "璨乐团 - 飞-致我们的星辰大海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/趁你还年轻.mp3; Failed to open '/home/storm/Music/our_music/趁你还年轻.mp3': No such file or directory
+Jan 10 12:56 : player: played "趁你还年轻.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/飞鸟和蝉.mp3; Failed to open '/home/storm/Music/our_music/飞鸟和蝉.mp3': No such file or directory
+Jan 10 12:56 : player: played "飞鸟和蝉.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/陪你走过一年四季.mp3; Failed to open '/home/storm/Music/our_music/陪你走过一年四季.mp3': No such file or directory
+Jan 10 12:56 : player: played "陪你走过一年四季.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/祖国-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/祖国-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "祖国-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/听妈妈的话-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/听妈妈的话-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "听妈妈的话-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Alan Walker - Faded.mp3; Failed to open '/home/storm/Music/our_music/Alan Walker - Faded.mp3': No such file or directory
+Jan 10 12:56 : player: played "Alan Walker - Faded.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/空山新雨后-音阙诗听、锦零.mp3; Failed to open '/home/storm/Music/our_music/空山新雨后-音阙诗听、锦零.mp3': No such file or directory
+Jan 10 12:56 : player: played "空山新雨后-音阙诗听、锦零.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去流浪-周笔畅.mp3; Failed to open '/home/storm/Music/our_music/去流浪-周笔畅.mp3': No such file or directory
+Jan 10 12:56 : player: played "去流浪-周笔畅.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星空剪影.mp3; Failed to open '/home/storm/Music/our_music/星空剪影.mp3': No such file or directory
+Jan 10 12:56 : player: played "星空剪影.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/嘲笑声-Big Daddy.mp3; Failed to open '/home/storm/Music/our_music/嘲笑声-Big Daddy.mp3': No such file or directory
+Jan 10 12:56 : player: played "嘲笑声-Big Daddy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你曾是少年.mp3; Failed to open '/home/storm/Music/our_music/你曾是少年.mp3': No such file or directory
+Jan 10 12:56 : player: played "你曾是少年.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/起风了.mp3; Failed to open '/home/storm/Music/our_music/起风了.mp3': No such file or directory
+Jan 10 12:56 : player: played "起风了.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/飞得更高.mp3; Failed to open '/home/storm/Music/our_music/飞得更高.mp3': No such file or directory
+Jan 10 12:56 : player: played "飞得更高.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/喀秋莎.mp3; Failed to open '/home/storm/Music/our_music/喀秋莎.mp3': No such file or directory
+Jan 10 12:56 : player: played "喀秋莎.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/粉色星球.mp3; Failed to open '/home/storm/Music/our_music/粉色星球.mp3': No such file or directory
+Jan 10 12:56 : player: played "粉色星球.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我与青春在赛跑-刘惜君.mp3; Failed to open '/home/storm/Music/our_music/我与青春在赛跑-刘惜君.mp3': No such file or directory
+Jan 10 12:56 : player: played "我与青春在赛跑-刘惜君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/dream it possible.mp3; Failed to open '/home/storm/Music/our_music/dream it possible.mp3': No such file or directory
+Jan 10 12:56 : player: played "dream it possible.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/世界这么大还是遇见你-清新的小女孩（中文版）.mp3; Failed to open '/home/storm/Music/our_music/世界这么大还是遇见你-清新的小女孩（中文版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "世界这么大还是遇见你-清新的小女孩（中文版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/烟火里的尘埃.mp3; Failed to open '/home/storm/Music/our_music/烟火里的尘埃.mp3': No such file or directory
+Jan 10 12:56 : player: played "烟火里的尘埃.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/城市傍晚-毛不易.mp3; Failed to open '/home/storm/Music/our_music/城市傍晚-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "城市傍晚-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/沙漠骆驼-展展与罗罗.mp3; Failed to open '/home/storm/Music/our_music/沙漠骆驼-展展与罗罗.mp3': No such file or directory
+Jan 10 12:56 : player: played "沙漠骆驼-展展与罗罗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力 - F_yy.mp3; Failed to open '/home/storm/Music/our_music/万有引力 - F_yy.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力 - F_yy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/水星记.mp3; Failed to open '/home/storm/Music/our_music/水星记.mp3': No such file or directory
+Jan 10 12:56 : player: played "水星记.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/五四版错位时空.mp3; Failed to open '/home/storm/Music/our_music/五四版错位时空.mp3': No such file or directory
+Jan 10 12:56 : player: played "五四版错位时空.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/七里香-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/七里香-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "七里香-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/银河与星斗.mp3; Failed to open '/home/storm/Music/our_music/银河与星斗.mp3': No such file or directory
+Jan 10 12:56 : player: played "银河与星斗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/奔赴-司南.mp3; Failed to open '/home/storm/Music/our_music/奔赴-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "奔赴-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/命运.mp3; Failed to open '/home/storm/Music/our_music/命运.mp3': No such file or directory
+Jan 10 12:56 : player: played "命运.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/稻香-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/稻香-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "稻香-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/那女孩对我说.mp3; Failed to open '/home/storm/Music/our_music/那女孩对我说.mp3': No such file or directory
+Jan 10 12:56 : player: played "那女孩对我说.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去年夏天-王大毛.mp3; Failed to open '/home/storm/Music/our_music/去年夏天-王大毛.mp3': No such file or directory
+Jan 10 12:56 : player: played "去年夏天-王大毛.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小蓝背心 - 微风与你.mp3; Failed to open '/home/storm/Music/our_music/小蓝背心 - 微风与你.mp3': No such file or directory
+Jan 10 12:56 : player: played "小蓝背心 - 微风与你.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/一起去风里吧-小蓝背心.mp3; Failed to open '/home/storm/Music/our_music/一起去风里吧-小蓝背心.mp3': No such file or directory
+Jan 10 12:56 : player: played "一起去风里吧-小蓝背心.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/心似烟火.mp3; Failed to open '/home/storm/Music/our_music/心似烟火.mp3': No such file or directory
+Jan 10 12:56 : player: played "心似烟火.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无名的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/无名的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "无名的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力.mp3; Failed to open '/home/storm/Music/our_music/万有引力.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3; Failed to open '/home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3': No such file or directory
+Jan 10 12:56 : player: played "爱与狂想-新乐尘符、谣君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/冬眠.mp3; Failed to open '/home/storm/Music/our_music/冬眠.mp3': No such file or directory
+Jan 10 12:56 : player: played "冬眠.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最美的期待.mp3; Failed to open '/home/storm/Music/our_music/最美的期待.mp3': No such file or directory
+Jan 10 12:56 : player: played "最美的期待.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3; Failed to open '/home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3': No such file or directory
+Jan 10 12:56 : player: played "My Heart Will Go On - 满舒克、MuSik I.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海-毛不易.mp3; Failed to open '/home/storm/Music/our_music/入海-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星辰大海.mp3; Failed to open '/home/storm/Music/our_music/星辰大海.mp3': No such file or directory
+Jan 10 12:56 : player: played "星辰大海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/可不可以.mp3; Failed to open '/home/storm/Music/our_music/可不可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "可不可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 麦浪.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 麦浪.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星火.mp3; Failed to open '/home/storm/Music/our_music/星火.mp3': No such file or directory
+Jan 10 12:56 : player: played "星火.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/晴时多云-F_yy.mp3; Failed to open '/home/storm/Music/our_music/晴时多云-F_yy.mp3': No such file or directory
+Jan 10 12:56 : player: played "晴时多云-F_yy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有理想.mp3; Failed to open '/home/storm/Music/our_music/有理想.mp3': No such file or directory
+Jan 10 12:56 : player: played "有理想.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/骄傲的少年-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/骄傲的少年-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "骄傲的少年-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/来自.mp3; Failed to open '/home/storm/Music/our_music/来自.mp3': No such file or directory
+Jan 10 12:56 : player: played "来自.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/范倪Liu - 南半球与北海道.mp3; Failed to open '/home/storm/Music/our_music/范倪Liu - 南半球与北海道.mp3': No such file or directory
+Jan 10 12:56 : player: played "范倪Liu - 南半球与北海道.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/妈妈的话.mp3; Failed to open '/home/storm/Music/our_music/妈妈的话.mp3': No such file or directory
+Jan 10 12:56 : player: played "妈妈的话.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3; Failed to open '/home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3': No such file or directory
+Jan 10 12:56 : player: played "南征北战NZBZ - 我的天空(不插电版).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/勇气.mp3; Failed to open '/home/storm/Music/our_music/勇气.mp3': No such file or directory
+Jan 10 12:56 : player: played "勇气.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最初的梦想.mp3; Failed to open '/home/storm/Music/our_music/最初的梦想.mp3': No such file or directory
+Jan 10 12:56 : player: played "最初的梦想.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/MOM.mp3; Failed to open '/home/storm/Music/our_music/MOM.mp3': No such file or directory
+Jan 10 12:56 : player: played "MOM.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/和风赴你-司南.mp3; Failed to open '/home/storm/Music/our_music/和风赴你-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "和风赴你-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/着迷.mp3; Failed to open '/home/storm/Music/our_music/着迷.mp3': No such file or directory
+Jan 10 12:56 : player: played "着迷.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/耳朵.mp3; Failed to open '/home/storm/Music/our_music/耳朵.mp3': No such file or directory
+Jan 10 12:56 : player: played "耳朵.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3; Failed to open '/home/storm/Music/our_music/JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3': No such file or directory
+Jan 10 12:56 : player: played "JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/湖-李棒棒Muti.mp3; Failed to open '/home/storm/Music/our_music/湖-李棒棒Muti.mp3': No such file or directory
+Jan 10 12:56 : player: played "湖-李棒棒Muti.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/距离高考还有.mp3; Failed to open '/home/storm/Music/our_music/距离高考还有.mp3': No such file or directory
+Jan 10 12:56 : player: played "距离高考还有.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/See You Again-See You Again.mp3; Failed to open '/home/storm/Music/our_music/See You Again-See You Again.mp3': No such file or directory
+Jan 10 12:56 : player: played "See You Again-See You Again.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/大鱼.mp3; Failed to open '/home/storm/Music/our_music/大鱼.mp3': No such file or directory
+Jan 10 12:56 : player: played "大鱼.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3; Failed to open '/home/storm/Music/our_music/冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3': No such file or directory
+Jan 10 12:56 : player: played "冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有种-孟美岐.mp3; Failed to open '/home/storm/Music/our_music/有种-孟美岐.mp3': No such file or directory
+Jan 10 12:56 : player: played "有种-孟美岐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/将你归还于人海-妍狗.mp3; Failed to open '/home/storm/Music/our_music/将你归还于人海-妍狗.mp3': No such file or directory
+Jan 10 12:56 : player: played "将你归还于人海-妍狗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的轮廓.mp3; Failed to open '/home/storm/Music/our_music/你的轮廓.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的轮廓.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你从未离去.mp3; Failed to open '/home/storm/Music/our_music/你从未离去.mp3': No such file or directory
+Jan 10 12:56 : player: played "你从未离去.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Beyond-光辉岁月.mp3; Failed to open '/home/storm/Music/our_music/Beyond-光辉岁月.mp3': No such file or directory
+Jan 10 12:56 : player: played "Beyond-光辉岁月.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Grew Up At Midnight.mp3; Failed to open '/home/storm/Music/our_music/Grew Up At Midnight.mp3': No such file or directory
+Jan 10 12:56 : player: played "Grew Up At Midnight.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的答案.mp3; Failed to open '/home/storm/Music/our_music/你的答案.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的答案.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/没有理由.mp3; Failed to open '/home/storm/Music/our_music/没有理由.mp3': No such file or directory
+Jan 10 12:56 : player: played "没有理由.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/放空.mp3; Failed to open '/home/storm/Music/our_music/放空.mp3': No such file or directory
+Jan 10 12:56 : player: played "放空.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我可以.mp3; Failed to open '/home/storm/Music/our_music/我可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "我可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白羊.mp3; Failed to open '/home/storm/Music/our_music/白羊.mp3': No such file or directory
+Jan 10 12:56 : player: played "白羊.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/朱砂.mp3; Failed to open '/home/storm/Music/our_music/朱砂.mp3': No such file or directory
+Jan 10 12:56 : player: played "朱砂.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/微微.mp3; Failed to open '/home/storm/Music/our_music/微微.mp3': No such file or directory
+Jan 10 12:56 : player: played "微微.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夜空中最亮的星.mp3; Failed to open '/home/storm/Music/our_music/夜空中最亮的星.mp3': No such file or directory
+Jan 10 12:56 : player: played "夜空中最亮的星.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不喜欢下雨天.mp3; Failed to open '/home/storm/Music/our_music/不喜欢下雨天.mp3': No such file or directory
+Jan 10 12:56 : player: played "不喜欢下雨天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3; Failed to open '/home/storm/Music/our_music/我的天空-南征北战NZBZ.mp3': No such file or directory
+Jan 10 12:56 : player: played "我的天空-南征北战NZBZ.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3; Failed to open '/home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3': No such file or directory
+Jan 10 12:56 : player: played "白月光与朱砂痣-大籽.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/像我这样的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/像我这样的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "像我这样的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有梦可待-陈立农.mp3; Failed to open '/home/storm/Music/our_music/有梦可待-陈立农.mp3': No such file or directory
+Jan 10 12:56 : player: played "有梦可待-陈立农.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/致你-yihuik苡慧.mp3; Failed to open '/home/storm/Music/our_music/致你-yihuik苡慧.mp3': No such file or directory
+Jan 10 12:56 : player: played "致你-yihuik苡慧.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你是人间四月天.mp3; Failed to open '/home/storm/Music/our_music/你是人间四月天.mp3': No such file or directory
+Jan 10 12:56 : player: played "你是人间四月天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/那时初夏.mp3; Failed to open '/home/storm/Music/our_music/那时初夏.mp3': No such file or directory
+Jan 10 12:56 : player: played "那时初夏.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无名之辈-陈雪燃.mp3; Failed to open '/home/storm/Music/our_music/无名之辈-陈雪燃.mp3': No such file or directory
+Jan 10 12:56 : player: played "无名之辈-陈雪燃.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/云端飞行-是二智呀.mp3; Failed to open '/home/storm/Music/our_music/云端飞行-是二智呀.mp3': No such file or directory
+Jan 10 12:56 : player: played "云端飞行-是二智呀.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/I Feel So Close To The Sweet Hall Of Fame.mp3; Failed to open '/home/storm/Music/our_music/I Feel So Close To The Sweet Hall Of Fame.mp3': No such file or directory
+Jan 10 12:56 : player: played "I Feel So Close To The Sweet Hall Of Fame.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Umbrella (Matte Remix).mp3; Failed to open '/home/storm/Music/our_music/Umbrella (Matte Remix).mp3': No such file or directory
+Jan 10 12:56 : player: played "Umbrella (Matte Remix).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/一百万个可能-Christine Welch.mp3; Failed to open '/home/storm/Music/our_music/一百万个可能-Christine Welch.mp3': No such file or directory
+Jan 10 12:56 : player: played "一百万个可能-Christine Welch.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/国际歌-唐朝乐队.mp3; Failed to open '/home/storm/Music/our_music/国际歌-唐朝乐队.mp3': No such file or directory
+Jan 10 12:56 : player: played "国际歌-唐朝乐队.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/刘大壮 - 后来.mp3; Failed to open '/home/storm/Music/our_music/刘大壮 - 后来.mp3': No such file or directory
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我与青春在赛跑-刘惜君.mp3; Failed to open '/home/storm/Music/our_music/我与青春在赛跑-刘惜君.mp3': No such file or directory
+Jan 10 12:56 : player: played "刘大壮 - 后来.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Umbrella (Matte Remix).mp3; Failed to open '/home/storm/Music/our_music/Umbrella (Matte Remix).mp3': No such file or directory
+Jan 10 12:56 : player: played "Umbrella (Matte Remix).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/告白气球-周杰伦.mp3; Failed to open '/home/storm/Music/our_music/告白气球-周杰伦.mp3': No such file or directory
+Jan 10 12:56 : player: played "告白气球-周杰伦.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/嘲笑声-Big Daddy.mp3; Failed to open '/home/storm/Music/our_music/嘲笑声-Big Daddy.mp3': No such file or directory
+Jan 10 12:56 : player: played "嘲笑声-Big Daddy.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/星辰大海.mp3; Failed to open '/home/storm/Music/our_music/星辰大海.mp3': No such file or directory
+Jan 10 12:56 : player: played "星辰大海.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/着迷.mp3; Failed to open '/home/storm/Music/our_music/着迷.mp3': No such file or directory
+Jan 10 12:56 : player: played "着迷.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你相信平行时空吗-司南.mp3; Failed to open '/home/storm/Music/our_music/你相信平行时空吗-司南.mp3': No such file or directory
+Jan 10 12:56 : player: played "你相信平行时空吗-司南.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3; Failed to open '/home/storm/Music/our_music/南征北战NZBZ - 我的天空(不插电版).mp3': No such file or directory
+Jan 10 12:56 : player: played "南征北战NZBZ - 我的天空(不插电版).mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/致你-yihuik苡慧.mp3; Failed to open '/home/storm/Music/our_music/致你-yihuik苡慧.mp3': No such file or directory
+Jan 10 12:56 : player: played "致你-yihuik苡慧.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/不是花火呀 - 记·念.mp3; Failed to open '/home/storm/Music/our_music/不是花火呀 - 记·念.mp3': No such file or directory
+Jan 10 12:56 : player: played "不是花火呀 - 记·念.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/我可以.mp3; Failed to open '/home/storm/Music/our_music/我可以.mp3': No such file or directory
+Jan 10 12:56 : player: played "我可以.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/沙漠骆驼-展展与罗罗.mp3; Failed to open '/home/storm/Music/our_music/沙漠骆驼-展展与罗罗.mp3': No such file or directory
+Jan 10 12:56 : player: played "沙漠骆驼-展展与罗罗.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最初的梦想.mp3; Failed to open '/home/storm/Music/our_music/最初的梦想.mp3': No such file or directory
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3; Failed to open '/home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3': No such file or directory
+Jan 10 12:56 : player: played "最初的梦想.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3; Failed to open '/home/storm/Music/our_music/白月光与朱砂痣-大籽.mp3': No such file or directory
+Jan 10 12:56 : player: played "白月光与朱砂痣-大籽.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/MOM.mp3; Failed to open '/home/storm/Music/our_music/MOM.mp3': No such file or directory
+Jan 10 12:56 : player: played "MOM.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有种-孟美岐.mp3; Failed to open '/home/storm/Music/our_music/有种-孟美岐.mp3': No such file or directory
+Jan 10 12:56 : player: played "有种-孟美岐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无名的人-毛不易.mp3; Failed to open '/home/storm/Music/our_music/无名的人-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "无名的人-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你对你的潜力一无所知.mp3; Failed to open '/home/storm/Music/our_music/你对你的潜力一无所知.mp3': No such file or directory
+Jan 10 12:56 : player: played "你对你的潜力一无所知.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/Beyond-光辉岁月.mp3; Failed to open '/home/storm/Music/our_music/Beyond-光辉岁月.mp3': No such file or directory
+Jan 10 12:56 : player: played "Beyond-光辉岁月.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/陪你走过一年四季.mp3; Failed to open '/home/storm/Music/our_music/陪你走过一年四季.mp3': No such file or directory
+Jan 10 12:56 : player: played "陪你走过一年四季.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/天与海-Kiki.mp3; Failed to open '/home/storm/Music/our_music/天与海-Kiki.mp3': No such file or directory
+Jan 10 12:56 : player: played "天与海-Kiki.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/任然 - 疑心病.mp3; Failed to open '/home/storm/Music/our_music/任然 - 疑心病.mp3': No such file or directory
+Jan 10 12:56 : player: played "任然 - 疑心病.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/会不会.mp3; Failed to open '/home/storm/Music/our_music/会不会.mp3': No such file or directory
+Jan 10 12:56 : player: played "会不会.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/李白.mp3; Failed to open '/home/storm/Music/our_music/李白.mp3': No such file or directory
+Jan 10 12:56 : player: played "李白.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/小雨天气.mp3; Failed to open '/home/storm/Music/our_music/小雨天气.mp3': No such file or directory
+Jan 10 12:56 : player: played "小雨天气.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3; Failed to open '/home/storm/Music/our_music/提拉米苏-新乐尘符、李思雨.mp3': No such file or directory
+Jan 10 12:56 : player: played "提拉米苏-新乐尘符、李思雨.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你是人间四月天.mp3; Failed to open '/home/storm/Music/our_music/你是人间四月天.mp3': No such file or directory
+Jan 10 12:56 : player: played "你是人间四月天.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/五四版错位时空.mp3; Failed to open '/home/storm/Music/our_music/五四版错位时空.mp3': No such file or directory
+Jan 10 12:56 : player: played "五四版错位时空.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/入海-毛不易.mp3; Failed to open '/home/storm/Music/our_music/入海-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "入海-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夏天的风.mp3; Failed to open '/home/storm/Music/our_music/夏天的风.mp3': No such file or directory
+Jan 10 12:56 : player: played "夏天的风.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/The Weather Man.mp3; Failed to open '/home/storm/Music/our_music/The Weather Man.mp3': No such file or directory
+Jan 10 12:56 : player: played "The Weather Man.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/趁你还年轻.mp3; Failed to open '/home/storm/Music/our_music/趁你还年轻.mp3': No such file or directory
+Jan 10 12:56 : player: played "趁你还年轻.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/love story.mp3; Failed to open '/home/storm/Music/our_music/love story.mp3': No such file or directory
+Jan 10 12:56 : player: played "love story.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3; Failed to open '/home/storm/Music/our_music/爱与狂想-新乐尘符、谣君.mp3': No such file or directory
+Jan 10 12:56 : player: played "爱与狂想-新乐尘符、谣君.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/最美的期待.mp3; Failed to open '/home/storm/Music/our_music/最美的期待.mp3': No such file or directory
+Jan 10 12:56 : player: played "最美的期待.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/平凡的一天-毛不易.mp3; Failed to open '/home/storm/Music/our_music/平凡的一天-毛不易.mp3': No such file or directory
+Jan 10 12:56 : player: played "平凡的一天-毛不易.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/去流浪-周笔畅.mp3; Failed to open '/home/storm/Music/our_music/去流浪-周笔畅.mp3': No such file or directory
+Jan 10 12:56 : player: played "去流浪-周笔畅.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/王淇-可可托海的牧羊人.mp3; Failed to open '/home/storm/Music/our_music/王淇-可可托海的牧羊人.mp3': No such file or directory
+Jan 10 12:56 : player: played "王淇-可可托海的牧羊人.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/一百万个可能-Christine Welch.mp3; Failed to open '/home/storm/Music/our_music/一百万个可能-Christine Welch.mp3': No such file or directory
+Jan 10 12:56 : player: played "一百万个可能-Christine Welch.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/代名词.mp3; Failed to open '/home/storm/Music/our_music/代名词.mp3': No such file or directory
+Jan 10 12:56 : player: played "代名词.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你的星环.mp3; Failed to open '/home/storm/Music/our_music/你的星环.mp3': No such file or directory
+Jan 10 12:56 : player: played "你的星环.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/勇气.mp3; Failed to open '/home/storm/Music/our_music/勇气.mp3': No such file or directory
+Jan 10 12:56 : player: played "勇气.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/I Feel So Close To The Sweet Hall Of Fame.mp3; Failed to open '/home/storm/Music/our_music/I Feel So Close To The Sweet Hall Of Fame.mp3': No such file or directory
+Jan 10 12:56 : player: played "I Feel So Close To The Sweet Hall Of Fame.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3; Failed to open '/home/storm/Music/our_music/My Heart Will Go On - 满舒克、MuSik I.mp3': No such file or directory
+Jan 10 12:56 : player: played "My Heart Will Go On - 满舒克、MuSik I.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/万有引力.mp3; Failed to open '/home/storm/Music/our_music/万有引力.mp3': No such file or directory
+Jan 10 12:56 : player: played "万有引力.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/世界这么大还是遇见你-清新的小女孩（中文版）.mp3; Failed to open '/home/storm/Music/our_music/世界这么大还是遇见你-清新的小女孩（中文版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "世界这么大还是遇见你-清新的小女孩（中文版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你从未离去.mp3; Failed to open '/home/storm/Music/our_music/你从未离去.mp3': No such file or directory
+Jan 10 12:56 : player: played "你从未离去.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3; Failed to open '/home/storm/Music/our_music/yihuik苡慧 - 如果呢（女声版）.mp3': No such file or directory
+Jan 10 12:56 : player: played "yihuik苡慧 - 如果呢（女声版）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/迷失幻境-IN.mp3; Failed to open '/home/storm/Music/our_music/迷失幻境-IN.mp3': No such file or directory
+Jan 10 12:56 : player: played "迷失幻境-IN.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/命运.mp3; Failed to open '/home/storm/Music/our_music/命运.mp3': No such file or directory
+Jan 10 12:56 : player: played "命运.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/潮汐.mp3; Failed to open '/home/storm/Music/our_music/潮汐.mp3': No such file or directory
+Jan 10 12:56 : player: played "潮汐.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/梦然 - 少年.mp3; Failed to open '/home/storm/Music/our_music/梦然 - 少年.mp3': No such file or directory
+Jan 10 12:56 : player: played "梦然 - 少年.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/无人之岛.mp3; Failed to open '/home/storm/Music/our_music/无人之岛.mp3': No such file or directory
+Jan 10 12:56 : player: played "无人之岛.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/雨爱（雨上晴空）.mp3; Failed to open '/home/storm/Music/our_music/雨爱（雨上晴空）.mp3': No such file or directory
+Jan 10 12:56 : player: played "雨爱（雨上晴空）.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/追风-颜人中.mp3; Failed to open '/home/storm/Music/our_music/追风-颜人中.mp3': No such file or directory
+Jan 10 12:56 : player: played "追风-颜人中.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/你曾是少年.mp3; Failed to open '/home/storm/Music/our_music/你曾是少年.mp3': No such file or directory
+Jan 10 12:56 : player: played "你曾是少年.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/世间美好与你环环相扣.mp3; Failed to open '/home/storm/Music/our_music/世间美好与你环环相扣.mp3': No such file or directory
+Jan 10 12:56 : player: played "世间美好与你环环相扣.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/夜空中最亮的星.mp3; Failed to open '/home/storm/Music/our_music/夜空中最亮的星.mp3': No such file or directory
+Jan 10 12:56 : player: played "夜空中最亮的星.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/有梦可待-陈立农.mp3; Failed to open '/home/storm/Music/our_music/有梦可待-陈立农.mp3': No such file or directory
+Jan 10 12:56 : player: played "有梦可待-陈立农.mp3"
+Jan 10 12:56 : exception: Failed to decode /home/storm/Music/our_music/妈妈的话.mp3; Failed to open '/home/storm/Music/our_music/妈妈的话.mp3': No such file or directory
+Jan 10 12:56 : player: played "妈妈的话.mp3"
+Jan 10 12:56 : player: played "极光-于果.mp3"
+Jan 10 12:56 : config: option 'buffer_time' on line 219 was not recognized
+Jan 10 12:57 : player: played "极光-于果.mp3"
+Jan 10 13:00 : config: option 'buffer_time' on line 219 was not recognized
+Jan 10 13:00 : player: played "夏夜灯塔.mp3"
+Jan 10 13:03 : player: played "目及皆是你.mp3"
+Jan 10 13:07 : player: played "所念皆星河-房东的猫.mp3"
+Jan 10 13:07 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:08 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:10 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:13 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:13 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:14 : player: played "青葱岁月.mp3"
+Jan 10 13:16 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:16 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:16 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:16 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:16 : player: played "南征北战NZBZ - 我的天空(不插电版).mp3"
+Jan 10 13:16 : update: removing 不知所措.mp3
+Jan 10 13:16 : update: removing 七里香-周杰伦.mp3
+Jan 10 13:16 : update: removing 飞鸟和蝉.mp3
+Jan 10 13:16 : update: removing 阿拉斯加海湾.mp3
+Jan 10 13:16 : update: removing 银河与星斗.mp3
+Jan 10 13:16 : update: removing 晴天-周杰伦.mp3
+Jan 10 13:16 : update: updating /水星记.mp3
+Jan 10 13:16 : update: removing 星辰大海.mp3
+Jan 10 13:16 : update: removing 孤勇者.mp3
+Jan 10 13:16 : update: removing 夜空中最亮的星.mp3
+Jan 10 13:16 : update: removing 告白气球-周杰伦.mp3
+Jan 10 13:16 : update: removing 听妈妈的话-周杰伦.mp3
+Jan 10 13:16 : update: updating /冬眠.mp3
+Jan 10 13:16 : update: added /任然 - 你好陌生人.mp3
+Jan 10 13:16 : update: updating /入海-毛不易.mp3
+Jan 10 13:16 : update: updating /梦然 - 少年.mp3
+Jan 10 13:16 : update: updating /光.mp3
+Jan 10 13:16 : update: updating /可不可以.mp3
+Jan 10 13:16 : update: updating /无名之辈-陈雪燃.mp3
+Jan 10 13:16 : update: updating /微微.mp3
+Jan 10 13:16 : update: added /周杰伦-七里香.mp3
+Jan 10 13:16 : update: updating /大鱼.mp3
+Jan 10 13:16 : update: added /黄霄雲-星辰大海.mp3
+Jan 10 13:16 : update: updating /会不会.mp3
+Jan 10 13:16 : update: updating /篝火旁.mp3
+Jan 10 13:16 : update: updating /My Heart Will Go On - 满舒克、MuSik I.mp3
+Jan 10 13:16 : update: updating /五四版错位时空.mp3
+Jan 10 13:16 : update: added /Michael Martin Murphey - Lost River.mp3
+Jan 10 13:16 : update: updating /夏天的风.mp3
+Jan 10 13:16 : update: updating /无名的人-毛不易.mp3
+Jan 10 13:16 : update: updating /Alan Walker - Faded.mp3
+Jan 10 13:16 : update: updating /所念皆星河-房东的猫.mp3
+Jan 10 13:16 : update: updating /Umbrella (Matte Remix).mp3
+Jan 10 13:16 : update: updating /李白.mp3
+Jan 10 13:16 : update: updating /国际歌-唐朝乐队.mp3
+Jan 10 13:16 : update: updating /Beyond-光辉岁月.mp3
+Jan 10 13:16 : update: added /周杰伦-告白气球.mp3
+Jan 10 13:16 : update: updating /我都明白.mp3
+Jan 10 13:16 : update: updating /你的轮廓.mp3
+Jan 10 13:16 : update: updating /无人之岛.mp3
+Jan 10 13:16 : update: updating /Carry You Home(feat.Maruja Retana&RUI).mp3
+Jan 10 13:16 : update: updating /放空.mp3
+Jan 10 13:16 : update: added /叶启田 - 爱拼才会赢(闽).mp3
+Jan 10 13:16 : update: added /秋天不回来.mp3
+Jan 10 13:16 : update: updating /湖-李棒棒Muti.mp3
+Jan 10 13:16 : update: updating /像我这样的人-毛不易.mp3
+Jan 10 13:16 : update: added /陈苏通 - 水手+星星点灯（新版）.mp3
+Jan 10 13:16 : update: updating /陪你走过一年四季.mp3
+Jan 10 13:16 : update: updating /迷失幻境-IN.mp3
+Jan 10 13:16 : update: updating /潮汐.mp3
+Jan 10 13:16 : update: updating /和风赴你-司南.mp3
+Jan 10 13:16 : update: updating /着迷.mp3
+Jan 10 13:16 : update: updating /万有引力 - F_yy.mp3
+Jan 10 13:16 : update: updating /致你-yihuik苡慧.mp3
+Jan 10 13:16 : update: updating /星空剪影.mp3
+Jan 10 13:16 : update: updating /See You Again-See You Again.mp3
+Jan 10 13:16 : update: updating /坠落星空-小星星Aurora.mp3
+Jan 10 13:16 : update: updating /JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3
+Jan 10 13:16 : update: updating /命运.mp3
+Jan 10 13:16 : update: updating /小蓝背心 - 星空与你.mp3
+Jan 10 13:16 : update: updating /那女孩对我说.mp3
+Jan 10 13:16 : update: added /程佳佳-山楂树の恋.mp3
+Jan 10 13:16 : update: updating /余生皆是你-小蓝背心.mp3
+Jan 10 13:16 : update: updating /爱与狂想-新乐尘符、谣君.mp3
+Jan 10 13:16 : update: updating /我的名字-袁小葳.mp3
+Jan 10 13:16 : update: added /周杰伦-晴天.mp3
+Jan 10 13:16 : update: added /周杰伦-听妈妈的话.mp3
+Jan 10 13:16 : update: updating /7 Years-Lukas Graham.mp3
+Jan 10 13:16 : update: updating /回到夏天.mp3
+Jan 10 13:16 : update: updating /平凡的一天-毛不易.mp3
+Jan 10 13:16 : update: updating /有些.mp3
+Jan 10 13:16 : update: updating /骄傲的少年-南征北战NZBZ.mp3
+Jan 10 13:16 : update: added /Noel Parlane - Everybody's Here.mp3
+Jan 10 13:16 : update: updating /万有引力.mp3
+Jan 10 13:16 : update: added /IN-K_王忻辰_苏星婕-落日与晚风.mp3
+Jan 10 13:16 : update: updating /我在未来等你-好妹妹.mp3
+Jan 10 13:16 : update: updating /目及皆是你.mp3
+Jan 10 13:16 : update: updating /雨爱（雨上晴空）.mp3
+Jan 10 13:16 : update: updating /小蓝背心 - 微风与你.mp3
+Jan 10 13:16 : update: updating /星河万里.mp3
+Jan 10 13:16 : update: updating /yihuik苡慧 - 如果呢（女声版）.mp3
+Jan 10 13:16 : update: updating /恋爱画板.mp3
+Jan 10 13:16 : update: updating /喀秋莎.mp3
+Jan 10 13:16 : update: updating /璨乐团 - 飞-致我们的星辰大海.mp3
+Jan 10 13:16 : update: added /黄霄雲-重返地球.mp3
+Jan 10 13:16 : update: updating /代名词.mp3
+Jan 10 13:16 : update: added /Slushii-Past_Lives.mp3
+Jan 10 13:16 : update: updating /沙漠骆驼-展展与罗罗.mp3
+Jan 10 13:16 : update: updating /我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3
+Jan 10 13:16 : update: updating /烟火里的尘埃.mp3
+Jan 10 13:16 : update: updating /你的答案.mp3
+Jan 10 13:16 : update: updating /你从未离去.mp3
+Jan 10 13:16 : update: updating /Grew Up At Midnight.mp3
+Jan 10 13:16 : update: updating /怒放的生命.mp3
+Jan 10 13:16 : update: updating /谜底.mp3
+Jan 10 13:16 : update: updating /要不要买菜-下山.mp3
+Jan 10 13:16 : update: updating /距离高考还有.mp3
+Jan 10 13:16 : update: updating /一起去风里吧-小蓝背心.mp3
+Jan 10 13:16 : update: updating /yihuik苡慧 - 麦浪.mp3
+Jan 10 13:16 : update: added /川青_Morerare-下潜.mp3
+Jan 10 13:16 : update: updating /厚颜无耻.mp3
+Jan 10 13:16 : update: updating /华晨宇 - 好想爱这个世界啊.mp3
+Jan 10 13:16 : update: updating /NCF-艾力,Bater Offical - 黎明前的黑暗.mp3
+Jan 10 13:16 : update: updating /星星才唱歌.mp3
+Jan 10 13:16 : update: updating /One And Only (唯你)-满舒克.mp3
+Jan 10 13:16 : update: updating /游山恋.mp3
+Jan 10 13:16 : update: updating /四季予你.mp3
+Jan 10 13:16 : update: updating /我可以.mp3
+Jan 10 13:16 : update: updating /耳朵.mp3
+Jan 10 13:16 : update: updating /dream it possible.mp3
+Jan 10 13:16 : update: updating /生来倔强-南征北战NZBZ.mp3
+Jan 10 13:16 : update: updating /王淇-可可托海的牧羊人.mp3
+Jan 10 13:16 : update: updating /去流浪-周笔畅.mp3
+Jan 10 13:16 : update: updating /白月光与朱砂痣-大籽.mp3
+Jan 10 13:16 : update: updating /奔赴-司南.mp3
+Jan 10 13:16 : update: added /莫文蔚-这世界那么多人.mp3
+Jan 10 13:16 : update: updating /世间美好与你环环相扣.mp3
+Jan 10 13:16 : update: updating /最美的期待.mp3
+Jan 10 13:16 : update: updating /你曾是少年.mp3
+Jan 10 13:16 : update: updating /晴时多云-F_yy.mp3
+Jan 10 13:16 : update: updating /刘大壮 - 后来.mp3
+Jan 10 13:16 : update: updating /白羊.mp3
+Jan 10 13:16 : update: updating /心似烟火.mp3
+Jan 10 13:16 : update: updating /22秒.mp3
+Jan 10 13:16 : update: updating /追风-颜人中.mp3
+Jan 10 13:16 : update: updating /The Weather Man.mp3
+Jan 10 13:16 : update: updating /一百万个可能-Christine Welch.mp3
+Jan 10 13:16 : update: updating /执迷不悟.mp3
+Jan 10 13:16 : update: added /蓝心羽 - 春夏秋冬.mp3
+Jan 10 13:16 : update: updating /来自.mp3
+Jan 10 13:16 : update: updating /love story.mp3
+Jan 10 13:16 : update: updating /等风吹-不是花火呀、小田音乐社.mp3
+Jan 10 13:16 : update: added /王靖雯-善变.mp3
+Jan 10 13:16 : update: updating /你的星环.mp3
+Jan 10 13:16 : update: updating /空山新雨后-音阙诗听、锦零.mp3
+Jan 10 13:16 : update: updating /有理想.mp3
+Jan 10 13:16 : update: updating /MOM.mp3
+Jan 10 13:16 : update: updating /星火.mp3
+Jan 10 13:16 : update: updating /不是花火呀 - 记·念.mp3
+Jan 10 13:16 : update: updating /粉色星球.mp3
+Jan 10 13:16 : update: updating /患失-小好14、金奕彤Kim$J.mp3
+Jan 10 13:16 : update: updating /树洞-欧阳娜娜.mp3
+Jan 10 13:16 : update: updating /有梦的人别怕-陆思恒.mp3
+Jan 10 13:16 : update: updating /追光者-岑宁儿.mp3
+Jan 10 13:16 : update: updating /你相信平行时空吗-司南.mp3
+Jan 10 13:16 : update: updating /任然 - 疑心病.mp3
+Jan 10 13:16 : update: updating /飞得更高.mp3
+Jan 10 13:16 : update: updating /去流浪.mp3
+Jan 10 13:16 : update: updating /勇气.mp3
+Jan 10 13:16 : update: updating /嘲笑声-Big Daddy.mp3
+Jan 10 13:16 : update: updating /小虎队 - 爱.mp3
+Jan 10 13:16 : update: updating /范倪Liu - 南半球与北海道.mp3
+Jan 10 13:16 : update: added /掌心之中-魏佳艺.mp3
+Jan 10 13:16 : update: added /朴树-平凡之路.mp3
+Jan 10 13:16 : update: updating /祖国-南征北战NZBZ.mp3
+Jan 10 13:16 : update: updating /like1999.mp3
+Jan 10 13:16 : update: updating /追梦赤子心.mp3
+Jan 10 13:16 : update: updating /不舍-颜人中.mp3
+Jan 10 13:16 : update: updating /冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3
+Jan 10 13:16 : update: added /任然-飞鸟和蝉.mp3
+Jan 10 13:16 : update: updating /起风了.mp3
+Jan 10 13:16 : update: updating /妈妈的话.mp3
+Jan 10 13:16 : update: updating /我的天空-南征北战NZBZ.mp3
+Jan 10 13:16 : update: updating /I Feel So Close To The Sweet Hall Of Fame.mp3
+Jan 10 13:16 : update: updating /那时初夏.mp3
+Jan 10 13:16 : update: updating /千千万万.mp3
+Jan 10 13:16 : update: updating /趁你还年轻.mp3
+Jan 10 13:16 : update: updating /极光-于果.mp3
+Jan 10 13:16 : update: updating /去年夏天-王大毛.mp3
+Jan 10 13:16 : update: updating /小雨天气.mp3
+Jan 10 13:16 : update: added /蓝心羽-阿拉斯加海湾.mp3
+Jan 10 13:16 : update: updating /有梦可待-陈立农.mp3
+Jan 10 13:16 : update: updating /南征北战NZBZ - 我的天空(不插电版).mp3
+Jan 10 13:16 : update: added /王靖雯-不知所措.mp3
+Jan 10 13:16 : update: added /王靖雯-爱，存在.mp3
+Jan 10 13:16 : update: updating /你对你的潜力一无所知.mp3
+Jan 10 13:16 : update: updating /提拉米苏-新乐尘符、李思雨.mp3
+Jan 10 13:16 : update: updating /最初的梦想-井柏然.mp3
+Jan 10 13:16 : update: added /yihuik苡慧-银河与星斗.mp3
+Jan 10 13:16 : update: added /陈奕迅-孤勇者.mp3
+Jan 10 13:16 : update: updating /将你归还于人海-妍狗.mp3
+Jan 10 13:16 : update: updating /最初的梦想.mp3
+Jan 10 13:16 : update: updating /稻香-周杰伦.mp3
+Jan 10 13:16 : update: updating /气象站台.mp3
+Jan 10 13:16 : update: updating /有种-孟美岐.mp3
+Jan 10 13:16 : update: updating /入海.mp3
+Jan 10 13:16 : update: updating /世界这么大还是遇见你-清新的小女孩（中文版）.mp3
+Jan 10 13:16 : update: updating /没有理由.mp3
+Jan 10 13:16 : update: updating /朱砂.mp3
+Jan 10 13:16 : update: updating /不喜欢下雨天.mp3
+Jan 10 13:16 : update: updating /城市傍晚-毛不易.mp3
+Jan 10 13:16 : update: updating /云端飞行-是二智呀.mp3
+Jan 10 13:16 : update: updating /天与海-Kiki.mp3
+Jan 10 13:16 : update: updating /不是花火呀、小田音乐社 - 如一.mp3
+Jan 10 13:16 : update: updating /青葱岁月.mp3
+Jan 10 13:16 : update: updating /你是人间四月天.mp3
+Jan 10 13:16 : update: added /逃跑计划-夜空中最亮的星.mp3
+Jan 10 13:16 : update: updating /我与青春在赛跑-刘惜君.mp3
+Jan 10 13:16 : update: added /明天你好-牛奶咖啡.mp3
+Jan 10 13:16 : update: added /藤柒吖 - 小城小爱 (温柔女声版).mp3
+Jan 10 13:16 : update: updating /夏夜灯塔.mp3
+Jan 10 13:16 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:16 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:16 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:17 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:22 : player: played "南征北战NZBZ - 我的天空(不插电版).mp3"
+Jan 10 13:25 : output: Failed to play on "My Pulse Output" (pulse): suspended
+Jan 10 13:25 : player: played "黄霄雲-星辰大海.mp3"
+Jan 10 13:29 : player: played "王靖雯-善变.mp3"
+Jan 10 13:30 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:30 : exception: Failed to open /home/storm/.config/mpd/playlists: No such file or directory
+Jan 10 13:33 : player: played "会不会.mp3"
+Jan 10 13:37 : player: played "谜底.mp3"
+Jan 10 13:41 : player: played "华晨宇 - 好想爱这个世界啊.mp3"
+Jan 10 13:46 : player: played "一百万个可能-Christine Welch.mp3"
+Jan 10 13:48 : player: played "空山新雨后-音阙诗听、锦零.mp3"
+Jan 10 13:52 : player: played "着迷.mp3"
+Jan 10 13:54 : output: Failed to play on "My Pulse Output" (pulse): suspended
+Jan 10 13:56 : player: played "王靖雯-爱，存在.mp3"
+Jan 10 14:00 : player: played "晴时多云-F_yy.mp3"
+Jan 10 14:04 : player: played "五四版错位时空.mp3"
+Jan 10 14:08 : player: played "去年夏天-王大毛.mp3"
+Jan 10 14:12 : player: played "我们都是追梦人-秦岚、江疏影、景甜、王俊凯、王源、易烊千玺、吴磊.mp3"
+Jan 10 14:16 : player: played "不是花火呀、小田音乐社 - 如一.mp3"
+Jan 10 14:21 : player: played "Umbrella (Matte Remix).mp3"
+Jan 10 14:26 : player: played "有梦的人别怕-陆思恒.mp3"
+Jan 10 14:29 : player: played "小蓝背心 - 微风与你.mp3"
+Jan 10 14:33 : player: played "万有引力 - F_yy.mp3"
+Jan 10 14:37 : player: played "JAEFOREAL、蜡笔大Boom - 追梦的蚂蚁.mp3"
+Jan 10 14:39 : player: played "气象站台.mp3"
+Jan 10 14:44 : player: played "无人之岛.mp3"
+Jan 10 14:48 : player: played "叶启田 - 爱拼才会赢(闽).mp3"
+Jan 10 14:53 : player: played "追风-颜人中.mp3"
+Jan 10 14:56 : player: played "云端飞行-是二智呀.mp3"
+Jan 10 14:58 : player: played "NCF-艾力,Bater Offical - 黎明前的黑暗.mp3"
+Jan 10 15:01 : player: played "IN-K_王忻辰_苏星婕-落日与晚风.mp3"
+Jan 10 15:04 : player: played "白羊.mp3"
+Jan 10 15:07 : output: Failed to play on "My Pulse Output" (pulse): suspended
+Jan 10 15:08 : player: played "坠落星空-小星星Aurora.mp3"
+Jan 10 15:12 : player: played "梦然 - 少年.mp3"
+Jan 10 15:15 : player: played "提拉米苏-新乐尘符、李思雨.mp3"
+Jan 10 15:20 : player: played "朴树-平凡之路.mp3"
+Jan 10 15:25 : player: played "任然-飞鸟和蝉.mp3"
+Jan 10 15:29 : player: played "奔赴-司南.mp3"
+Jan 10 15:34 : player: played "黄霄雲-重返地球.mp3"
+Jan 10 15:37 : player: played "要不要买菜-下山.mp3"
+Jan 10 15:41 : player: played "My Heart Will Go On - 满舒克、MuSik I.mp3"
+Jan 10 15:44 : player: played "Slushii-Past_Lives.mp3"
+Jan 10 15:47 : player: played "来自.mp3"
+Jan 10 15:51 : player: played "稻香-周杰伦.mp3"
+Jan 10 15:54 : player: played "星河万里.mp3"
+Jan 10 16:00 : player: played "烟火里的尘埃.mp3"
+Jan 10 16:04 : player: played "夏夜灯塔.mp3"
+Jan 10 16:07 : player: played "有些.mp3"
+Jan 10 16:10 : player: played "yihuik苡慧 - 麦浪.mp3"
+Jan 10 16:14 : player: played "青葱岁月.mp3"
+Jan 10 16:18 : player: played "川青_Morerare-下潜.mp3"
+Jan 10 16:22 : player: played "去流浪.mp3"
+Jan 10 16:26 : player: played "恋爱画板.mp3"
+Jan 10 16:29 : player: played "趁你还年轻.mp3"
+Jan 10 16:33 : player: played "我的天空-南征北战NZBZ.mp3"
+Jan 10 16:37 : player: played "冲破一切封锁，我们的答案-华为数据存储与机器视觉产品线管理团队.mp3"
+Jan 10 16:41 : player: played "周杰伦-晴天.mp3"
+Jan 10 16:44 : player: played "喀秋莎.mp3"
+Jan 10 16:48 : player: played "无名之辈-陈雪燃.mp3"
+Jan 10 16:51 : player: played "I Feel So Close To The Sweet Hall Of Fame.mp3"
+Jan 10 16:55 : player: played "蓝心羽 - 春夏秋冬.mp3"
+Jan 10 16:59 : player: played "去流浪-周笔畅.mp3"
+Jan 10 17:02 : player: played "迷失幻境-IN.mp3"
+Jan 10 17:06 : player: played "我与青春在赛跑-刘惜君.mp3"
+Jan 10 17:11 : player: played "致你-yihuik苡慧.mp3"
+Jan 10 17:15 : player: played "你的轮廓.mp3"
+Jan 10 17:19 : player: played "陈奕迅-孤勇者.mp3"
+Jan 10 17:24 : player: played "Beyond-光辉岁月.mp3"
+Jan 10 17:28 : player: played "游山恋.mp3"
+Jan 10 17:33 : player: played "璨乐团 - 飞-致我们的星辰大海.mp3"
+Jan 10 17:37 : player: played "执迷不悟.mp3"
+Jan 10 17:40 : player: played "有梦可待-陈立农.mp3"
+Jan 10 17:44 : player: played "Noel Parlane - Everybody's Here.mp3"
+Jan 10 17:46 : output: Failed to play on "My Pulse Output" (pulse): suspended
+Jan 10 19:52 : player: played "Noel Parlane - Everybody's Here.mp3"
+Jan 10 19:52 : output: Failed to play on "My Pulse Output" (pulse): suspended
+Jan 10 19:56 : player: played "Grew Up At Midnight.mp3"
