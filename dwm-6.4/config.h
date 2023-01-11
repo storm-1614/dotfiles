@@ -6,7 +6,6 @@ static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int newclientathead    = 0;        /* 定义新窗口在栈顶还是栈底 */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -32,41 +31,12 @@ static const unsigned int alphas[][3]      = {
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
-//打开dwm启动的命令
-static const char *const autostart[] = {
-	"picom", NULL,
-	"fcitx5", "-d", NULL,
-//	"birdtray", NULL,
-//	"cfw", NULL,
-	"clash", NULL,
-//	"thunderbird", NULL,
-	"slstatus", NULL,
-	"dunst", NULL,
-	"qbat", NULL,
-//	"dida", "--force-device-scale-factor=1.5", NULL,
-	"xset", "s", "3600", NULL,
-	"xset", "dpms", "0", "0", "3600", NULL,
-	"redshift", "-O", "4500", NULL,
-	"wallpaper.sh", NULL,	
-//	"telegram-desktop", NULL,
-	"pasystray", NULL,
-//	"nm-applet", NULL,
-	NULL
-};
-
 /* tagging */
 static const char *tags[] = { "¹", "²", "³","切⁴", "﬐⁵", "⁶","⁷", "ﱘ⁸", "⁹" };
-
-static const int overviewgappi           = 24;        /* overview时 窗口与边缘 缝隙大小 */
-static const int overviewgappo           = 60;        /* overview时 窗口与窗口 缝隙大小 */
-static const char *overviewtag = "OVERVIEW";
-static const Layout overviewlayout = { "",  overview };
 
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
 
-
-//窗口规则，tags mask指定打开的tag,isfloating指定是否浮动，monitor指定屏幕
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -98,8 +68,6 @@ static const Layout layouts[] = {
 	{ "﬿",      tile },    /* first entry is default */
 	{ "缾",     NULL },    /* no layout function means floating behavior */
 	{ "[M]",    monocle },
-	{ "﩯",      magicgrid },
-
 };
 
 /* key definitions */
@@ -148,7 +116,6 @@ static const char *mpc_prev[]= { "mpc", "prev", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_a,      toggleoverview, {0} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_F7,     spawn,          {.v = lightdown } },/*减小亮度*/
@@ -166,24 +133,22 @@ static const Key keys[] = {
   	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },/*打开firefox*/
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, //终端
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } }, //终端
-	{ MODKEY|ShiftMask,             XK_n,      rotatestack,    {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_b,      rotatestack,    {.i = -1 } },
-	{ MODKEY,                       XK_r,      togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY, 		                XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
 	{ MODKEY,                       XK_y,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_y,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_v,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_i,      setcfact,       {.f = +0.25} },
-	{ MODKEY,                       XK_p,      setcfact,       {.f = -0.25} },
-	{ MODKEY,                       XK_o,      setcfact,       {.f =  0.00} },
-	{ MODKEY,                       XK_z,  	   zoom,           {0} },
+	{ MODKEY,        			    XK_i,      setcfact,       {.f = +0.25} },
+	{ MODKEY,           			XK_p,      setcfact,       {.f = -0.25} },
+	{ MODKEY, 			            XK_o,      setcfact,       {.f =  0.00} },
+	{ MODKEY|ShiftMask,             XK_b,      zoom,           {0} },
+	{ MODKEY,                       XK_r,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,   			        XK_q,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -196,12 +161,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,                       XK_s,      show,           {0} },
 	{ MODKEY|ShiftMask,             XK_s,      showall,        {0} },
 	{ MODKEY,                       XK_v,      hide,           {0} },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,                       XK_Left,   viewtoleft,     {0} },
 	{ MODKEY,                       XK_Right,  viewtoright,    {0} },
 	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },
@@ -224,7 +189,6 @@ static const Key keys[] = {
 	{ 0, 			  XF86XK_AudioPrev, 	   spawn,   	   {.v = mpc_prev } },
 	{ 0, 			  XF86XK_MonBrightnessUp,  spawn, 		   {.v = lightup } },
 	{ 0, 			  XF86XK_MonBrightnessDown,spawn,  		   {.v = lightdown} },
-
 };
 
 /* button definitions */

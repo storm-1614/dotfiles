@@ -28,6 +28,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <X11/cursorfont.h>
@@ -50,7 +51,7 @@
 #define CLEANMASK(mask)         (mask & ~(numlockmask|LockMask) & (ShiftMask|ControlMask|Mod1Mask|Mod2Mask|Mod3Mask|Mod4Mask|Mod5Mask))
 #define INTERSECT(x,y,w,h,m)    (MAX(0, MIN((x)+(w),(m)->wx+(m)->ww) - MAX((x),(m)->wx)) \
                                * MAX(0, MIN((y)+(h),(m)->wy+(m)->wh) - MAX((y),(m)->wy)))
-#define ISVISIBLE(C)            ((C->mon->isoverview || C->tags & C->mon->tagset[C->mon->seltags]))
+#define ISVISIBLE(C)            ((C->tags & C->mon->tagset[C->mon->seltags]))
 #define HIDDEN(C)               ((getstate(C->win) == IconicState))
 #define LENGTH(X)               (sizeof X / sizeof X[0])
 #define MOUSEMASK               (BUTTONMASK|PointerMotionMask)
@@ -79,8 +80,8 @@
 #define XEMBED_EMBEDDED_VERSION (VERSION_MAJOR << 16) | VERSION_MINOR
 
 /* enums */
-enum { Manager, Xembed, XembedInfo, XLast }; /* Xembed atoms */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
+enum { Manager, Xembed, XembedInfo, XLast }; /* Xembed atoms */
 enum { SchemeNorm, SchemeSel, SchemeHid }; /* color schemes */
 enum { NetSupported, NetSystemTray, NetSystemTrayOP, NetSystemTrayOrientation, NetSystemTrayVisual,
 	   NetWMName, NetWMState, NetWMFullscreen, NetActiveWindow, NetWMWindowType, NetWMWindowTypeDock,
@@ -158,7 +159,6 @@ struct Monitor {
 	Monitor *next;
 	Window barwin;
 	const Layout *lt[2];
-    unsigned int isoverview;
 	Pertag *pertag;
 };
 
@@ -199,8 +199,6 @@ static void detachstack(Client *c);
 static Monitor *dirtomon(int dir);
 static void drawbar(Monitor *m);
 static void drawbars(void);
-static void enqueue(Client *c);
-static void enqueuestack(Client *c);
 static void enternotify(XEvent *e);
 static void expose(XEvent *e);
 static void focus(Client *c);
@@ -238,7 +236,6 @@ static void resizemouse(const Arg *arg);
 static void removesystrayicon(Client *i);
 static void resizerequest(XEvent *e);
 static void restack(Monitor *m);
-static void rotatestack(const Arg *arg);
 static void run(void);
 static void scan(void);
 static int sendevent(Window w, Atom proto, int m, long d0, long d1, long d2, long d3, long d4);
@@ -264,16 +261,12 @@ static void tagmon(const Arg *arg);
 static void tagtoleft(const Arg *arg);
 static void tagtoright(const Arg *arg);
 static void tile(Monitor *m);
-static void magicgrid(Monitor *m);
-static void grid(Monitor *m, uint gappo, uint uappi);
-static void overview(Monitor *m);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglescratch(const Arg *arg);
 static void togglefullscr(const Arg *arg);
 static void toggletag(const Arg *arg);
 static void toggleview(const Arg *arg);
-static void toggleoverview(const Arg *arg);
 static void togglewin(const Arg *arg);
 static void unfocus(Client *c, int setfocus);
 static void unmanage(Client *c, int destroyed);
@@ -302,7 +295,6 @@ static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void xinitvisual();
 static void zoom(const Arg *arg);
-static void autostart_exec(void);
 
 /* variables */
 static const char broken[] = "broken";
@@ -350,7 +342,6 @@ static Colormap cmap;
 
 /* configuration, allows nested code to access above variables */
 #include "config.h"
-#include <time.h>
 
 struct Pertag {
 	unsigned int curtag, prevtag; /* current and previous tag */
@@ -365,34 +356,6 @@ static unsigned int scratchtag = 1 << LENGTH(tags);
 
 /* compile-time check if all tags fit into an unsigned int bit array. */
 struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };
-
-/* dwm will keep pid's of processes from autostart array and kill them at quit */
-static pid_t *autostart_pids;
-static size_t autostart_len;
-
-/* execute command from autostart array */
-static void
-autostart_exec() {
-	const char *const *p;
-	size_t i = 0;
-
-	/* count entries */
-	for (p = autostart; *p; autostart_len++, p++)
-		while (*++p);
-
-	autostart_pids = malloc(autostart_len * sizeof(pid_t));
-	for (p = autostart; *p; i++, p++) {
-		if ((autostart_pids[i] = fork()) == 0) {
-			setsid();
-			execvp(*p, (char *const *)p);
-			fprintf(stderr, "dwm: execvp %s\n", *p);
-			perror(" failed");
-			_exit(EXIT_FAILURE);
-		}
-		/* skip arguments */
-		while (*++p);
-	}
-}
 
 /* function implementations */
 void
@@ -516,28 +479,16 @@ arrange(Monitor *m)
 void
 arrangemon(Monitor *m)
 {
-    if (m->isoverview) {
-        strncpy(m->ltsymbol, overviewlayout.symbol, sizeof m->ltsymbol);
-        overviewlayout.arrange(m);
-    } else {
-        strncpy(m->ltsymbol, m->lt[m->sellt]->symbol, sizeof m->ltsymbol);
-        if (m->lt[m->sellt]->arrange)
-            m->lt[m->sellt]->arrange(m);
-    }
+	strncpy(m->ltsymbol, m->lt[m->sellt]->symbol, sizeof m->ltsymbol);
+	if (m->lt[m->sellt]->arrange)
+		m->lt[m->sellt]->arrange(m);
 }
 
 void
 attach(Client *c)
 {
-    if (!newclientathead) {
-        Client **tc;
-        for (tc = &c->mon->clients; *tc; tc = &(*tc)->next);
-        *tc = c;
-        c->next = NULL;
-    } else {
-        c->next = c->mon->clients;
-        c->mon->clients = c;
-    }
+	c->next = c->mon->clients;
+	c->mon->clients = c;
 }
 
 void
@@ -565,22 +516,15 @@ buttonpress(XEvent *e)
 	}
 	if (ev->window == selmon->barwin) {
 		i = x = 0;
-        if (selmon->isoverview) {
-            x += TEXTW(overviewtag);
-            i = ~0;
-            if (ev->x > x)
-                i = LENGTH(tags);
-        } else { 
-            do
-                x += TEXTW(tags[i]);
-            while (ev->x >= x && ++i < LENGTH(tags));
-        }
+		do
+			x += TEXTW(tags[i]);
+		while (ev->x >= x && ++i < LENGTH(tags));
 		if (i < LENGTH(tags)) {
 			click = ClkTagBar;
 			arg.ui = 1 << i;
 		} else if (ev->x < x + TEXTW(selmon->ltsymbol))
 			click = ClkLtSymbol;
-		else if (ev->x > selmon->ww - TEXTW(stext) + lrpad - 2 - getsystraywidth())
+		else if (ev->x > selmon->ww - TEXTW(stext) - getsystraywidth() + lrpad -2)
 			click = ClkStatusText;
 		else {
 			x += blw;
@@ -845,7 +789,6 @@ createmon(void)
 	m->gappx = gappx;
 	m->lt[0] = &layouts[0];
 	m->lt[1] = &layouts[1 % LENGTH(layouts)];
-    m->isoverview = 0;
 	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
 	m->pertag = ecalloc(1, sizeof(Pertag));
 	m->pertag->curtag = m->pertag->prevtag = 1;
@@ -949,25 +892,16 @@ drawbar(Monitor *m)
 			urg |= c->tags;
 	}
 	x = 0;
-
-    if (m->isoverview) {
-        w = TEXTW(overviewtag);
-        drw_setscheme(drw, scheme[SchemeSel]);
-        drw_text(drw, x, 0, w, bh, lrpad / 2, overviewtag, 0);
-        x += w;
-    } else {
-        for (i = 0; i < LENGTH(tags); i++) {
-            w = TEXTW(tags[i]);
-            drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
-            drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
-            if (occ & 1 << i)
-                drw_rect(drw, x + boxs, boxs, boxw, boxw,
-                    m == selmon && selmon->sel && selmon->sel->tags & 1 << i,
-                    urg & 1 << i);
-            x += w;
-        }
-    }
-
+	for (i = 0; i < LENGTH(tags); i++) {
+		w = TEXTW(tags[i]);
+		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
+		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
+		if (occ & 1 << i)
+			drw_rect(drw, x + boxs, boxs, boxw, boxw,
+				m == selmon && selmon->sel && selmon->sel->tags & 1 << i,
+				urg & 1 << i);
+		x += w;
+	}
 	w = TEXTW(m->ltsymbol);
 	drw_setscheme(drw, scheme[SchemeNorm]);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
@@ -1016,28 +950,6 @@ drawbars(void)
 
 	if (showsystray && !systraypinning)
 		updatesystray(0);
-}
-
-void
-enqueue(Client *c)
-{
-	Client *l;
-	for (l = c->mon->clients; l && l->next; l = l->next);
-	if (l) {
-		l->next = c;
-		c->next = NULL;
-	}
-}
-
-void
-enqueuestack(Client *c)
-{
-	Client *l;
-	for (l = c->mon->stack; l && l->snext; l = l->snext);
-	if (l) {
-		l->snext = c;
-		c->snext = NULL;
-	}
 }
 
 void
@@ -1651,15 +1563,7 @@ quit(const Arg *arg)
 				if (c && HIDDEN(c)) showwin(c);
 		}
 	}
-	size_t i;
 
-	/* kill child processes */
-	for (i = 0; i < autostart_len; i++) {
-		if (0 < autostart_pids[i]) {
-			kill(autostart_pids[i], SIGTERM);
-			waitpid(autostart_pids[i], NULL, 0);
-		}
-	}
 	FILE *fd = NULL;
 	struct stat filestat;
 
@@ -1822,38 +1726,6 @@ restack(Monitor *m)
 	}
 	XSync(dpy, False);
 	while (XCheckMaskEvent(dpy, EnterWindowMask, &ev));
-}
-
-void
-rotatestack(const Arg *arg)
-{
-	Client *c = NULL, *f;
-
-	if (!selmon->sel)
-		return;
-	f = selmon->sel;
-	if (arg->i > 0) {
-		for (c = nexttiled(selmon->clients); c && nexttiled(c->next); c = nexttiled(c->next));
-		if (c){
-			detach(c);
-			attach(c);
-			detachstack(c);
-			attachstack(c);
-		}
-	} else {
-		if ((c = nexttiled(selmon->clients))){
-			detach(c);
-			enqueue(c);
-			detachstack(c);
-			enqueuestack(c);
-		}
-	}
-	if (c){
-		arrange(selmon);
-		//unfocus(f, 1);
-		focus(f);
-		restack(selmon);
-	}
 }
 
 void
@@ -2202,31 +2074,14 @@ showhide(Client *c)
 void
 sigchld(int unused)
 {
-	pid_t pid;
-
 	if (signal(SIGCHLD, sigchld) == SIG_ERR)
 		die("can't install SIGCHLD handler:");
-	while (0 < (pid = waitpid(-1, NULL, WNOHANG))) {
-		pid_t *p, *lim;
-
-		if (!(p = autostart_pids))
-			continue;
-		lim = &p[autostart_len];
-
-		for (; p < lim; p++) {
-			if (*p == pid) {
-				*p = -1;
-				break;
-			}
-		}
-
-	}
+	while (0 < waitpid(-1, NULL, WNOHANG));
 }
 
 void
 spawn(const Arg *arg)
 {
-	
 	selmon->tagset[selmon->seltags] &= ~scratchtag;
 	if (fork() == 0) {
 		if (dpy)
@@ -2313,19 +2168,20 @@ tile(Monitor *m)
 	if (n > m->nmaster)
 		mw = m->nmaster ? m->ww * m->mfact : 0;
 	else
-		mw = m->ww - m->gappx;
+		mw = m->ww -m->gappx;
 	for (i = 0, my = ty = m->gappx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
 		if (i < m->nmaster) {
-			h = (m->wh - my) * (c->cfact / mfacts) -m->gappx;
+			h = (m->wh - my)  * (c->cfact / mfacts) - m-> gappx;
 			resize(c, m->wx + m->gappx, m->wy + my, mw - (2*c->bw) - m->gappx, h - (2*c->bw), 0);
-			if (my + HEIGHT(c) + m->gappx < m->wh)
+			if (my + HEIGHT(c) < m->wh)
 				my += HEIGHT(c) + m->gappx;
+      mfacts -= c->cfact;
 		} else {
 			h = (m->wh - ty) * (c->cfact / sfacts) - m->gappx;
 			resize(c, m->wx + mw + m->gappx, m->wy + ty, m->ww - mw - (2*c->bw) - 2*m->gappx, h - (2*c->bw), 0);
-			if (ty + HEIGHT(c) + m->gappx < m->wh)
-				ty += HEIGHT(c) +m->gappx;
-     sfacts -= c->cfact;
+			if (ty + HEIGHT(c) < m->wh)
+				ty += HEIGHT(c) + m-> gappx;
+      sfacts -= c->cfact;
 		}
 }
 
@@ -2370,6 +2226,13 @@ togglefloating(const Arg *arg)
 }
 
 void
+togglefullscr(const Arg *arg)
+{
+  if(selmon->sel)
+    setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
+}
+
+void
 togglescratch(const Arg *arg)
 {
 	Client *c;
@@ -2389,13 +2252,6 @@ togglescratch(const Arg *arg)
 		}
 	} else
 		spawn(arg);
-}
-
-void
-togglefullscr(const Arg *arg)
-{
-  if(selmon->sel)
-    setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
 }
 
 void
@@ -2899,10 +2755,9 @@ view(const Arg *arg)
 {
 	int i;
 	unsigned int tmptag;
-	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags]) {
-        arrange(selmon);
+
+	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags])
 		return;
-	}
 	selmon->seltags ^= 1; /* toggle sel tagset */
 	if (arg->ui & TAGMASK) {
 		selmon->tagset[selmon->seltags] = arg->ui & TAGMASK;
@@ -3092,7 +2947,6 @@ main(int argc, char *argv[])
 	if (!(dpy = XOpenDisplay(NULL)))
 		die("dwm: cannot open display");
 	checkotherwm();
-	autostart_exec();
 	setup();
 #ifdef __OpenBSD__
 	if (pledge("stdio rpath proc exec", NULL) == -1)
@@ -3104,94 +2958,3 @@ main(int argc, char *argv[])
 	XCloseDisplay(dpy);
 	return EXIT_SUCCESS;
 }
-
-
-void
-magicgrid(Monitor *m)
-{
-    grid(m, 12, 12);
-}
-
-void
-grid(Monitor *m, uint gappo, uint gappi)
-{
-    unsigned int i, n;
-    unsigned int cx, cy, cw, ch;
-    unsigned int dx;
-    unsigned int cols, rows, overcols;
-    Client *c;
-
-    for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
-    if (n == 0) return;
-    if (n == 1) {
-        c = nexttiled(m->clients);
-        cw = (m->ww - 2 * gappo) * 0.6;
-        ch = (m->wh - 2 * gappo) * 0.6;
-        resize(c,
-               m->mx + (m->mw - cw) / 2 + gappo,
-               m->my + (m->mh - ch) / 2 + gappo,
-               cw - 2 * c->bw,
-               ch - 2 * c->bw,
-               0);
-        return;
-    }
-    if (n == 2) {
-        c = nexttiled(m->clients);
-        cw = (m->ww - 2 * gappo - gappi) / 2;
-        ch = (m->wh - 2 * gappo) * 0.6;
-        resize(c,
-               m->mx + gappo,
-               m->my + (m->mh - ch) / 2 + gappo,
-               cw - 2 * c->bw,
-               ch - 2 * c->bw,
-               0);
-        resize(nexttiled(c->next),
-               m->mx + cw + gappo + gappi,
-               m->my + (m->mh - ch) / 2 + gappo,
-               cw - 2 * c->bw,
-               ch - 2 * c->bw,
-               0);
-        return;
-    }
-
-    for (cols = 0; cols <= n / 2; cols++)
-        if (cols * cols >= n)
-            break;
-    rows = (cols && (cols - 1) * cols >= n) ? cols - 1 : cols;
-	ch = (m->wh - 2 * gappo - (rows - 1) * gappi) / rows;
-	cw = (m->ww - 2 * gappo - (cols - 1) * gappi) / cols;
-
-    overcols = n % cols;
-    if (overcols){
-        dx = (m->ww - overcols * cw - (overcols - 1) * gappi) / 2 - gappo;}
-	for(i = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++) {
-        cx = m->wx + (i % cols) * (cw + gappi);
-        cy = m->wy + (i / cols) * (ch + gappi);
-        if (overcols && i >= n - overcols) {
-            cx += dx;
-        }
-        resize(c,
-               cx + gappo,
-               cy + gappo,
-               cw - 2 * c->bw,
-               ch - 2 * c->bw,
-               0);
-	}
-}
-
-
-void
-overview(Monitor *m)
-{
-    grid(m, overviewgappo, overviewgappi);
-}
-
-// 显示所有tag 或 跳转到聚焦窗口的tag
-void
-toggleoverview(const Arg *arg)
-{
-    uint target = selmon->sel ? selmon->sel->tags : selmon->tagset[selmon->seltags];
-    selmon->isoverview ^= 1;
-    view(&(Arg){ .ui = target });
-}
-
