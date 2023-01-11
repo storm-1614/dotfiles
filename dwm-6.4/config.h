@@ -153,12 +153,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_F7,     spawn,          {.v = lightdown } },/*减小亮度*/
 	{ MODKEY,                       XK_F8,     spawn,          {.v = lightup } },/*增大亮度*/
-	{ MODKEY,                       XK_F6,     spawn,          {.v = mutevol } },/*静音*/
-	{ MODKEY,                       XK_F5,     spawn,          {.v = downvol } },/*减小音量*/
-	{ MODKEY,                       XK_F4,     spawn,          {.v = upvol   } },/*增加音量*/
-	{ MODKEY,                       XK_F1,     spawn,          {.v = mpc_toggle } },  /*音乐播放/暂停*/
-	{ MODKEY,                       XK_F2,     spawn,          {.v = mpc_prev } },    /*音乐上一首*/
- 	{ MODKEY,                       XK_F3,     spawn,          {.v = mpc_next } },    /*音乐下一首*/
 	{ MODKEY|ShiftMask,           	XK_z,      spawn,          {.v = lock}},  /*锁屏*/
 	{ MODKEY, 			           	XK_x,      spawn,          {.v = music}},  /*音乐控制*/
 	{ MODKEY,                       XK_e,      spawn,          {.v = file}}, /*打开ranger*/
@@ -222,6 +216,15 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    { 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
+    { 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
+    { 0,              XF86XK_AudioMute,        spawn,          {.v = mutevol } },
+	{ 0, 			  XF86XK_AudioPlay, 	   spawn,          {.v = mpc_toggle } },
+	{ 0, 			  XF86XK_AudioNext,  	   spawn, 		   {.v = mpc_next } },
+	{ 0, 			  XF86XK_AudioPrev, 	   spawn,   	   {.v = mpc_prev } },
+	{ 0, 			  XF86XK_MonBrightnessUp,  spawn, 		   {.v = lightup } },
+	{ 0, 			  XF86XK_MonBrightnessDown,spawn,  		   {.v = lightdown} },
+
 };
 
 /* button definitions */
