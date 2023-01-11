@@ -51,7 +51,7 @@
 #define CLEANMASK(mask)         (mask & ~(numlockmask|LockMask) & (ShiftMask|ControlMask|Mod1Mask|Mod2Mask|Mod3Mask|Mod4Mask|Mod5Mask))
 #define INTERSECT(x,y,w,h,m)    (MAX(0, MIN((x)+(w),(m)->wx+(m)->ww) - MAX((x),(m)->wx)) \
                                * MAX(0, MIN((y)+(h),(m)->wy+(m)->wh) - MAX((y),(m)->wy)))
-#define ISVISIBLE(C)            ((C->tags & C->mon->tagset[C->mon->seltags]))
+#define ISVISIBLE(C)            ((C->mon->isoverview || C->tags & C->mon->tagset[C->mon->seltags]))
 #define HIDDEN(C)               ((getstate(C->win) == IconicState))
 #define LENGTH(X)               (sizeof X / sizeof X[0])
 #define MOUSEMASK               (BUTTONMASK|PointerMotionMask)
@@ -160,6 +160,7 @@ struct Monitor {
 	Window barwin;
 	const Layout *lt[2];
 	Pertag *pertag;
+    unsigned int isoverview;
 };
 
 typedef struct {
@@ -261,12 +262,16 @@ static void tagmon(const Arg *arg);
 static void tagtoleft(const Arg *arg);
 static void tagtoright(const Arg *arg);
 static void tile(Monitor *m);
+static void magicgrid(Monitor *m);
+static void overview(Monitor *m);
+static void grid(Monitor *m, uint gappo, uint uappi);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglescratch(const Arg *arg);
 static void togglefullscr(const Arg *arg);
 static void toggletag(const Arg *arg);
 static void toggleview(const Arg *arg);
+static void toggleoverview(const Arg *arg);
 static void togglewin(const Arg *arg);
 static void unfocus(Client *c, int setfocus);
 static void unmanage(Client *c, int destroyed);
@@ -479,9 +484,14 @@ arrange(Monitor *m)
 void
 arrangemon(Monitor *m)
 {
-	strncpy(m->ltsymbol, m->lt[m->sellt]->symbol, sizeof m->ltsymbol);
-	if (m->lt[m->sellt]->arrange)
-		m->lt[m->sellt]->arrange(m);
+    if (m->isoverview) {
+        strncpy(m->ltsymbol, overviewlayout.symbol, sizeof m->ltsymbol);
+        overviewlayout.arrange(m);
+    } else {
+        strncpy(m->ltsymbol, m->lt[m->sellt]->symbol, sizeof m->ltsymbol);
+        if (m->lt[m->sellt]->arrange)
+            m->lt[m->sellt]->arrange(m);
+    }
 }
 
 void
@@ -789,6 +799,7 @@ createmon(void)
 	m->gappx = gappx;
 	m->lt[0] = &layouts[0];
 	m->lt[1] = &layouts[1 % LENGTH(layouts)];
+	m->isoverview = 0;
 	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
 	m->pertag = ecalloc(1, sizeof(Pertag));
 	m->pertag->curtag = m->pertag->prevtag = 1;
@@ -2755,9 +2766,10 @@ view(const Arg *arg)
 {
 	int i;
 	unsigned int tmptag;
-
-	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags])
+	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags]) {
+        arrange(selmon);
 		return;
+	}
 	selmon->seltags ^= 1; /* toggle sel tagset */
 	if (arg->ui & TAGMASK) {
 		selmon->tagset[selmon->seltags] = arg->ui & TAGMASK;
@@ -2957,4 +2969,94 @@ main(int argc, char *argv[])
 	cleanup();
 	XCloseDisplay(dpy);
 	return EXIT_SUCCESS;
+}
+
+
+void
+magicgrid(Monitor *m)
+{
+    grid(m, 12, 12);
+}
+
+void
+grid(Monitor *m, uint gappo, uint gappi)
+{
+    unsigned int i, n;
+    unsigned int cx, cy, cw, ch;
+    unsigned int dx;
+    unsigned int cols, rows, overcols;
+    Client *c;
+
+    for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+    if (n == 0) return;
+    if (n == 1) {
+        c = nexttiled(m->clients);
+        cw = (m->ww - 2 * gappo) * 0.6;
+        ch = (m->wh - 2 * gappo) * 0.6;
+        resize(c,
+               m->mx + (m->mw - cw) / 2 + gappo,
+               m->my + (m->mh - ch) / 2 + gappo,
+               cw - 2 * c->bw,
+               ch - 2 * c->bw,
+               0);
+        return;
+    }
+    if (n == 2) {
+        c = nexttiled(m->clients);
+        cw = (m->ww - 2 * gappo - gappi) / 2;
+        ch = (m->wh - 2 * gappo) * 0.6;
+        resize(c,
+               m->mx + gappo,
+               m->my + (m->mh - ch) / 2 + gappo,
+               cw - 2 * c->bw,
+               ch - 2 * c->bw,
+               0);
+        resize(nexttiled(c->next),
+               m->mx + cw + gappo + gappi,
+               m->my + (m->mh - ch) / 2 + gappo,
+               cw - 2 * c->bw,
+               ch - 2 * c->bw,
+               0);
+        return;
+    }
+
+    for (cols = 0; cols <= n / 2; cols++)
+        if (cols * cols >= n)
+            break;
+    rows = (cols && (cols - 1) * cols >= n) ? cols - 1 : cols;
+	ch = (m->wh - 2 * gappo - (rows - 1) * gappi) / rows;
+	cw = (m->ww - 2 * gappo - (cols - 1) * gappi) / cols;
+
+    overcols = n % cols;
+    if (overcols)
+        dx = (m->ww - overcols * cw - (overcols - 1) * gappi) / 2 - gappo;
+		for(i = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++) {
+        cx = m->wx + (i % cols) * (cw + gappi);
+        cy = m->wy + (i / cols) * (ch + gappi);
+        if (overcols && i >= n - overcols) {
+            cx += dx;
+        }
+        resize(c,
+               cx + gappo,
+               cy + gappo,
+               cw - 2 * c->bw,
+               ch - 2 * c->bw,
+               0);
+	}
+}
+
+
+void
+overview(Monitor *m)
+{
+    grid(m, overviewgappo, overviewgappi);
+}
+
+// 显示所有tag 或 跳转到聚焦窗口的tag
+void
+toggleoverview(const Arg *arg)
+{
+    uint target = selmon->sel ? selmon->sel->tags : selmon->tagset[selmon->seltags];
+    selmon->isoverview ^= 1;
+    view(&(Arg){ .ui = target });
 }

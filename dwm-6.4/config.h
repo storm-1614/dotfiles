@@ -34,6 +34,11 @@ static const unsigned int alphas[][3]      = {
 /* tagging */
 static const char *tags[] = { "¹", "²", "³","切⁴", "﬐⁵", "⁶","⁷", "ﱘ⁸", "⁹" };
 
+static const int overviewgappi           = 24;        /* overview时 窗口与边缘 缝隙大小 */
+static const int overviewgappo           = 60;        /* overview时 窗口与窗口 缝隙大小 */
+static const char *overviewtag = "OVERVIEW";
+static const Layout overviewlayout = { "",  overview };
+
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
 
@@ -68,6 +73,7 @@ static const Layout layouts[] = {
 	{ "﬿",      tile },    /* first entry is default */
 	{ "缾",     NULL },    /* no layout function means floating behavior */
 	{ "[M]",    monocle },
+	{ "[G]",    magicgrid },
 };
 
 /* key definitions */
@@ -116,6 +122,7 @@ static const char *mpc_prev[]= { "mpc", "prev", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_a,      toggleoverview, {0} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_F7,     spawn,          {.v = lightdown } },/*减小亮度*/
@@ -140,7 +147,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
 	{ MODKEY,                       XK_y,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_y,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_v,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,        			    XK_i,      setcfact,       {.f = +0.25} },
 	{ MODKEY,           			XK_p,      setcfact,       {.f = -0.25} },
@@ -152,6 +159,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
