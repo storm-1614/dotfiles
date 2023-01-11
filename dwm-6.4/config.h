@@ -36,8 +36,8 @@ static const char *tags[] = { "¹", "²", "³","切⁴", "﬐⁵", "
 
 static const int overviewgappi           = 24;        /* overview时 窗口与边缘 缝隙大小 */
 static const int overviewgappo           = 60;        /* overview时 窗口与窗口 缝隙大小 */
-static const char *overviewtag = "OVERVIEW";
-static const Layout overviewlayout = { "",  overview };
+static const Layout overviewlayout = { "OVERVIEW",  overview };
+
 
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
@@ -73,7 +73,7 @@ static const Layout layouts[] = {
 	{ "﬿",      tile },    /* first entry is default */
 	{ "缾",     NULL },    /* no layout function means floating behavior */
 	{ "[M]",    monocle },
-	{ "[G]",    magicgrid },
+	{ "﩯",    magicgrid },
 };
 
 /* key definitions */
@@ -141,10 +141,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, //终端
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } }, //终端
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
+	{ MODKEY,                       XK_k,      focusstackvis,  {.i = +1 } },
+	{ MODKEY,                       XK_j,      focusstackvis,  {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = -1 } },
 	{ MODKEY,                       XK_y,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_y,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },

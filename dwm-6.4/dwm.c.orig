@@ -51,7 +51,7 @@
 #define CLEANMASK(mask)         (mask & ~(numlockmask|LockMask) & (ShiftMask|ControlMask|Mod1Mask|Mod2Mask|Mod3Mask|Mod4Mask|Mod5Mask))
 #define INTERSECT(x,y,w,h,m)    (MAX(0, MIN((x)+(w),(m)->wx+(m)->ww) - MAX((x),(m)->wx)) \
                                * MAX(0, MIN((y)+(h),(m)->wy+(m)->wh) - MAX((y),(m)->wy)))
-#define ISVISIBLE(C)            ((C->tags & C->mon->tagset[C->mon->seltags]))
+#define ISVISIBLE(C)            ((C->mon->isoverview || C->tags & C->mon->tagset[C->mon->seltags]))
 #define HIDDEN(C)               ((getstate(C->win) == IconicState))
 #define LENGTH(X)               (sizeof X / sizeof X[0])
 #define MOUSEMASK               (BUTTONMASK|PointerMotionMask)
@@ -160,6 +160,7 @@ struct Monitor {
 	Window barwin;
 	const Layout *lt[2];
 	Pertag *pertag;
+    unsigned int isoverview;
 };
 
 typedef struct {
@@ -262,6 +263,7 @@ static void tagtoleft(const Arg *arg);
 static void tagtoright(const Arg *arg);
 static void tile(Monitor *m);
 static void magicgrid(Monitor *m);
+static void overview(Monitor *m);
 static void grid(Monitor *m, uint gappo, uint uappi);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
@@ -269,6 +271,7 @@ static void togglescratch(const Arg *arg);
 static void togglefullscr(const Arg *arg);
 static void toggletag(const Arg *arg);
 static void toggleview(const Arg *arg);
+static void toggleoverview(const Arg *arg);
 static void togglewin(const Arg *arg);
 static void unfocus(Client *c, int setfocus);
 static void unmanage(Client *c, int destroyed);
@@ -481,9 +484,14 @@ arrange(Monitor *m)
 void
 arrangemon(Monitor *m)
 {
-	strncpy(m->ltsymbol, m->lt[m->sellt]->symbol, sizeof m->ltsymbol);
-	if (m->lt[m->sellt]->arrange)
-		m->lt[m->sellt]->arrange(m);
+    if (m->isoverview) {
+        strncpy(m->ltsymbol, overviewlayout.symbol, sizeof m->ltsymbol);
+        overviewlayout.arrange(m);
+    } else {
+        strncpy(m->ltsymbol, m->lt[m->sellt]->symbol, sizeof m->ltsymbol);
+        if (m->lt[m->sellt]->arrange)
+            m->lt[m->sellt]->arrange(m);
+    }
 }
 
 void
@@ -791,6 +799,7 @@ createmon(void)
 	m->gappx = gappx;
 	m->lt[0] = &layouts[0];
 	m->lt[1] = &layouts[1 % LENGTH(layouts)];
+	m->isoverview = 0;
 	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
 	m->pertag = ecalloc(1, sizeof(Pertag));
 	m->pertag->curtag = m->pertag->prevtag = 1;
@@ -2757,9 +2766,10 @@ view(const Arg *arg)
 {
 	int i;
 	unsigned int tmptag;
-
-	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags])
+	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags]) {
+        arrange(selmon);
 		return;
+	}
 	selmon->seltags ^= 1; /* toggle sel tagset */
 	if (arg->ui & TAGMASK) {
 		selmon->tagset[selmon->seltags] = arg->ui & TAGMASK;
@@ -3035,3 +3045,18 @@ grid(Monitor *m, uint gappo, uint gappi)
 	}
 }
 
+
+void
+overview(Monitor *m)
+{
+    grid(m, overviewgappo, overviewgappi);
+}
+
+// 显示所有tag 或 跳转到聚焦窗口的tag
+void
+toggleoverview(const Arg *arg)
+{
+    uint target = selmon->sel ? selmon->sel->tags : selmon->tagset[selmon->seltags];
+    selmon->isoverview ^= 1;
+    view(&(Arg){ .ui = target });
+}
