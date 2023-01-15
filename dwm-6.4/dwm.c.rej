@@ -1,18 +1,19 @@
 --- dwm.c
 +++ dwm.c
-@@ -212,6 +212,7 @@ static void tagmon(const Arg *arg);
- static void tile(Monitor *m);
- static void togglebar(const Arg *arg);
- static void togglefloating(const Arg *arg);
-+static void togglescratch(const Arg *arg);
- static void toggletag(const Arg *arg);
- static void toggleview(const Arg *arg);
- static void unfocus(Client *c, int setfocus);
-@@ -1651,6 +1662,7 @@ spawn(const Arg *arg)
- {
- 	if (arg->v == dmenucmd)
- 		dmenumon[0] = '0' + selmon->num;
-+	selmon->tagset[selmon->seltags] &= ~scratchtag;
- 	if (fork() == 0) {
- 		if (dpy)
- 			close(ConnectionNumber(dpy));
+@@ -267,7 +275,7 @@ static void (*handler[LASTEvent]) (XEvent *) = {
+ 	[PropertyNotify] = propertynotify,
+ 	[UnmapNotify] = unmapnotify
+ };
+-static Atom wmatom[WMLast], netatom[NetLast];
++static Atom wmatom[WMLast], netatom[NetLast], motifatom;
+ static int running = 1;
+ static Cur *cursor[CurLast];
+ static Clr **scheme;
+@@ -1573,6 +1584,7 @@ setup(void)
+ 	netatom[NetWMWindowType] = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE", False);
+ 	netatom[NetWMWindowTypeDialog] = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE_DIALOG", False);
+ 	netatom[NetClientList] = XInternAtom(dpy, "_NET_CLIENT_LIST", False);
++	motifatom = XInternAtom(dpy, "_MOTIF_WM_HINTS", False);
+ 	/* init cursors */
+ 	cursor[CurNormal] = drw_cur_create(drw, XC_left_ptr);
+ 	cursor[CurResize] = drw_cur_create(drw, XC_sizing);

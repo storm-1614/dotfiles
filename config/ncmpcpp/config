@@ -46,5 +46,5 @@ enable_window_title = "yes"
 external_editor = "nvim"
 
 ## you have dunst?
-execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% - %artist%' current)"
+#execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% - %artist%' current)"
 

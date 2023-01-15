@@ -52,7 +52,6 @@ static const Rule rules[] = {
 	{ "Vmware",   NULL,       NULL,       1 << 5,       0,           -1 },
 	{ "dida",     NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Zathura",  NULL, 	  NULL, 	  1 << 1,  		0, 			 -1 },
 	{ "VirtualBox Manager", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "VirtualBox Machine", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "icalingua", NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
@@ -67,6 +66,7 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int decorhints  = 1;    /* 1 means respect decoration hints */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
