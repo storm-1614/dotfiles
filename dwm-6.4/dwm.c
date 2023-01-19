@@ -906,7 +906,7 @@ drawbar(Monitor *m)
 	if (m == selmon) { /* status is only drawn on selected monitor */
 		drw_setscheme(drw, scheme[SchemeNorm]);
 		tw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
-		drw_text(drw, m->ww - tw - stw - 2 * sp, 0, tw, bh, 0, stext, 0);
+		drw_text(drw, m->ww - tw - stw, 0, tw, bh, 0, stext, 0);
 	}
 
 	for (c = m->clients; c; c = c->next) {
@@ -951,12 +951,12 @@ drawbar(Monitor *m)
 					}
 					remainder--;
 				}
-				drw_text(drw, x, 0, tabw - 2 * sp, bh, lrpad / 2, c->name, 0);
+				drw_text(drw, x, 0, tabw, bh, lrpad / 2, c->name, 0);
 				x += tabw;
 			}
 		} else {
 			drw_setscheme(drw, scheme[SchemeNorm]);
-			drw_rect(drw, x, 0, w - 2 * sp, bh, 1, 1);
+			drw_rect(drw, x, 0, w, bh, 1, 1);
 		}
 	}
 	m->bt = n;
@@ -2706,9 +2706,11 @@ updatesystray(int updatebar)
 	}
 	w = w ? w + systrayspacing : 1;
 	x -= w;
-	XMoveResizeWindow(dpy, systray->win, x - xpad - sp, m->by + ypad + vp, w, bh);
-	wc.x = x - xpad - sp;
-	wc.y = m->by + ypad + vp;
+	xpad = sp;
+	ypad = vp;
+	XMoveResizeWindow(dpy, systray->win, x - sp, m->by + ypad, w, bh);
+	wc.x = x - xpad;
+	wc.y = m->by + ypad;
 	wc.width = w;
 	wc.height = bh;
 	wc.stack_mode = Above; wc.sibling = m->barwin;
