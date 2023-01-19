@@ -5,4 +5,5 @@ sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache
 ```
-即可
+即可  
+字体为：`Hack Nerd Font`  
