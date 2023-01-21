@@ -5,6 +5,7 @@ clash &
 slstatus &
 dunst &
 qbat &
+runcat &
 xset s 3600 &
 xset dpms 0 0 3600 &
 redshift -O 4500 &

@@ -33,6 +33,21 @@ static const unsigned int alphas[][3]      = {
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
+static const char *const autostart[] = {
+	"picom", "-cGbf", NULL,
+	"fcitx5", "-d", NULL,
+	"clash", NULL,
+	"slstatus", NULL,
+	"dunst", NULL,
+	"qbat", NULL,
+	"runcat", NULL,
+	"xset", "s", "3600", NULL,
+	"redshift", "-O" "4500", NULL,
+	"pasystray", NULL,
+	"python", "/bin/cgwp.py", NULL,
+	NULL /* terminate */
+};
+
 /* tagging */
 static const char *tags[] = { "¹", "²", "³","切⁴", "﬐⁵", "⁶","⁷", "ﱘ⁸", "⁹" };
 
