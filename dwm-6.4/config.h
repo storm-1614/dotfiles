@@ -42,6 +42,7 @@ static const char *const autostart[] = {
 	"qbat", NULL,
 	"runcat", NULL,
 	"xset", "s", "3600", NULL,
+	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O" "4500", NULL,
 	"pasystray", NULL,
 	"python", "/bin/cgwp.py", NULL,

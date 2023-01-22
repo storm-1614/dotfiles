@@ -1,13 +1,15 @@
 window:
   dimensions:
-    columns: 65
-    lines: 25
+    columns: 75
+    lines: 35
   # 内填充
   padding:
     x: 0
     y: 0
+  # 透明度：0 透明，1 不透明
+  # opacity: 1.0
+  opacity: 0.6
 
-background.opacity: 0.7
 colors:
   primary:
     background: '#2e3440'
@@ -103,3 +105,5 @@ key_bindings:
   - { key: V, mods: command, action: Paste }
   - { key: C, mods: command, action: Copy }
 
+shell:
+  program: /bin/zsh
