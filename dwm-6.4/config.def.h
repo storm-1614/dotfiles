@@ -81,7 +81,7 @@ static const Rule rules[] = {
 	{ "Virt-manager", NULL,   NULL, 	  1 << 5, 		0, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 3, 		0, 			 -1 },
-	{ "thunderbird",    NULL,       NULL, 	  1 << 8, 		0, 			 -1 },
+	{ "thunderbird", NULL,    NULL, 	  1 << 8, 		0, 			 -1 },
 };
 
 /* layout(s) */
@@ -111,6 +111,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
+static const char *jgmenucmd[]  = { "jgmenu_run", NULL };
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *termcmd2[] = { "st", NULL };
@@ -145,6 +146,7 @@ static const char *mpc_prev[]= { "mpc", "prev", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY, XK_F1, spawn, {.v = jgmenucmd } },
 	{ MODKEY,                       XK_a,      toggleoverview, {0} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = dmenucmd } },
@@ -226,6 +228,9 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
+	{ ClkWinTitle, 0, Button1, spawn, {.v = jgmenucmd } },
+	{ ClkWinTitle, 0, Button3, spawn, {.v = jgmenucmd } },
+	{ ClkRootWin,  0, Button3, spawn, {.v = jgmenucmd } },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
