@@ -8,7 +8,7 @@ window:
     y: 0
   # 透明度：0 透明，1 不透明
   # opacity: 1.0
-  opacity: 0.6
+  #  opacity: 0.75
 
 colors:
   primary:

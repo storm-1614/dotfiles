@@ -1,17 +1,18 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 10;       /* vertical padding of bar */
-static const int sidepad            = 10;       /* horizontal padding of bar */
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const unsigned int borderpx  = 3;        /* 窗口边缘像素 */
+static const unsigned int gappx     = 10;        /* 窗口间隔 */
+static const unsigned int snap      = 32;       /* 边缘依附宽度 */
+static const int showbar            = 1;        /* 是否显示状态栏 */
+static const int topbar             = 1;        /* 是否将状态栏置于上方 */
+static const int vertpad            = 10;       /* 垂直状态栏缝隙 */
+static const int sidepad            = 10;       /* 水平状态栏缝隙 */
+static const unsigned int systraypinning = 0;   /* 托盘跟随的显示器，0表示不指定 */
+static const unsigned int systrayspacing = 1;   /* 托盘间距 */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
+static const unsigned int baralpha = 0xaa;
 static const char *fonts[]          = { "Hack Nerd Font:size=15", "Source Han Sans CN:size=15" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#2e3440";
@@ -19,7 +20,6 @@ static const char col_gray2[]       = "#4c566a";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#8fbcbb";
 static const char col_cyan[]        = "#5e81ac";
-static const unsigned int baralpha = 0xaa;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -214,6 +214,16 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+    { MODKEY|ControlMask,  XK_Up,           movewin,          {.ui = UP} },              
+    { MODKEY|ControlMask,  XK_Down,         movewin,          {.ui = DOWN} },           
+    { MODKEY|ControlMask,  XK_Left,         movewin,          {.ui = LEFT} },           
+    { MODKEY|ControlMask,  XK_Right,        movewin,          {.ui = RIGHT} },          
+    { MODKEY|Mod1Mask,     XK_Up,           resizewin,        {.ui = V_REDUCE} },       
+    { MODKEY|Mod1Mask,     XK_Down,         resizewin,        {.ui = V_EXPAND} },       
+    { MODKEY|Mod1Mask,     XK_Left,         resizewin,        {.ui = H_REDUCE} },       
+    { MODKEY|Mod1Mask,     XK_Right,        resizewin,        {.ui = H_EXPAND} },       
+
     { 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
     { 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
     { 0,              XF86XK_AudioMute,        spawn,          {.v = mutevol } },
@@ -228,8 +238,6 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkWinTitle, 0, Button1, spawn, {.v = jgmenucmd } },
-	{ ClkWinTitle, 0, Button3, spawn, {.v = jgmenucmd } },
 	{ ClkRootWin,  0, Button3, spawn, {.v = jgmenucmd } },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
