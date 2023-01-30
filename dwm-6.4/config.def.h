@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
+static const unsigned int systrayspadding = 10;        /* 托盘和状态栏的间隙 */
 static const unsigned int borderpx  = 3;        /* 窗口边缘像素 */
 static const unsigned int gappx     = 10;        /* 窗口间隔 */
 static const unsigned int snap      = 32;       /* 边缘依附宽度 */
@@ -15,16 +16,17 @@ static const int showsystray             = 1;   /* 0 means no systray */
 static const unsigned int baralpha = 0xaa;
 static const char *fonts[]          = { "Hack Nerd Font:size=15", "Source Han Sans CN:size=15" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#2e3440";
+static const char col_gray1[]       = "#3b4252";
 static const char col_gray2[]       = "#4c566a";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#8fbcbb";
+static const char col_gray5[]       = "#2e3440";
 static const char col_cyan[]        = "#5e81ac";
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_gray5,  col_cyan  },
 	[SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
 };
 static const unsigned int alphas[][3]      = {

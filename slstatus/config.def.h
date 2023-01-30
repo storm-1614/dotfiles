@@ -81,5 +81,5 @@ static const struct arg args[] = {
 	{netspeed_tx, "[ %s]", "wlp0s20f3"},
 	/*{wifi_essid, " \uf1eb %s|", "wlan0"},*/
 //	{datetime, "  %s|",           "%F %T" },
-    {run_command, "[ %s]  ", get_time},
+    {run_command, "[ %s]", get_time},
 };
