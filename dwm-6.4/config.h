@@ -14,6 +14,8 @@ static const unsigned int systrayspacing = 1;   /* 托盘间距 */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
 static const unsigned int baralpha = 0xaa;
+static const unsigned int borderalpha = OPAQUE;
+static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Hack Nerd Font:size=15", "Source Han Sans CN:size=15" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#3b4252";
@@ -22,7 +24,6 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#8fbcbb";
 static const char col_gray5[]       = "#2e3440";
 static const char col_cyan[]        = "#5e81ac";
-static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
