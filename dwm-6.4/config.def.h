@@ -48,7 +48,8 @@ static const char *const autostart[] = {
 	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O" "4500", NULL,
 	"pasystray", NULL,
-	"python", "/bin/cgwp.py", NULL,
+//	"python", "/bin/cgwp.py", NULL,
+	"wallpaper.sh", NULL,
 	NULL /* terminate */
 };
 
@@ -242,17 +243,28 @@ static const Key keys[] = {
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkRootWin,  0, Button3, spawn, {.v = jgmenucmd } },
+    { ClkRootWin,           0,              Button4,        viewtoleft,     {0} }, 
+	{ ClkRootWin,           0,              Button5,        viewtoright,    {0} },
+
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+
 	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
+    { ClkWinTitle,          0,              Button4,        focusstackhid,  {.i = -1 } },
+	{ ClkWinTitle,          0,              Button5,        focusstackhid,  {.i = +1 } },
+
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+    { ClkTagBar,           0,               Button4,        viewtoleft,     {0} }, 
+	{ ClkTagBar,           0,               Button5,        viewtoright,    {0} },
 };
 
