@@ -230,6 +230,7 @@ static void hidewin(Client *c);
 static void incnmaster(const Arg *arg);
 static void keypress(XEvent *e);
 static void killclient(const Arg *arg);
+static void forcekillclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
 static void mappingnotify(XEvent *e);
 static void maprequest(XEvent *e);
@@ -1370,6 +1371,15 @@ killclient(const Arg *arg)
 		XSetErrorHandler(xerror);
 		XUngrabServer(dpy);
 	}
+}
+
+void
+forcekillclient(const Arg *arg)
+{
+    if (!selmon->sel)
+        return;
+    killclient(arg);
+    unmanage(selmon->sel, 1);
 }
 
 void

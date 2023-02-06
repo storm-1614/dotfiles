@@ -1,4 +1,9 @@
-#!/bin/sh
+#/bin/sh
+#xrandr --setprovideroutputsource modesetting NVIDIA-0
+#xrandr --auto
+xrandr --dpi 96
+
+export LANG=zh_CN.UTF-8
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -54,21 +59,27 @@ session=${1:-dwm}
 
 case $session in
     i3|i3wm           ) exec i3;;
-    kde               ) 
+    kde               )
+		export DESKTOP_SESSION=plasma 
 		latte-dock &
 		exec startplasma-x11;;
     dwm 		      ) 
-		picom -cGbf & 
+#		picom -cGbf & 
+#		wallpaper.sh &
+#		fcitx5 -d &
+#		clash &
+#		slstatus &
+#		dunst &
+#		qbat &
+#		xset s 3600 &
+#		xset dpms 0 0 3600 &
+#		redshift -O 4500 &
+#		pasystray &
+#		~/.config/polybar/launch.sh &
+		exec dwm;;
+	dwmp  		     )
+		~/.config/polybar/launch.sh &
 		wallpaper.sh &
-		fcitx5 -d &
-		clash &
-		slstatus &
-		dunst &
-		qbat &
-		xset s 3600 &
-		xset dpms 0 0 3600 &
-		redshift -O 4500 &
-		pasystray &
 		exec dwm;;
 	bsp 			  ) exec bspwm;;
     # No known session, try to run it as command

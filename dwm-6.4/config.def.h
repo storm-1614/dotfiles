@@ -49,7 +49,9 @@ static const char *const autostart[] = {
 	"redshift", "-O" "4500", NULL,
 	"pasystray", NULL,
 //	"python", "/bin/cgwp.py", NULL,
-	"wallpaper.sh", NULL,
+//	"wallpaper.sh", NULL,
+	"feh", "--bg-fill", "Pictures/wallpapers/932271.jpg", NULL,
+	"libinput-gestures", NULL,
 	NULL /* terminate */
 };
 
@@ -117,7 +119,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *jgmenucmd[]  = { "jgmenu_run", NULL };
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "prime-run", "alacritty", NULL };
 static const char *termcmd2[] = { "st", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
 static const char *roficmd1[]  = { "rofi", "-show", "run", NULL };
@@ -150,7 +152,7 @@ static const char *mpc_prev[]= { "mpc", "prev", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY, XK_F1, spawn, {.v = jgmenucmd } },
+	{ MODKEY, 						XK_F1, 	   spawn, 		   {.v = jgmenucmd } },
 	{ MODKEY,                       XK_a,      toggleoverview, {0} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = dmenucmd } },
@@ -184,7 +186,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,      zoom,           {0} },
 	{ MODKEY,                       XK_r,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -217,6 +218,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	{ MODKEY|ControlMask,  			XK_q,      forcekillclient,{0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
     { MODKEY|ControlMask,  XK_Up,           movewin,          {.ui = UP} },              
@@ -243,8 +246,8 @@ static const Key keys[] = {
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkRootWin,  0, Button3, spawn, {.v = jgmenucmd } },
-    { ClkRootWin,           0,              Button4,        viewtoleft,     {0} }, 
-	{ ClkRootWin,           0,              Button5,        viewtoright,    {0} },
+//  { ClkRootWin,           0,              Button4,        viewtoleft,     {0} }, 
+//	{ ClkRootWin,           0,              Button5,        viewtoright,    {0} },
 
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
