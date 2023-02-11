@@ -52,6 +52,7 @@ static const char *const autostart[] = {
 //	"wallpaper.sh", NULL,
 	"feh", "--bg-fill", "Pictures/wallpapers/932271.jpg", NULL,
 	"libinput-gestures", NULL,
+	"nm-applet", NULL, 
 	NULL /* terminate */
 };
 
