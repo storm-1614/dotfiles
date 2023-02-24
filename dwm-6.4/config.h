@@ -39,7 +39,7 @@ static const unsigned int alphas[][3]      = {
 static const char *const autostart[] = {
 	"picom", "-cGbf", NULL,
 	"fcitx5", "-d", NULL,
-	"clash", NULL,
+	"clash-verge", NULL,
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
@@ -120,7 +120,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *jgmenucmd[]  = { "jgmenu_run", NULL };
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "prime-run", "alacritty", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *termcmd2[] = { "st", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
 static const char *roficmd1[]  = { "rofi", "-show", "run", NULL };
