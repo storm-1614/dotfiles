@@ -39,7 +39,7 @@ static const unsigned int alphas[][3]      = {
 static const char *const autostart[] = {
 	"picom", "-cGbf", NULL,
 	"fcitx5", "-d", NULL,
-	"clash", NULL,
+	"clash-verge", NULL,
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
@@ -170,8 +170,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = emoji}}, /*emoji*/
 	{ MODKEY,                       XK_w,      spawn,          {.v = window}}, /*window*/
   	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },/*打开firefox*/
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd2 } }, //终端
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } }, //终端
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, //终端
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } }, //终端
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = -1 } },
