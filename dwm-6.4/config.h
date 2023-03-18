@@ -7,8 +7,8 @@ static const unsigned int gappx     = 10;        /* 窗口间隔 */
 static const unsigned int snap      = 32;       /* 边缘依附宽度 */
 static const int showbar            = 1;        /* 是否显示状态栏 */
 static const int topbar             = 1;        /* 是否将状态栏置于上方 */
-static const int vertpad            = 10;       /* 垂直状态栏缝隙 */
-static const int sidepad            = 10;       /* 水平状态栏缝隙 */
+static const int vertpad            = 0;       /* 垂直状态栏缝隙 */
+static const int sidepad            = 0;       /* 水平状态栏缝隙 */
 static const unsigned int systraypinning = 0;   /* 托盘跟随的显示器，0表示不指定 */
 static const unsigned int systrayspacing = 1;   /* 托盘间距 */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -43,7 +43,7 @@ static const char *const autostart[] = {
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
-	"runcat", NULL,
+//	"runcat", NULL,
 	"xset", "s", "3600", NULL,
 	"xset", "dpms", "0", "0", "3600", NULL,
 	"redshift", "-O" "4500", NULL,

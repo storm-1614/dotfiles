@@ -267,7 +267,6 @@ static void show(const Arg *arg);
 static void showall(const Arg *arg);
 static void showwin(Client *c);
 static void showhide(Client *c);
-static void sigchld(int unused);
 static int solitary(Client *c);
 static void spawn(const Arg *arg);
 static Monitor *systraytomon(Monitor *m);
@@ -1279,16 +1278,26 @@ grabkeys(void)
 {
 	updatenumlockmask();
 	{
-		unsigned int i, j;
+		unsigned int i, j, k;
 		unsigned int modifiers[] = { 0, LockMask, numlockmask, numlockmask|LockMask };
-		KeyCode code;
+		int start, end, skip;
+		KeySym *syms;
 
 		XUngrabKey(dpy, AnyKey, AnyModifier, root);
-		for (i = 0; i < LENGTH(keys); i++)
-			if ((code = XKeysymToKeycode(dpy, keys[i].keysym)))
-				for (j = 0; j < LENGTH(modifiers); j++)
-					XGrabKey(dpy, code, keys[i].mod | modifiers[j], root,
-						True, GrabModeAsync, GrabModeAsync);
+		XDisplayKeycodes(dpy, &start, &end);
+		syms = XGetKeyboardMapping(dpy, start, end - start + 1, &skip);
+		if (!syms)
+			return;
+		for (k = start; k <= end; k++)
+			for (i = 0; i < LENGTH(keys); i++)
+				/* skip modifier codes, we do that ourselves */
+				if (keys[i].keysym == syms[(k - start) * skip])
+					for (j = 0; j < LENGTH(modifiers); j++)
+						XGrabKey(dpy, k,
+							 keys[i].mod | modifiers[j],
+							 root, True,
+							 GrabModeAsync, GrabModeAsync);
+		XFree(syms);
 	}
 }
 
@@ -2030,9 +2039,16 @@ setup(void)
 	int i;
 	XSetWindowAttributes wa;
 	Atom utf8string;
+	struct sigaction sa;
 
-	/* clean up any zombies immediately */
-	sigchld(0);
+	/* do not transform children into zombies when they terminate */
+	sigemptyset(&sa.sa_mask);
+	sa.sa_flags = SA_NOCLDSTOP | SA_NOCLDWAIT | SA_RESTART;
+	sa.sa_handler = SIG_IGN;
+	sigaction(SIGCHLD, &sa, NULL);
+
+	/* clean up any zombies (inherited from .xinitrc etc) immediately */
+	while (waitpid(-1, NULL, WNOHANG) > 0);
 
 	/* init screen */
 	screen = DefaultScreen(dpy);
@@ -2175,30 +2191,6 @@ showhide(Client *c)
 		/* hide clients bottom up */
 		showhide(c->snext);
 		XMoveWindow(dpy, c->win, WIDTH(c) * -2, c->y);
-	}
-}
-
-void
-sigchld(int unused)
-{
-	pid_t pid;
-
-	if (signal(SIGCHLD, sigchld) == SIG_ERR)
-		die("can't install SIGCHLD handler:");
-	while (0 < (pid = waitpid(-1, NULL, WNOHANG))) {
-		pid_t *p, *lim;
-
-		if (!(p = autostart_pids))
-			continue;
-		lim = &p[autostart_len];
-
-		for (; p < lim; p++) {
-			if (*p == pid) {
-				*p = -1;
-				break;
-			}
-		}
-
 	}
 }
 

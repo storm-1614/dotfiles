@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack Nerd Font:pixelsize=24:antialias=true:autohint=true";
+static char *font = "Hack Nerd Font:pixelsize=22:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*
@@ -27,7 +27,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
-static float chscale = 0.9;
+static float chscale = 1.0;
 
 /*
  * word delimiter string
@@ -57,12 +57,6 @@ static double minlatency = 8;
 static double maxlatency = 33;
 
 /*
- * Synchronized-Update timeout in ms
- * https://gitlab.com/gnachman/iterm2/-/wikis/synchronized-updates-spec
- */
-static uint su_timeout = 200;
-
-/*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
@@ -72,21 +66,6 @@ static unsigned int blinktimeout = 800;
  * thickness of underline and bar cursors
  */
 static unsigned int cursorthickness = 2;
-
-/*
- * 1: render most of the lines/blocks characters without using the font for
- *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
- *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
- * 0: disable (render all U25XX glyphs normally from the font).
- */
-const int boxdraw = 1;
-const int boxdraw_bold = 0;
-
-/* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 0;
-
-/* bg opacity */
-float alpha = 0.9;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -114,8 +93,10 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* bg opacity */
+float alpha = 0.8;
 
+/* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
 	"#3b4252", /* black   */
@@ -167,8 +148,8 @@ static unsigned int cursorshape = 2;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 100;
-static unsigned int rows = 30;
+static unsigned int cols = 80;
+static unsigned int rows = 24;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -190,10 +171,6 @@ static unsigned int defaultattr = 11;
  */
 static uint forcemousemod = ShiftMask;
 
-/* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
-
 /*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
@@ -201,12 +178,15 @@ static uint forcemousemod = ShiftMask;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ XK_ANY_MOD,           Button3, selpaste,       {.i = 0},      1 },
-	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1}         },
-	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1}         },
-	{ ControlMask,          Button4, kscrollup,      {.i = -1}        },
-	{ ControlMask,          Button5, kscrolldown,    {.i = -1}        },
+	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
+
+/* Internal keyboard shortcuts. */
+#define MODKEY Mod1Mask
+#define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -222,6 +202,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
 };
 
 /*

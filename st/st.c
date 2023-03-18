@@ -16,7 +16,6 @@
 #include <termios.h>
 #include <unistd.h>
 #include <wchar.h>
-#include <time.h>
 
 #include "st.h"
 #include "win.h"
@@ -160,6 +159,11 @@ typedef struct {
 	int narg;              /* nb of args */
 } STREscape;
 
+typedef struct {
+	int state;
+	size_t length;
+} URLdfa;
+
 static void execsh(char *, char **);
 static void stty(char **);
 static void sigchld(int);
@@ -169,6 +173,7 @@ static void csidump(void);
 static void csihandle(void);
 static void csiparse(void);
 static void csireset(void);
+static void osc_color_response(int, int, int);
 static int eschandle(uchar);
 static void strdump(void);
 static void strhandle(void);
@@ -194,20 +199,21 @@ static void tputc(Rune);
 static void treset(void);
 static void tscrollup(int, int, int);
 static void tscrolldown(int, int, int);
-static void tsetattr(int *, int);
-static void tsetchar(Rune, Glyph *, int, int);
+static void tsetattr(const int *, int);
+static void tsetchar(Rune, const Glyph *, int, int);
 static void tsetdirt(int, int);
 static void tsetscroll(int, int);
 static void tswapscreen(void);
-static void tsetmode(int, int, int *, int);
+static void tsetmode(int, int, const int *, int);
 static int twrite(const char *, int, int);
 static void tfulldirt(void);
 static void tcontrolcode(uchar );
 static void tdectest(char );
 static void tdefutf8(char);
-static int32_t tdefcolor(int *, int *, int);
+static int32_t tdefcolor(const int *, int *, int);
 static void tdeftran(char);
 static void tstrsequence(uchar);
+static int daddch(URLdfa *, char);
 
 static void drawregion(int, int, int, int);
 
@@ -234,36 +240,10 @@ static int iofd = 1;
 static int cmdfd;
 static pid_t pid;
 
-static uchar utfbyte[UTF_SIZ + 1] = {0x80,    0, 0xC0, 0xE0, 0xF0};
-static uchar utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0xE0, 0xF0, 0xF8};
-static Rune utfmin[UTF_SIZ + 1] = {       0,    0,  0x80,  0x800,  0x10000};
-static Rune utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};
-
-static int su = 0;
-struct timespec sutv;
-
-static void
-tsync_begin()
-{
-	clock_gettime(CLOCK_MONOTONIC, &sutv);
-	su = 1;
-}
-
-static void
-tsync_end()
-{
-	su = 0;
-}
-
-int
-tinsync(uint timeout)
-{
-	struct timespec now;
-	if (su && !clock_gettime(CLOCK_MONOTONIC, &now)
-	       && TIMEDIFF(now, sutv) >= timeout)
-		su = 0;
-	return su;
-}
+static const uchar utfbyte[UTF_SIZ + 1] = {0x80,    0, 0xC0, 0xE0, 0xF0};
+static const uchar utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0xE0, 0xF0, 0xF8};
+static const Rune utfmin[UTF_SIZ + 1] = {       0,    0,  0x80,  0x800,  0x10000};
+static const Rune utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};
 
 ssize_t
 xwrite(int fd, const char *s, size_t len)
@@ -303,12 +283,14 @@ xrealloc(void *p, size_t len)
 }
 
 char *
-xstrdup(char *s)
+xstrdup(const char *s)
 {
-	if ((s = strdup(s)) == NULL)
+	char *p;
+
+	if ((p = strdup(s)) == NULL)
 		die("strdup: %s\n", strerror(errno));
 
-	return s;
+	return p;
 }
 
 size_t
@@ -381,25 +363,10 @@ utf8validate(Rune *u, size_t i)
 	return i;
 }
 
-static const char base64_digits[] = {
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0,
-	63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 0, 0, 0, -1, 0, 0, 0, 0, 1,
-	2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-	22, 23, 24, 25, 0, 0, 0, 0, 0, 0, 26, 27, 28, 29, 30, 31, 32, 33, 34,
-	35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
-
 char
 base64dec_getc(const char **src)
 {
-	while (**src && !isprint(**src))
+	while (**src && !isprint((unsigned char)**src))
 		(*src)++;
 	return **src ? *((*src)++) : '=';  /* emulate padding if string ends */
 }
@@ -409,6 +376,13 @@ base64dec(const char *src)
 {
 	size_t in_len = strlen(src);
 	char *result, *dst;
+	static const char base64_digits[256] = {
+		[43] = 62, 0, 0, 0, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
+		0, 0, 0, -1, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+		13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 0, 0, 0, 0,
+		0, 0, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+		40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51
+	};
 
 	if (in_len % 4)
 		in_len += 4 - (in_len % 4);
@@ -552,7 +526,7 @@ selsnap(int *x, int *y, int direction)
 {
 	int newx, newy, xt, yt;
 	int delim, prevdelim;
-	Glyph *gp, *prevgp;
+	const Glyph *gp, *prevgp;
 
 	switch (sel.snap) {
 	case SNAP_WORD:
@@ -625,7 +599,7 @@ getsel(void)
 {
 	char *str, *ptr;
 	int y, bufsize, lastx, linelen;
-	Glyph *gp, *last;
+	const Glyph *gp, *last;
 
 	if (sel.ob.x == -1)
 		return NULL;
@@ -792,7 +766,7 @@ stty(char **args)
 }
 
 int
-ttynew(char *line, char *cmd, char *out, char **args)
+ttynew(const char *line, char *cmd, const char *out, char **args)
 {
 	int m, s;
 
@@ -825,14 +799,15 @@ ttynew(char *line, char *cmd, char *out, char **args)
 		break;
 	case 0:
 		close(iofd);
+		close(m);
 		setsid(); /* create a new process group */
 		dup2(s, 0);
 		dup2(s, 1);
 		dup2(s, 2);
 		if (ioctl(s, TIOCSCTTY, NULL) < 0)
 			die("ioctl TIOCSCTTY failed: %s\n", strerror(errno));
-		close(s);
-		close(m);
+		if (s > 2)
+			close(s);
 #ifdef __OpenBSD__
 		if (pledge("stdio getpw proc exec", NULL) == -1)
 			die("pledge\n");
@@ -852,9 +827,6 @@ ttynew(char *line, char *cmd, char *out, char **args)
 	return cmdfd;
 }
 
-static int twrite_aborted = 0;
-int ttyread_pending() { return twrite_aborted; }
-
 size_t
 ttyread(void)
 {
@@ -863,7 +835,7 @@ ttyread(void)
 	int ret, written;
 
 	/* append read bytes to unprocessed bytes */
-	ret = twrite_aborted ? 1 : read(cmdfd, buf+buflen, LEN(buf)-buflen);
+	ret = read(cmdfd, buf+buflen, LEN(buf)-buflen);
 
 	switch (ret) {
 	case 0:
@@ -871,7 +843,7 @@ ttyread(void)
 	case -1:
 		die("couldn't read from shell: %s\n", strerror(errno));
 	default:
-		buflen += twrite_aborted ? 0 : ret;
+		buflen += ret;
 		written = twrite(buf, buflen, 0);
 		buflen -= written;
 		/* keep any incomplete UTF-8 byte sequence for the next call */
@@ -1034,7 +1006,6 @@ tsetdirtattr(int attr)
 void
 tfulldirt(void)
 {
-	tsync_end();
 	tsetdirt(0, term.row-1);
 }
 
@@ -1139,13 +1110,13 @@ tscrolldown(int orig, int n, int copyhist)
 	Line temp;
 
 	LIMIT(n, 0, term.bot-orig+1);
-
 	if (copyhist) {
 		term.histi = (term.histi - 1 + HISTSIZE) % HISTSIZE;
 		temp = term.hist[term.histi];
 		term.hist[term.histi] = term.line[term.bot];
 		term.line[term.bot] = temp;
 	}
+
 
 	tsetdirt(orig, term.bot-n);
 	tclearregion(0, term.bot-n+1, term.col-1, term.bot);
@@ -1156,7 +1127,8 @@ tscrolldown(int orig, int n, int copyhist)
 		term.line[i-n] = temp;
 	}
 
-	selscroll(orig, n);
+	if (term.scr == 0)
+		selscroll(orig, n);
 }
 
 void
@@ -1186,7 +1158,8 @@ tscrollup(int orig, int n, int copyhist)
 		term.line[i+n] = temp;
 	}
 
-	selscroll(orig, -n);
+	if (term.scr == 0)
+		selscroll(orig, -n);
 }
 
 void
@@ -1277,9 +1250,9 @@ tmoveto(int x, int y)
 }
 
 void
-tsetchar(Rune u, Glyph *attr, int x, int y)
+tsetchar(Rune u, const Glyph *attr, int x, int y)
 {
-	static char *vt100_0[62] = { /* 0x41 - 0x7e */
+	static const char *vt100_0[62] = { /* 0x41 - 0x7e */
 		"↑", "↓", "→", "←", "█", "▚", "☃", /* A - G */
 		0, 0, 0, 0, 0, 0, 0, 0, /* H - O */
 		0, 0, 0, 0, 0, 0, 0, 0, /* P - W */
@@ -1310,9 +1283,6 @@ tsetchar(Rune u, Glyph *attr, int x, int y)
 	term.dirty[y] = 1;
 	term.line[y][x] = *attr;
 	term.line[y][x].u = u;
-
-	if (isboxdraw(u))
-		term.line[y][x].mode |= ATTR_BOXDRAW;
 }
 
 void
@@ -1394,7 +1364,7 @@ tdeleteline(int n)
 }
 
 int32_t
-tdefcolor(int *attr, int *npar, int l)
+tdefcolor(const int *attr, int *npar, int l)
 {
 	int32_t idx = -1;
 	uint r, g, b;
@@ -1444,7 +1414,7 @@ tdefcolor(int *attr, int *npar, int l)
 }
 
 void
-tsetattr(int *attr, int l)
+tsetattr(const int *attr, int l)
 {
 	int i;
 	int32_t idx;
@@ -1562,9 +1532,9 @@ tsetscroll(int t, int b)
 }
 
 void
-tsetmode(int priv, int set, int *args, int narg)
+tsetmode(int priv, int set, const int *args, int narg)
 {
-	int alt, *lim;
+	int alt; const int *lim;
 
 	for (lim = args + narg; args < lim; ++args) {
 		if (priv) {
@@ -1934,10 +1904,40 @@ csireset(void)
 }
 
 void
+osc_color_response(int num, int index, int is_osc4)
+{
+	int n;
+	char buf[32];
+	unsigned char r, g, b;
+
+	if (xgetcolor(is_osc4 ? num : index, &r, &g, &b)) {
+		fprintf(stderr, "erresc: failed to fetch %s color %d\n",
+		        is_osc4 ? "osc4" : "osc",
+		        is_osc4 ? num : index);
+		return;
+	}
+
+	n = snprintf(buf, sizeof buf, "\033]%s%d;rgb:%02x%02x/%02x%02x/%02x%02x\007",
+	             is_osc4 ? "4;" : "", num, r, r, g, g, b, b);
+	if (n < 0 || n >= sizeof(buf)) {
+		fprintf(stderr, "error: %s while printing %s response\n",
+		        n < 0 ? "snprintf failed" : "truncation occurred",
+		        is_osc4 ? "osc4" : "osc");
+	} else {
+		ttywrite(buf, n, 1);
+	}
+}
+
+void
 strhandle(void)
 {
 	char *p = NULL, *dec;
 	int j, narg, par;
+	const struct { int idx; char *str; } osc_table[] = {
+		{ defaultfg, "foreground" },
+		{ defaultbg, "background" },
+		{ defaultcs, "cursor" }
+	};
 
 	term.esc &= ~(ESC_STR_END|ESC_STR);
 	strparse();
@@ -1947,7 +1947,15 @@ strhandle(void)
 	case ']': /* OSC -- Operating System Command */
 		switch (par) {
 		case 0:
+			if (narg > 1) {
+				xsettitle(strescseq.args[1]);
+				xseticontitle(strescseq.args[1]);
+			}
+			return;
 		case 1:
+			if (narg > 1)
+				xseticontitle(strescseq.args[1]);
+			return;
 		case 2:
 			if (narg > 1)
 				xsettitle(strescseq.args[1]);
@@ -1963,14 +1971,35 @@ strhandle(void)
 				}
 			}
 			return;
+		case 10:
+		case 11:
+		case 12:
+			if (narg < 2)
+				break;
+			p = strescseq.args[1];
+			if ((j = par - 10) < 0 || j >= LEN(osc_table))
+				break; /* shouldn't be possible */
+
+			if (!strcmp(p, "?")) {
+				osc_color_response(par, osc_table[j].idx, 0);
+			} else if (xsetcolorname(osc_table[j].idx, p)) {
+				fprintf(stderr, "erresc: invalid %s color: %s\n",
+				        osc_table[j].str, p);
+			} else {
+				tfulldirt();
+			}
+			return;
 		case 4: /* color set */
 			if (narg < 3)
 				break;
 			p = strescseq.args[2];
 			/* FALLTHROUGH */
-		case 104: /* color reset, here p = NULL */
+		case 104: /* color reset */
 			j = (narg > 1) ? atoi(strescseq.args[1]) : -1;
-			if (xsetcolorname(j, p)) {
+
+			if (p && !strcmp(p, "?")) {
+				osc_color_response(j, 0, 1);
+			} else if (xsetcolorname(j, p)) {
 				if (par == 104 && narg <= 1)
 					return; /* color reset without parameter */
 				fprintf(stderr, "erresc: invalid color j=%d, p=%s\n",
@@ -1980,7 +2009,7 @@ strhandle(void)
 				 * TODO if defaultbg color is changed, borders
 				 * are dirty
 				 */
-				redraw();
+				tfulldirt();
 			}
 			return;
 		}
@@ -1989,12 +2018,6 @@ strhandle(void)
 		xsettitle(strescseq.args[0]);
 		return;
 	case 'P': /* DCS -- Device Control String */
-		/* https://gitlab.com/gnachman/iterm2/-/wikis/synchronized-updates-spec */
-		if (strstr(strescseq.buf, "=1s") == strescseq.buf)
-			tsync_begin();  /* BSU */
-		else if (strstr(strescseq.buf, "=2s") == strescseq.buf)
-			tsync_end();  /* ESU */
-		return;
 	case '_': /* APC -- Application Program Command */
 	case '^': /* PM -- Privacy Message */
 		return;
@@ -2112,7 +2135,7 @@ void
 tdumpline(int n)
 {
 	char buf[UTF_SIZ];
-	Glyph *bp, *end;
+	const Glyph *bp, *end;
 
 	bp = &term.line[n][0];
 	end = &bp[MIN(tlinelen(n), term.col) - 1];
@@ -2518,6 +2541,10 @@ check_control_code:
 	if (width == 2) {
 		gp->mode |= ATTR_WIDE;
 		if (term.c.x+1 < term.col) {
+			if (gp[1].mode == ATTR_WIDE && term.c.x+2 < term.col) {
+				gp[2].u = ' ';
+				gp[2].mode &= ~ATTR_WDUMMY;
+			}
 			gp[1].u = '\0';
 			gp[1].mode = ATTR_WDUMMY;
 		}
@@ -2536,9 +2563,6 @@ twrite(const char *buf, int buflen, int show_ctrl)
 	Rune u;
 	int n;
 
-	int su0 = su;
-	twrite_aborted = 0;
-
 	for (n = 0; n < buflen; n += charsize) {
 		if (IS_SET(MODE_UTF8)) {
 			/* process a complete utf8 char */
@@ -2548,10 +2572,6 @@ twrite(const char *buf, int buflen, int show_ctrl)
 		} else {
 			u = buf[n] & 0xFF;
 			charsize = 1;
-		}
-		if (su0 && !su) {
-			twrite_aborted = 1;
-			break;  // ESU - allow rendering before a new BSU
 		}
 		if (show_ctrl && ISCONTROL(u)) {
 			if (u & 0x80) {
@@ -2695,10 +2715,9 @@ draw(void)
 		cx--;
 
 	drawregion(0, 0, term.col, term.row);
- 	if (term.scr == 0)
- 		xdrawcursor(cx, term.c.y, term.line[term.c.y][cx],
- 				term.ocx, term.ocy, term.line[term.ocy][term.ocx],
-                term.line[term.ocy], term.col);
+	if (term.scr == 0)
+		xdrawcursor(cx, term.c.y, term.line[term.c.y][cx],
+				term.ocx, term.ocy, term.line[term.ocy][term.ocx]);
 	term.ocx = cx;
 	term.ocy = term.c.y;
 	xfinishdraw();
@@ -2711,4 +2730,91 @@ redraw(void)
 {
 	tfulldirt();
 	draw();
+}
+
+int
+daddch(URLdfa *dfa, char c)
+{
+	/* () and [] can appear in urls, but excluding them here will reduce false
+	 * positives when figuring out where a given url ends.
+	 */
+	static const char URLCHARS[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		"abcdefghijklmnopqrstuvwxyz"
+		"0123456789-._~:/?#@!$&'*+,;=%";
+	static const char RPFX[] = "//:sptth";
+
+	if (!strchr(URLCHARS, c)) {
+		dfa->length = 0;
+		dfa->state = 0;
+
+		return 0;
+	}
+
+	dfa->length++;
+
+	if (dfa->state == 2 && c == '/') {
+		dfa->state = 0;
+	} else if (dfa->state == 3 && c == 'p') {
+		dfa->state++;
+	} else if (c != RPFX[dfa->state]) {
+		dfa->state = 0;
+		return 0;
+	}
+
+	if (dfa->state++ == 7) {
+		dfa->state = 0;
+		return 1;
+	}
+
+	return 0;
+}
+
+/*
+** Select and copy the previous url on screen (do nothing if there's no url).
+*/
+void
+copyurl(const Arg *arg) {
+	int row = 0, /* row of current URL */
+		col = 0, /* column of current URL start */
+		colend = 0, /* column of last occurrence */
+		passes = 0; /* how many rows have been scanned */
+
+	const char *c = NULL,
+		 *match = NULL;
+	URLdfa dfa = { 0 };
+
+	row = (sel.ob.x >= 0 && sel.nb.y > 0) ? sel.nb.y : term.bot;
+	LIMIT(row, term.top, term.bot);
+
+	colend = (sel.ob.x >= 0 && sel.nb.y > 0) ? sel.nb.x : term.col;
+	LIMIT(colend, 0, term.col);
+
+	/*
+	** Scan from (term.row - 1,term.col - 1) to (0,0) and find
+	** next occurrance of a URL
+	*/
+	for (passes = 0; passes < term.row; passes++) {
+		/* Read in each column of every row until
+		** we hit previous occurrence of URL
+		*/
+		for (col = colend; col--;)
+			if (daddch(&dfa, term.line[row][col].u < 128 ? term.line[row][col].u : ' '))
+				break;
+
+		if (col >= 0)
+			break;
+
+		if (--row < 0)
+			row = term.row - 1;
+
+		colend = term.col;
+	}
+
+	if (passes < term.row) {
+		selstart(col, row, 0);
+		selextend((col + dfa.length - 1) % term.col, row + (col + dfa.length - 1) / term.col, SEL_REGULAR, 0);
+		selextend((col + dfa.length - 1) % term.col, row + (col + dfa.length - 1) / term.col, SEL_REGULAR, 1);
+		xsetsel(getsel());
+		xclipcopy();
+	}
 }
