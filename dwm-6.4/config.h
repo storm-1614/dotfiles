@@ -43,6 +43,7 @@ static const char *const autostart[] = {
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
+	"conky", NULL,
 //	"runcat", NULL,
 	"xset", "s", "3600", NULL,
 	"xset", "dpms", "0", "0", "3600", NULL,
