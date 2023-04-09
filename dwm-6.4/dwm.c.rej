@@ -1,19 +1,38 @@
 --- dwm.c
 +++ dwm.c
-@@ -1278,6 +1307,16 @@ propertynotify(XEvent *e)
- void
- quit(const Arg *arg)
- {
-+	size_t i;
-+
-+	/* kill child processes */
-+	for (i = 0; i < autostart_len; i++) {
-+		if (0 < autostart_pids[i]) {
-+			kill(autostart_pids[i], SIGTERM);
-+			waitpid(autostart_pids[i], NULL, 0);
-+		}
-+	}
-+
- 	running = 0;
- }
- 
+@@ -28,6 +28,8 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <limits.h>
++#include <stdint.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include <X11/cursorfont.h>
+@@ -60,7 +62,7 @@
+ /* enums */
+ enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
+ enum { SchemeNorm, SchemeSel }; /* color schemes */
+-enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
++enum { NetSupported, NetWMName, NetWMIcon, NetWMState, NetWMCheck,
+        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
+        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
+ enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
+@@ -216,6 +220,7 @@ static void togglebar(const Arg *arg);
+ static void togglefloating(const Arg *arg);
+ static void toggletag(const Arg *arg);
+ static void toggleview(const Arg *arg);
++static void freeicon(Client *c);
+ static void unfocus(Client *c, int setfocus);
+ static void unmanage(Client *c, int destroyed);
+ static void unmapnotify(XEvent *e);
+@@ -738,7 +744,8 @@ drawbar(Monitor *m)
+ 	if ((w = m->ww - tw - x) > bh) {
+ 		if (m->sel) {
+ 			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
+-			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
++			drw_text(drw, x, 0, w, bh, lrpad / 2 + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
++			if (m->sel->icon) drw_pic(drw, x + lrpad / 2, (bh - m->sel->ich) / 2, m->sel->icw, m->sel->ich, m->sel->icon);
+ 			if (m->sel->isfloating)
+ 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
+ 		} else {

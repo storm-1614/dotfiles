@@ -2,13 +2,22 @@
 #xrandr --setprovideroutputsource modesetting NVIDIA-0
 #xrandr --auto
 xrandr --dpi 96
-
+xhost +si:localuser:root
 export LANG=zh_CN.UTF-8
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
+
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
+
 
 # merge in defaults and keymaps
 

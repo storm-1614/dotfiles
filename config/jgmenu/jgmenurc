@@ -1,7 +1,7 @@
 at_pointer           = 1
 stay_alive           = 1
-csv_cmd             = pmenu
-csv_no_dirs     =       0
+#csv_cmd             = pmenu
+#csv_no_dirs     =       0
 tint2_look           = 0
 terminal_exec        = alacritty
 terminal_args        =

@@ -1,14 +1,17 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
+#define ICONSIZE 25   /* icon size */
+#define ICONSPACING 5 /* space between icon and title */
+
 static const unsigned int systrayspadding = 10;        /* 托盘和状态栏的间隙 */
 static const unsigned int borderpx  = 3;        /* 窗口边缘像素 */
 static const unsigned int gappx     = 10;        /* 窗口间隔 */
 static const unsigned int snap      = 32;       /* 边缘依附宽度 */
 static const int showbar            = 1;        /* 是否显示状态栏 */
 static const int topbar             = 1;        /* 是否将状态栏置于上方 */
-static const int vertpad            = 0;       /* 垂直状态栏缝隙 */
-static const int sidepad            = 0;       /* 水平状态栏缝隙 */
+static const int vertpad            = 10;       /* 垂直状态栏缝隙 */
+static const int sidepad            = 10;       /* 水平状态栏缝隙 */
 static const unsigned int systraypinning = 0;   /* 托盘跟随的显示器，0表示不指定 */
 static const unsigned int systrayspacing = 1;   /* 托盘间距 */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -43,7 +46,7 @@ static const char *const autostart[] = {
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
-	"conky", NULL,
+//	"conky", NULL,
 //	"runcat", NULL,
 	"xset", "s", "3600", NULL,
 	"xset", "dpms", "0", "0", "3600", NULL,
@@ -51,7 +54,7 @@ static const char *const autostart[] = {
 	"pasystray", NULL,
 //	"python", "/bin/cgwp.py", NULL,
 //	"wallpaper.sh", NULL,
-	"feh", "--bg-fill", "Pictures/wallpapers/932271.jpg", NULL,
+	"feh", "--bg-fill", "Pictures/1.jpg", NULL,
 	"libinput-gestures", NULL,
 	"nm-applet", NULL, 
 	NULL /* terminate */
@@ -139,10 +142,10 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 /*-----------------------*/
 /*声音需要安装pulseaudio-ctl
  *音乐播放用的mpd,mpc
- *亮度控制需要acpilight
+ *亮度控制需要light
  * */
-static const char *lightup[] = { "xbacklight", "-inc", "10",  NULL };
-static const char *lightdown[] = { "xbacklight", "-dec", "10",  NULL };
+static const char *lightup[] = { "light", "-A", "10",  NULL };
+static const char *lightdown[] = { "light", "-U", "10",  NULL };
 
 static const char *mutevol[] = { "pulseaudio-ctl", "mute", NULL };
 static const char *downvol[] = { "pulseaudio-ctl", "down", "5", NULL };
