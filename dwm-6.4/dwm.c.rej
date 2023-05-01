@@ -1,38 +1,38 @@
 --- dwm.c
 +++ dwm.c
-@@ -28,6 +28,8 @@
- #include <stdlib.h>
- #include <string.h>
- #include <unistd.h>
-+#include <limits.h>
-+#include <stdint.h>
- #include <sys/types.h>
- #include <sys/wait.h>
- #include <X11/cursorfont.h>
-@@ -60,7 +62,7 @@
- /* enums */
- enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
- enum { SchemeNorm, SchemeSel }; /* color schemes */
--enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
-+enum { NetSupported, NetWMName, NetWMIcon, NetWMState, NetWMCheck,
-        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
-        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
- enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
-@@ -216,6 +220,7 @@ static void togglebar(const Arg *arg);
- static void togglefloating(const Arg *arg);
- static void toggletag(const Arg *arg);
- static void toggleview(const Arg *arg);
-+static void freeicon(Client *c);
- static void unfocus(Client *c, int setfocus);
- static void unmanage(Client *c, int destroyed);
- static void unmapnotify(XEvent *e);
-@@ -738,7 +744,8 @@ drawbar(Monitor *m)
- 	if ((w = m->ww - tw - x) > bh) {
- 		if (m->sel) {
- 			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
--			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
-+			drw_text(drw, x, 0, w, bh, lrpad / 2 + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
-+			if (m->sel->icon) drw_pic(drw, x + lrpad / 2, (bh - m->sel->ich) / 2, m->sel->icw, m->sel->ich, m->sel->icon);
- 			if (m->sel->isfloating)
- 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
- 		} else {
+@@ -431,18 +431,23 @@ buttonpress(XEvent *e)
+ 	}
+ 	if (ev->window == selmon->barwin) {
+ 		i = x = 0;
+-		do
+-			x += TEXTW(tags[i]);
+-		while (ev->x >= x && ++i < LENGTH(tags));
+-		if (i < LENGTH(tags)) {
+-			click = ClkTagBar;
+-			arg.ui = 1 << i;
+-		} else if (ev->x < x + blw)
+-			click = ClkLtSymbol;
+-		else if (ev->x > selmon->ww - TEXTW(stext))
+-			click = ClkStatusText;
+-		else
+-			click = ClkWinTitle;
++		x += TEXTW(buttonbar);
++		if(ev->x < x) {
++			click = ClkButton;
++		} else {
++			do
++				x += TEXTW(tags[i]);
++			while (ev->x >= x && ++i < LENGTH(tags));
++			if (i < LENGTH(tags)) {
++				click = ClkTagBar;
++				arg.ui = 1 << i;
++			} else if (ev->x < x + blw)
++				click = ClkLtSymbol;
++			else if (ev->x > selmon->ww - TEXTW(stext))
++				click = ClkStatusText;
++			else
++				click = ClkWinTitle;
++		}
+ 	} else if ((c = wintoclient(ev->window))) {
+ 		focus(c);
+ 		restack(selmon);

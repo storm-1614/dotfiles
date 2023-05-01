@@ -10,6 +10,7 @@ static const unsigned int gappx     = 10;        /* 窗口间隔 */
 static const unsigned int snap      = 32;       /* 边缘依附宽度 */
 static const int showbar            = 1;        /* 是否显示状态栏 */
 static const int topbar             = 1;        /* 是否将状态栏置于上方 */
+static const char buttonbar[]       = "";
 static const int vertpad            = 10;       /* 垂直状态栏缝隙 */
 static const int sidepad            = 10;       /* 水平状态栏缝隙 */
 static const unsigned int systraypinning = 0;   /* 托盘跟随的显示器，0表示不指定 */
@@ -42,7 +43,7 @@ static const unsigned int alphas[][3]      = {
 static const char *const autostart[] = {
 	"picom", "-cGbf", NULL,
 	"fcitx5", "-d", NULL,
-	"clash-verge", NULL,
+	//"clash-verge", NULL,
 	"slstatus", NULL,
 	"dunst", NULL,
 	"qbat", NULL,
@@ -89,6 +90,7 @@ static const Rule rules[] = {
 	{ "VirtualBox Manager", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "VirtualBox Machine", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "icalingua", NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
+	{ "QQ",       NULL,       NULL, 	  1 << 4, 		0, 			 -1 },
 	{ "Virt-manager", NULL,   NULL, 	  1 << 5, 		0, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 3, 		0, 			 -1 },
@@ -157,7 +159,6 @@ static const char *mpc_prev[]= { "mpc", "prev", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY, 						XK_F1, 	   spawn, 		   {.v = jgmenucmd } },
 	{ MODKEY,                       XK_a,      toggleoverview, {0} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = dmenucmd } },
@@ -214,6 +215,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Right,  viewtoright,    {0} },
 	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },
 	{ MODKEY|ShiftMask,             XK_Right,  tagtoright,     {0} },
+	{ MODKEY, 						XK_F1, 	   spawn, 		   {.v = jgmenucmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -254,6 +256,7 @@ static const Button buttons[] = {
 //  { ClkRootWin,           0,              Button4,        viewtoleft,     {0} }, 
 //	{ ClkRootWin,           0,              Button5,        viewtoright,    {0} },
 
+	{ ClkButton,		0,		Button1,	spawn,		{.v = jgmenucmd } },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 
