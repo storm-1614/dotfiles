@@ -4,13 +4,12 @@
 #define ICONSIZE 25   /* icon size */
 #define ICONSPACING 5 /* space between icon and title */
 
-static const unsigned int systrayspadding = 10;        /* 托盘和状态栏的间隙 */
 static const unsigned int borderpx  = 3;        /* 窗口边缘像素 */
 static const unsigned int gappx     = 10;        /* 窗口间隔 */
 static const unsigned int snap      = 32;       /* 边缘依附宽度 */
 static const int showbar            = 1;        /* 是否显示状态栏 */
 static const int topbar             = 1;        /* 是否将状态栏置于上方 */
-static const char buttonbar[]       = "";
+static const char buttonbar[]       = "";      /*bar左侧图标*/
 static const int vertpad            = 10;       /* 垂直状态栏缝隙 */
 static const int sidepad            = 10;       /* 水平状态栏缝隙 */
 static const unsigned int systraypinning = 0;   /* 托盘跟随的显示器，0表示不指定 */
