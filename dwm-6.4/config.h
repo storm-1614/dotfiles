@@ -1,6 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
+#include <X11/XF86keysym.h>
+
 #define ICONSIZE 25   /* icon size */
 #define ICONSPACING 5 /* space between icon and title */
 
