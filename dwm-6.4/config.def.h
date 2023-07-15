@@ -21,7 +21,7 @@ static const int showsystray             = 1;   /* 0 means no systray */
 static const unsigned int baralpha = 0xaa;
 static const unsigned int borderalpha = OPAQUE;
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Hack Nerd Font:size=15", "Source Han Sans CN:size=15" };
+static const char *fonts[]          = { "HackNerdFont-Bold:size=15", "Source Han Sans CN:size=15" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#3b4252";
 static const char col_gray2[]       = "#4c566a";
@@ -56,7 +56,7 @@ static const char *const autostart[] = {
 	"pasystray", NULL,
 //	"python", "/bin/cgwp.py", NULL,
 //	"wallpaper.sh", NULL,
-	"feh", "--bg-fill", "Pictures/1.jpg", NULL,
+	"feh", "--bg-fill", "/data/1.jpg", NULL,
 	"libinput-gestures", NULL,
 	"nm-applet", NULL, 
 	NULL /* terminate */
@@ -137,7 +137,7 @@ static const char *firefoxcmd[]  = { "firefox",  NULL };
 static const char *file[] = {"alacritty", "-e", "ranger", NULL};
 static const char *lock[] = {"i3lock-fancy", NULL};
 static const char *power[] = {"power.sh", NULL};
-static const char *emoji[] = {"rofi", "-show", "emoji", "-modi", "emoji", NULL};
+static const char *emoji[] = {"rofi", "-show", "emoji", "-modi", "emoji:emoji.sh", NULL};
 static const char *window[] = {"rofi", "-show", "window", NULL};
 static const char *music[] = {"cmus-config", NULL};
 static const char scratchpadname[] = "scratchpad";
