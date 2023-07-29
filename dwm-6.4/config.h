@@ -144,7 +144,7 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 /*-----------------------*/
 /*声音需要安装pulseaudio-ctl
- *音乐播放用的mpd,mpc
+ *音乐播放用的cmus,playerctl
  *亮度控制需要light
  * */
 static const char *lightup[] = { "light", "-A", "10",  NULL };
@@ -154,9 +154,9 @@ static const char *mutevol[] = { "pulseaudio-ctl", "mute", NULL };
 static const char *downvol[] = { "pulseaudio-ctl", "down", "5", NULL };
 static const char *upvol[]   = { "pulseaudio-ctl", "up", "5", NULL };
 
-static const char *mpc_toggle[]= { "mpc", "toggle", NULL };
-static const char *mpc_next[]= { "mpc", "next", NULL };
-static const char *mpc_prev[]= { "mpc", "prev", NULL };
+static const char *music_toggle[]= { "playerctl", "--player=cmus", "play-pause",NULL };
+static const char *music_next[]= { "playerctl", "--player=cmus", "next",NULL };
+static const char *music_prev[]= { "playerctl", "--player=cmus", "previous",NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -242,9 +242,9 @@ static const Key keys[] = {
     { 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
     { 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
     { 0,              XF86XK_AudioMute,        spawn,          {.v = mutevol } },
-	{ 0, 			  XF86XK_AudioPlay, 	   spawn,          {.v = mpc_toggle } },
-	{ 0, 			  XF86XK_AudioNext,  	   spawn, 		   {.v = mpc_next } },
-	{ 0, 			  XF86XK_AudioPrev, 	   spawn,   	   {.v = mpc_prev } },
+	{ 0, 			  XF86XK_AudioPlay, 	   spawn,          {.v = music_toggle } },
+	{ 0, 			  XF86XK_AudioNext,  	   spawn, 		   {.v = music_next } },
+	{ 0, 			  XF86XK_AudioPrev, 	   spawn,   	   {.v = music_prev } },
 	{ 0, 			  XF86XK_MonBrightnessUp,  spawn, 		   {.v = lightup } },
 	{ 0, 			  XF86XK_MonBrightnessDown,spawn,  		   {.v = lightdown} },
 };
