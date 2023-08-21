@@ -6,6 +6,8 @@
 
 [global]
     ### Display ###
+	
+	origin = top-center	
 
     monitor = 0
     follow = keyboard

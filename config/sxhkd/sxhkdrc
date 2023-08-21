@@ -6,56 +6,64 @@
 super + Return
 	alacritty
 
+# 浏览器
+super + f
+	firefox
+
 # 启动器
 super + d
 	rofi -show drun
 
-# 重新加载sxhkd
-super + alt + r
+# 重新加载rxhkd
+super + shift + r
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
+super + alt + r
+	~/.config/polybar/launch.sh
 
 # 退出/重启 bspwm
-super + alt + {q,r}
+super + {shift + q,control + r}
 	bspc {quit,wm -r}
 
-# 关闭或强制杀死窗口
+# 电源菜单
+super + shift + l
+	power.sh
+
+# 关闭窗口
 super + q
-	bspc node -{c,k}
+	bspc node -c
+
+# 杀死窗口
+super + alt + q
+	bspc note -k
 
 super + e
-	dolphin
+	alacritty -e ranger
 
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+#super + y
+#	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
+#super + g
+#	bspc node -s biggest.window
 
 #
 # state/flags
 #
 
 # set the window state
-super + {t,shift + t,s}
+super + {t,shift + t,g}
 	bspc node -t {tiled,pseudo_tiled,floating}
 
 # set the node flags
-super + ctrl + {z,x}
-	bspc node -g {locked,sticky}
+#super + ctrl + {z,x}
+#	bspc node -g {locked,sticky}
 
-#
-# focus/swap
-#
 
 # focus the next/previous window in the current desktop
 super + j
@@ -65,34 +73,38 @@ super + k
 	bspc node -f next.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+#super + bracket{left,right}
+#	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+#super + {o,i}
+#	bspc wm -h off; \
+#	bspc node {older,newer} -f; \
+#	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+super + shift + {Right, left}
+	bspc desktop -f {next, prev}
+
 # 旋转窗口
-super + d
+super + b
 	bspc node @/ -C forward
 
-super + a
+super + shift + b
 	bspc node @/ -C backward
 
-super + {w,b}
+super + {shift + y,y}
 	bspc node first_ancestor -R {90,270}
 
-super + f
+# 全屏
+super + shift + f
 	if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
 		bspc node focused -t fullscreen; \
 	else \
@@ -106,71 +118,92 @@ super + f
 #	alacritty
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+#super + ctrl + {h,j,k,l}
+#	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+#super + ctrl + {1-9}
+#	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
+#super + ctrl + space
+#	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+#super + ctrl + shift + space
+#	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-# move/resize
-#
 
 super + v
-	/usr/lib/gpaste/gpaste-ui
+	~/.config/sxhkd/scripts/hide.sh
 
-super + r
+super + w
 	rofi -show window
 
-# expand a window by moving one of its side outward
 
+# 控制平铺窗口大小
 super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+  bspc node -z {left -20 0 || bspc node -z right -20 0, \
+                bottom 0 20 || bspc node -z top 0 20,\
+                top 0 -20 || bspc node -z bottom 0 -20,\
+                right 20 0 || bspc node -z left 20 0}
 
-# contract a window by moving one of its side inward
+#super + alt + {h,j,k,l}
+#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+#
+## contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
+#
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
 # Screenshot
-super + shift + F12
-	gnome-screenshot -i
+super + shift + a
+	flameshot gui
 
 #super + shift + F1
 #	~/.config/polybar/brightness.sh sub 5
 
 #super + shift + F2
 #	~/.config/polybar/brightness.sh add 5
-
-super + F3
-	playerctl -a previous
-
-super + F4
-	playerctl -a play-pause
-
-super + F5
-	playerctl -a next
-
-super + alt + Return
-	~/.config/bspwm/slop.sh
-
+#
+#super + F3
+#	playerctl -a previous
+#
+#super + F4
+#	playerctl -a play-pause
+#
+#super + F5
+#	playerctl -a next
+#
+#super + alt + Return
+#	~/.config/bspwm/slop.sh
+#
 # hide window
 super + v
   bspc node -g hidden
 
-# unhide window
-super + shift + v
-  bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
+#Volume Control
+XF86AudioLowerVolume
+	pulseaudio-ctl down 5
+XF86AudioRaiseVolume
+	pulseaudio-ctl up 5
+XF86AudioMute
+	pulseaudio-ctl mute    
+
+# Brightness Control
+XF86MonBrightnessDown
+	light -U 5
+XF86MonBrightnessUp
+	light -A 5
+
+# Player Control
+XF86AudioPlay
+	playerctl --player=cmus play-pause
+XF86AudioNext
+	playerctl --player=cmus next
+XF86AudioPrev
+	playerctl --player=cmus previous

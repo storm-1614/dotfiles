@@ -21,7 +21,7 @@ static const int showsystray             = 1;   /* 0 means no systray */
 static const unsigned int baralpha = 0xaa;
 static const unsigned int borderalpha = OPAQUE;
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "HackNerdFont-Bold:size=15", "Source Han Sans CN:size=15" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=15", "Source Han Sans CN:size=15" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#3b4252";
 static const char col_gray2[]       = "#4c566a";
@@ -50,15 +50,16 @@ static const char *const autostart[] = {
 	"qbat", NULL,
 //	"conky", NULL,
 //	"runcat", NULL,
-	"xset", "s", "3600", NULL,
-	"xset", "dpms", "0", "0", "3600", NULL,
+//	"xset", "s", "7200", NULL,
+//	"xset", "dpms", "0", "0", "7200", NULL,
 	"redshift", "-O" "4500", NULL,
 	"pasystray", NULL,
 //	"python", "/bin/cgwp.py", NULL,
 //	"wallpaper.sh", NULL,
-	"feh", "--bg-fill", "/data/1.jpg", NULL,
+//	"feh", "--bg-fill", "/data/1.jpg", NULL,
 	"libinput-gestures", NULL,
 	"nm-applet", NULL, 
+	"/data/TyphoonWeather_Archive/satellite/main.py", NULL,
 	NULL /* terminate */
 };
 
@@ -92,6 +93,7 @@ static const Rule rules[] = {
 	{ "VirtualBox Machine", NULL, NULL,   1 << 5, 		0, 			 -1 },
 	{ "icalingua", NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
 	{ "QQ",       NULL,       NULL, 	  1 << 4, 		0, 			 -1 },
+	{ "wechat.exe",NULL,      NULL, 	  1 << 4, 		0, 			 -1 },
 	{ "Virt-manager", NULL,   NULL, 	  1 << 5, 		0, 			 -1 },
 	{ "discord",  NULL,       NULL, 	  1 << 6, 		0, 			 -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 3, 		0, 			 -1 },
@@ -147,8 +149,8 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
  *音乐播放用的cmus,playerctl
  *亮度控制需要light
  * */
-static const char *lightup[] = { "light", "-A", "10",  NULL };
-static const char *lightdown[] = { "light", "-U", "10",  NULL };
+static const char *lightup[] = { "light", "-A", "5",  NULL };
+static const char *lightdown[] = { "light", "-U", "5",  NULL };
 
 static const char *mutevol[] = { "pulseaudio-ctl", "mute", NULL };
 static const char *downvol[] = { "pulseaudio-ctl", "down", "5", NULL };
