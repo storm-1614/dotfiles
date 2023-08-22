@@ -3,8 +3,11 @@
 #xrandr --auto
 xrandr --dpi 96
 xhost +si:localuser:root
-export LANG=zh_CN.UTF-8
-export QT_QPA_PLATFORMTHEME=qt5ct
+export LANG=en_US.UTF-8
+export XDG_SESSION_TYPE=x11
+
+xset s 9600 9600 
+xset -dpms
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
@@ -12,6 +15,8 @@ export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
 
+#export http_proxy=http://127.0.0.1:7890 
+#export https_proxy=http://127.0.0.1:7890
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -63,34 +68,34 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 
-		clash &
-session=${1:-dwm}
-
-case $session in
-    i3|i3wm           ) exec i3;;
-    kde               )
-		export DESKTOP_SESSION=plasma 
-		latte-dock &
-		exec startplasma-x11;;
-    dwm 		      ) 
-#		picom -cGbf & 
-#		wallpaper.sh &
-#		fcitx5 -d &
-#		clash &
-#		slstatus &
-#		dunst &
-#		qbat &
-#		xset s 3600 &
-#		xset dpms 0 0 3600 &
-#		redshift -O 4500 &
-#		pasystray &
+#session=${1:-dwm}
+#
+#case $session in
+#    i3|i3wm           ) exec i3;;
+#    kde               )
+#		export DESKTOP_SESSION=plasma 
+#		latte-dock &
+#		exec startplasma-x11;;
+#    dwm 		      ) 
+#		export QT_QPA_PLATFORMTHEME=qt5ct
+#		exec bspwm;;
+#	dwmp  		     )
 #		~/.config/polybar/launch.sh &
-		exec dwm;;
-	dwmp  		     )
-		~/.config/polybar/launch.sh &
-		wallpaper.sh &
-		exec dwm;;
-	bsp 			  ) exec bspwm;;
-    # No known session, try to run it as command
-    *                 ) exec $1;;
-esac
+#		wallpaper.sh &
+#		exec dwm;;
+#	bsp 			  ) exec bspwm;;
+#    # No known session, try to run it as command
+#    *                 ) exec $1;;
+#esac
+
+~/.config/polybar/launch.sh & 
+xsetroot -cursor_name left_ptr
+export QT_QPA_PLATFORMTHEME=qt5ct
+wallpapers & 
+picom & 
+dunst &
+fcitx5 &
+plank &
+
+exec bspwm
+

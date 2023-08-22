@@ -7,7 +7,7 @@
 [global]
     ### Display ###
 	
-	origin = top-center	
+	origin = top-right
 
     monitor = 0
     follow = keyboard

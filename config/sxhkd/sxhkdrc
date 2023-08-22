@@ -14,6 +14,9 @@ super + f
 super + d
 	rofi -show drun
 
+super + shift + d
+	rofi -show run
+
 # 重新加载rxhkd
 super + shift + r
 	pkill -USR1 -x sxhkd
@@ -185,6 +188,10 @@ super + shift + a
 # hide window
 super + v
   bspc node -g hidden
+
+super + h
+	~/.config/sxhkd/scripts/hide_bar.sh
+
 
 #Volume Control
 XF86AudioLowerVolume
