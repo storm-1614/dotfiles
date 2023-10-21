@@ -1,0 +1,13 @@
+add /data/Music/
+clear
+add /data/Like_Music/
+add /data/pure_music/
+live-filter 
+add /data/Music/Five Hundred Miles - Justin Timberlake、Carey Mulligan、Stark Sands.mp3
+add Music/
+clear 
+add Music/茫 - 李润祺.mp3
+add /data/Music/溯 (Reverse) feat. 马吟吟 - CORSAK胡梦周、马吟吟.mp3
+shell 
+colorscheme nord
+q
