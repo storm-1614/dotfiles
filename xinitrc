@@ -1,7 +1,7 @@
 #/bin/sh
 #xrandr --setprovideroutputsource modesetting NVIDIA-0
 #xrandr --auto
-xrandr --dpi 96
+xrandr --dpi 115
 xhost +si:localuser:root
 export LANG=en_US.UTF-8
 export XDG_SESSION_TYPE=x11
@@ -15,8 +15,8 @@ export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
 
-#export http_proxy=http://127.0.0.1:7890 
-#export https_proxy=http://127.0.0.1:7890
+#export http_proxy=http://127.0.0.1:20171
+#export https_proxy=http://127.0.0.1:20171
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -91,11 +91,14 @@ fi
 ~/.config/polybar/launch.sh & 
 xsetroot -cursor_name left_ptr
 export QT_QPA_PLATFORMTHEME=qt5ct
-wallpapers & 
+#wallpapers & 
+#/data/TyphoonWeather_Archive/satellite/main.py &
+feh --bg-fill /data/Wallpapers/earth-ring.png &
 picom & 
 dunst &
 fcitx5 &
-plank &
+nm-applet &
+#pasystray &
 
 exec bspwm
 

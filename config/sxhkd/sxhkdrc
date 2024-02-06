@@ -4,7 +4,7 @@
 # terminal emulator
 # 终端
 super + Return
-	alacritty
+	kitty
 
 # 浏览器
 super + f
@@ -41,7 +41,7 @@ super + alt + q
 	bspc note -k
 
 super + e
-	alacritty -e ranger
+	kitty -e ranger
 
 # alternate between the tiled and monocle layout
 super + m
@@ -192,6 +192,9 @@ super + v
 super + h
 	~/.config/sxhkd/scripts/hide_bar.sh
 
+# Capture screen region with slop and open in Kitty
+super + x
+	~/.config/sxhkd/scripts/draw.sh
 
 #Volume Control
 XF86AudioLowerVolume
