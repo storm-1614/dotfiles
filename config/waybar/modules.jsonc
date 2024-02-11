@@ -1,5 +1,5 @@
 {   "custom/arch": {
-        "format": "  󰣇 |",
+        "format": "󰣇",
         "on-click": "wofi --show drun"
     },
 
@@ -81,7 +81,7 @@
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		"format": "{:%H:%M:%S}",
-        "format-alt": "{:%Y-%m-%d %H:%M:%S}"
+        "format-alt": "{:%Y-%m-%d %a %H:%M:%S}"
     },
     "cpu": {
         "format": "{usage}% ",
