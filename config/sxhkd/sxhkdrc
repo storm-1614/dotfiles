@@ -196,6 +196,9 @@ super + h
 super + x
 	~/.config/sxhkd/scripts/draw.sh
 
+super + c
+	~/.config/sxhkd/scripts/music_win.sh
+
 #Volume Control
 XF86AudioLowerVolume
 	pulseaudio-ctl down 5
@@ -212,8 +215,8 @@ XF86MonBrightnessUp
 
 # Player Control
 XF86AudioPlay
-	playerctl --player=cmus play-pause
+	mpc toggle
 XF86AudioNext
-	playerctl --player=cmus next
+	mpc next
 XF86AudioPrev
-	playerctl --player=cmus previous
+	mpc prev
