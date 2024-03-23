@@ -10,8 +10,8 @@ rsync -av --delete ~/.config/hypr/ config/hypr/
 rsync -av --delete ~/.config/i3/ config/i3/
 rsync -av --delete ~/.config/jgmenu/ config/jgmenu/
 rsync -av --delete ~/.config/kitty/ config/kitty/
-rsync -av --delete ~/.config/mpd/ config/mpd/
-rsync -av --delete ~/.config/ncmpcpp/ config/ncmpcpp/
+#rsync -av --delete ~/.config/mpd/ config/mpd/
+#rsync -av --delete ~/.config/ncmpcpp/ config/ncmpcpp/
 rsync -av --delete ~/.config/neofetch/  config/neofetch/
 rsync -av --delete ~/.config/picom/ config/picom/
 rsync -av --delete ~/.config/polybar/ config/polybar/
