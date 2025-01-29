@@ -165,7 +165,7 @@ super + {Left,Down,Up,Right}
 
 # Screenshot
 super + shift + a
-	flameshot gui
+	killall flameshot && flameshot gui
 
 #super + shift + F1
 #	~/.config/polybar/brightness.sh sub 5
