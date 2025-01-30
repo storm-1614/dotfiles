@@ -12,9 +12,11 @@
          "disable-scroll": true,
          "all-outputs": true,
          "warp-on-scroll": true,
-    	 "on-scroll-up": "hyprctl dispatch workspace e-1",
-         "on-scroll-down": "hyprctl dispatch workspace e+1",
-         "format": "{icon}",
+//         "on-scroll-down": "hyprctl dispatch workspace e+1",
+//    	 "on-scroll-up": "hyprctl dispatch workspace e-1",
+    	 "on-scroll-up": "hyprctl dispatch workspace -1",
+         "on-scroll-down": "hyprctl dispatch workspace +1",
+         "format": "{name}",
          "format-icons": {
              "1": "¹",
              "2": "²",
@@ -96,7 +98,7 @@
         "critical-threshold": 80,
         // "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -188,7 +190,6 @@
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": [
-       "kitty"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"

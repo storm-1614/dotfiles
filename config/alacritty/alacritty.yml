@@ -6,9 +6,6 @@ window:
   padding:
     x: 0
     y: 0
-  # 透明度：0 透明，1 不透明
-  opacity: 0
-  opacity: 0.75
 
 colors:
   primary:
@@ -60,13 +57,13 @@ colors:
 # 设置字体
 font:
   normal:
-    family: "Hack Nerd Font"
+    family: " JetBrainsMonoNL Nerd Font Mono"
   bold:
-    family: "Hack Nerd Font"
+    family: " JetBrainsMonoNL Nerd Font Mono"
   italic:
-    family: "Hack Nerd Font"
+    family: " JetBrainsMonoNL Nerd Font Mono"
   bold_italic:
-    family: "Hack Nerd Font"
+    family: " JetBrainsMonoNL Nerd Font Mono"
 
   # 字大小
   size: 11.0 
