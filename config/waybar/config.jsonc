@@ -15,7 +15,7 @@
 			"mpd",
 			"pulseaudio",
 			"backlight",
-			"temperature",
+		//	"temperature",
 			"battery"
 		]
 	},
