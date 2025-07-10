@@ -16,17 +16,17 @@
 //    	 "on-scroll-up": "hyprctl dispatch workspace e-1",
     	 "on-scroll-up": "hyprctl dispatch workspace -1",
          "on-scroll-down": "hyprctl dispatch workspace +1",
-         "format": "{name}",
+         "format": "{icon}",
          "format-icons": {
-             "1": "¹",
-             "2": "²",
-             "3": "³",
-             "4": "切⁴",
-             "5": "﬐⁵",
-			 "6": "⁶",
-			 "7": "⁷",
-			 "8": "⁸ﱘ" ,
-			 "9": "⁹",
+             "1": " ¹",
+             "2": " ²",
+             "3": " ³",
+             "4": " ⁴",
+             "5": " ⁵",
+			 "6": " ⁶",
+			 "7": " ⁷",
+			 "8": " ⁸" ,
+			 "9": " ⁹",
 //			"urgent": "",
              "focused": "",
              "default": ""
@@ -93,9 +93,10 @@
         "format": "{}% "
     },
     "temperature": {
-        // "thermal-zone": 2,
+         "thermal-zone": 6,
+		 "interval": 10,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
+        "critical-threshold": 75,
         // "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
@@ -161,11 +162,11 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
 	 "cava": {
-//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+     //   "cava_config": "$XDG_CONFIG_HOME/.config/cava/config",
         "framerate": 30,
         "autosens": 1,
-        "sensitivity": 100,
-        "bars": 14,
+        "sensitivity": 1,
+        "bars": 10,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
         "method": "pulse",
@@ -180,8 +181,10 @@
         "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
         "actions": {
                    "on-click-right": "mode"
-                   }
-    },
+				   
+                   
+    }
+},
 	"wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 14,
