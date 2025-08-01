@@ -6,6 +6,6 @@ chosen=$(printf "⏻  Power Off\n  Restart\n  Lock" | rofi -dmenu -i -them
 case "$chosen" in
 	"⏻  Power Off") poweroff ;;
 	"  Restart") reboot ;;
-	"  Lock") loginctl lock-session ;;
+	"  Lock") systemctl suspend ;;
 	*) exit 1 ;;
 esac

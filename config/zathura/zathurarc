@@ -1,7 +1,8 @@
 set selection-clipboard clipboard
 
-map d feedkeys <C-d>
+map d feedkeys <C-d> 
 map u feedkeys <C-u>
+map <C-y> toggle_page_mode
 
 set notification-error-bg       "#2E3440"
 set notification-error-fg       "#BF616A"

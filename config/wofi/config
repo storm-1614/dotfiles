@@ -5,6 +5,6 @@ hide_scroll=true
 no_actions=true
 term=kitty
 width=35%
-lines=8
+hights=8
 always_parse_args=true
 

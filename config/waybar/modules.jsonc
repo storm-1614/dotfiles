@@ -1,6 +1,6 @@
 {   "custom/arch": {
         "format": "󰣇",
-        "on-click": "wofi --show drun"
+        "on-click": "rofi -show drun"
     },
 
 	"hyprland/submap": {
@@ -27,11 +27,21 @@
 			 "7": " ⁷",
 			 "8": " ⁸" ,
 			 "9": " ⁹",
+			 "10": "10",
 //			"urgent": "",
              "focused": "",
-             "default": ""
+             "default": "$"
          },
      },
+    "hyprland/window": {
+    "format": "{title:.30}",
+    "icon": true,
+    "rewrite": {
+        "(.*) — Mozilla Firefox": "$1",
+        "(.*) - fish": "> [$1]"
+    },
+    "separate-outputs": true
+},
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -86,7 +96,7 @@
         "format-alt": "{:%Y-%m-%d %a %H:%M:%S}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": " {usage}%",
         "tooltip": false
     },
     "memory": {
@@ -94,17 +104,18 @@
     },
     "temperature": {
          "thermal-zone": 6,
-		 "interval": 10,
+		 "interval": 5,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 75,
+        "critical-threshold": 70,
         // "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{icon} ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip-format": "{icon} {percent}%",
     },
     "battery": {
         "states": {
@@ -112,26 +123,34 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": "{capacity}% ",
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "on-click-right": "gnome-power-statistics"
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
+"network": {
+//    "interface": "wlp2s0",
+    "on-click-right": "kitty -e nmtui",
+    "format": "{ifname}",
+    "format-wifi": "{icon}  ",
+    "format-ethernet": " ",
+    "format-disconnected": "󰯡 ", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "format-icons": {
+            "wifi": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        },
+    "max-length": 50
+},   
     "pulseaudio": {
         // "scroll-step": 5, // %, can be a float
         "format": "{icon} {volume}%",
@@ -149,6 +168,24 @@
         },
         "on-click": "pavucontrol"
     },
+
+"bluetooth": {
+	"format": "󰂲  ",
+    "format-on": "  ",
+    "format-off": "󰂲  ",
+	"format-connected": "󰂰  ",
+	"format-connected-battery": "󰂰  ",
+	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click-right": "kitty -e bluetoothctl",
+    "format-icons": {
+        "connected-battery": ["󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"], 
+    }
+},
+
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -161,14 +198,16 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-	 "cava": {
-     //   "cava_config": "$XDG_CONFIG_HOME/.config/cava/config",
+"cava": {
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 30,
         "autosens": 1,
-        "sensitivity": 1,
-        "bars": 10,
+        "sensitivity": 100,
+        "bars": 14,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
+        "hide_on_silence": false,
+        // "format_silent": "quiet",
         "method": "pulse",
         "source": "auto",
         "stereo": true,
@@ -178,16 +217,14 @@
         "waves": false,
         "noise_reduction": 0.77,
         "input_delay": 2,
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
         "actions": {
                    "on-click-right": "mode"
-				   
-                   
-    }
-},
+                   }
+    },
 	"wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 14,
+    "icon-size": 18,
     "icon-theme": "Tela",
     "tooltip-format": "{title}",
     "on-click": "activate",
@@ -201,5 +238,16 @@
         "Firefox Web Browser": "Firefox",
         "Foot Server": "Terminal"
     }
-}
+},
+    "power-profiles-daemon": {
+  "format": "{icon}",
+  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+  "tooltip": true,
+  "format-icons": {
+    "default": "",
+    "performance": "",
+    "balanced": "",
+    "power-saver": ""
+  }
+},
 }

@@ -1,0 +1,11 @@
+[Added Associations]
+image/png=imv-4.desktop;imv-3.desktop;imv-2.desktop;
+[Default Applications]
+image/png=imv-4.desktop;
+image/jpeg=imv-4.desktop;
+x-scheme-handler/lxmusic=lx-music-desktop.desktop
+clash=clash-verge-handler.desktop
+clash-verge=clash-verge-handler.desktop
+x-scheme-handler/clash=clash-verge.desktop
+x-scheme-handler/betterdiscord=discord.desktop
+application/pdf=org.pwmt.zathura.desktop

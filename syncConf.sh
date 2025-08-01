@@ -1,5 +1,6 @@
 #! /bin/bash
 
+rsync -av --delete ~/.config/mimeapps.list config/mimeapps.list
 rsync -av --delete ~/.config/alacritty/ config/alacritty/
 rsync -av --delete ~/.config/bspwm/ config/bspwm/
 rsync -av --delete ~/.config/cava/ config/cava/
