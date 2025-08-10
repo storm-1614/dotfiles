@@ -16,12 +16,10 @@ rsync -av --delete ~/.config/kitty/ config/kitty/
 rsync -av --delete ~/.config/neofetch/  config/neofetch/
 rsync -av --delete ~/.config/picom/ config/picom/
 rsync -av --delete ~/.config/polybar/ config/polybar/
-rsync -av --delete ~/.config/ranger/ config/ranger/
+#rsync -av --delete ~/.config/ranger/ config/ranger/
 rsync -av --delete ~/.config/rofi/ config/rofi/
 rsync -av --delete ~/.config/sxhkd/ config/sxhkd/
 rsync -av --delete ~/.config/waybar/ config/waybar/
 rsync -av --delete ~/.config/wofi/ config/wofi/
 rsync -av --delete ~/.config/zathura/ config/zathura/
-
-#rsync -av --delete ~/.config/ config/
-
+rsync -av --delete ~/.config/yazi/ config/yazi/

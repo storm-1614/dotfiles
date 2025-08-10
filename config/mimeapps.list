@@ -9,3 +9,5 @@ clash-verge=clash-verge-handler.desktop
 x-scheme-handler/clash=clash-verge.desktop
 x-scheme-handler/betterdiscord=discord.desktop
 application/pdf=org.pwmt.zathura.desktop
+inode/directory=yazi.desktop
+x-scheme-handler/etcher=balenaEtcher.desktop

@@ -110,12 +110,14 @@
         // "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""],
+        "on-click": "kitty -e watch -n 1 sensors",
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} ",
+        "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip-format": "{icon} {percent}%",
+        "on-click": "nwg-displays",
     },
     "battery": {
         "states": {
@@ -123,7 +125,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
@@ -137,7 +139,7 @@
     },
 "network": {
 //    "interface": "wlp2s0",
-    "on-click-right": "kitty -e nmtui",
+    "on-click": "kitty -e nmtui",
     "format": "{ifname}",
     "format-wifi": "{icon}  ",
     "format-ethernet": " ",
@@ -170,17 +172,17 @@
     },
 
 "bluetooth": {
-	"format": "󰂲  ",
-    "format-on": "  ",
-    "format-off": "󰂲  ",
-	"format-connected": "󰂰  ",
-	"format-connected-battery": "󰂰  ",
+	"format": "󰂲 ",
+    "format-on": " ",
+    "format-off": "󰂲 ",
+	"format-connected": "󰂰 ",
+	"format-connected-battery": "󰂰 ",
 	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
 	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
 	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click-right": "kitty -e bluetoothctl",
+    "on-click": "kitty -e bluetoothctl",
     "format-icons": {
         "connected-battery": ["󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"], 
     }
