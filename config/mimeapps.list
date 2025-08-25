@@ -1,13 +1,28 @@
 [Added Associations]
-image/png=imv-4.desktop;imv-3.desktop;imv-2.desktop;
+image/jpeg=imv-6.desktop;imv-5.desktop;
+image/png=/home/storm/.local/share/applications/imv-7.desktop;imv-7.desktop;imv-4.desktop;imv-3.desktop;imv-2.desktop;
+
 [Default Applications]
-image/png=imv-4.desktop;
-image/jpeg=imv-4.desktop;
-x-scheme-handler/lxmusic=lx-music-desktop.desktop
+application/pdf=org.pwmt.zathura.desktop
 clash=clash-verge-handler.desktop
 clash-verge=clash-verge-handler.desktop
-x-scheme-handler/clash=clash-verge.desktop
-x-scheme-handler/betterdiscord=discord.desktop
-application/pdf=org.pwmt.zathura.desktop
+image/jpeg=imv-6.desktop;
+image/png=imv-6.desktop;
 inode/directory=yazi.desktop
+x-scheme-handler/betterdiscord=discord.desktop
+x-scheme-handler/clash=clash-verge.desktop
 x-scheme-handler/etcher=balenaEtcher.desktop
+x-scheme-handler/lxmusic=lx-music-desktop.desktop
+
+application/msword=libreoffice-writer.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+application/vnd.ms-excel=libreoffice-calc.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop
+application/vnd.ms-powerpoint=libreoffice-impress.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.template=libreoffice-writer.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.template=libreoffice-calc.desktop
+application/vnd.openxmlformats-officedocument.presentationml.template=libreoffice-impress.desktop
+application/vnd.ms-word.document.macroEnabled.12=libreoffice-writer.desktop
+application/vnd.ms-excel.sheet.macroEnabled.12=libreoffice-calc.desktop
+application/vnd.ms-powerpoint.presentation.macroEnabled.12=libreoffice-impress.desktop

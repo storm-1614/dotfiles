@@ -1,0 +1,39 @@
+[[plugin.deps]]
+use = "llanosrocas/yaziline"
+rev = "e7042a8"
+hash = "9c2ab18ff5368056904e4ebb61b17571"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "d7588f6"
+hash = "63b6c222bf2103b3023389dde5e2ecfe"
+
+[[plugin.deps]]
+use = "Ape/simple-status"
+rev = "d0da104"
+hash = "68603fdd1dcaf415227e2c77a9317947"
+
+[[plugin.deps]]
+use = "imsi32/yatline"
+rev = "88bd1c5"
+hash = "981acbe9b758b1af3a8154c932bb936d"
+
+[[plugin.deps]]
+use = "macydnah/office"
+rev = "33cc61a"
+hash = "d7e31c616cc6c8a1f05fdff7c47dae98"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "d7588f6"
+hash = "3996fc74044bc44144b323686f887e1"
+
+[[plugin.deps]]
+use = "walldmtd/fs-usage"
+rev = "d00655e"
+hash = "4c19faa86a2326ef1054644133568c8e"
+
+[[flavor.deps]]
+use = "AdithyanA2005/nord"
+rev = "3a791e9"
+hash = "fa7142cda74a50b271ea212356b40b57"
