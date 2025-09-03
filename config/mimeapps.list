@@ -26,3 +26,4 @@ application/vnd.openxmlformats-officedocument.presentationml.template=libreoffic
 application/vnd.ms-word.document.macroEnabled.12=libreoffice-writer.desktop
 application/vnd.ms-excel.sheet.macroEnabled.12=libreoffice-calc.desktop
 application/vnd.ms-powerpoint.presentation.macroEnabled.12=libreoffice-impress.desktop
+x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
