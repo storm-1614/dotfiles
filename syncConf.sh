@@ -24,4 +24,3 @@ rsync -av --delete ~/.config/wofi/ config/wofi/
 rsync -av --delete ~/.config/zathura/ config/zathura/
 rsync -av --delete ~/.config/yazi/ config/yazi/
 rsync -av --delete ~/.config/btop/ config/btop/
-rsync -av --delete ~/.config/mpv/ config/mpv/
