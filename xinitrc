@@ -93,7 +93,7 @@ xsetroot -cursor_name left_ptr
 export QT_QPA_PLATFORMTHEME=qt5ct
 #wallpapers & 
 #/data/TyphoonWeather_Archive/satellite/main.py &
-feh --bg-fill /data/Wallpapers/earth-ring.png &
+feh --bg-fill /data/Wallpapers/h8.jpg &
 picom & 
 dunst &
 fcitx5 &
