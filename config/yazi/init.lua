@@ -1,52 +1,28 @@
-require("git"):setup()
+require("yaziline"):setup({
+  color = "#81a1c1",
+  secondary_color = "#2e3440",
+  default_files_color = "darkgray", -- color of the file counter when it's inactive
+  selected_files_color = "white",
+  yanked_files_color = "green",
+  cut_files_color = "red",
 
-require("full-border"):setup {
-	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
-	type = ui.Border.ROUNDED,
-}
-require("yatline"):setup({
-	show_background = false,
+  separator_style = "angly", -- "angly" | "curvy" | "liney" | "empty"
+  separator_open = "",
+  separator_close = "",
+  separator_open_thin = "",
+  separator_close_thin = "",
+  separator_head = "",
+  separator_tail = "",
 
-	header_line = {
-		left = {
-			section_a = {},
-			section_b = {},
-			section_c = {},
-		},
-		right = {
-			section_a = {},
-			section_b = {},
-			section_c = {},
-		},
-	},
+  select_symbol = "",
+  yank_symbol = "󰆐",
 
-	status_line = {
-		left = {
-			section_a = {
-				{ type = "string", custom = false, name = "tab_mode" },
-			},
-			section_b = {
-				{ type = "string", custom = false, name = "hovered_size" },
-			},
-			section_c = {
-                {type = "string", custom = false, name = "tab_num_files"},
-				{ type = "coloreds", custom = false, name = "count" },
-			},
-		},
-		right = {
-			section_a = {
-				{ type = "string", custom = false, name = "cursor_position" },
-			},
-			section_b = {
-				{ type = "string", custom = false, name = "cursor_percentage" },
-			},
-			section_c = {
-				{ type = "string", custom = false, name = "hovered_file_extension", params = { true } },
-				{ type = "coloreds", custom = false, name = "permissions" },
-			},
-		},
-	},
+  filename_max_length = 24, -- truncate when filename > 24
+  filename_truncate_length = 6, -- leave 6 chars on both sides
+  filename_truncate_separator = "..."
 })
+
+require("git"):setup()
 
 require("fs-usage"):setup({
     -- All values are optional
@@ -85,17 +61,24 @@ require("fs-usage"):setup({
     --   italic: Make the label italic (bool)
     -- Example: style_label = { fg = "", bold = true, italic = false },
     -- Default: {}
-    style_label = {},
+    style_normal = {
+        fg = "white",
+        bg = "#81a1c1"
+    },
 
     -- Usage bar style
     --   fg: Bar colour (String like "blue", or hex like "#0000ff")
     --   bg: Bar background colour (Same format as fg)
     -- Example: style_normal = { fg = "blue", bg = "black" },
     -- Default: {}
-    style_normal = {},
 
     -- Usage bar style when the used space is above the warning threshold
     -- Options are the same as style_normal
     -- Default: {}
     style_warning = {}
 })
+
+require("full-border"):setup {
+	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
+	type = ui.Border.ROUNDED,
+}

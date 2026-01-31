@@ -5,7 +5,7 @@ chosen=$(printf "󰐥  Power Off\n  Restart\n  Lock\n󰒲  Hibernate\n 
 
 case "$chosen" in
 	"󰐥  Power Off") poweroff ;;
-	"  Lock") systemctl suspend ;;
+	"  Lock") hyprlock ;;
 	"  Restart") reboot ;;
     "󰒲  Hibernate") systemctl hibernate ;;
     "  Log Out") ~/.config/hypr/script/exit.sh ;;

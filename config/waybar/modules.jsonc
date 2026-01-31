@@ -34,7 +34,7 @@
         },
     },
     "hyprland/window": {
-        "format": "{title:.35}",
+        "format": "{title:.50}",
         "icon": true,
         "rewrite": {
             "(.*) — Mozilla Firefox": "$1",
