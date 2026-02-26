@@ -1,0 +1,8 @@
+add .
+add 静享音乐 - 雨的印记 (轻音乐).mp3/
+clear
+add *
+add /data/Music/
+add /data/Music/*
+add /data/Music/世界末日之前 - Y.Z.H、李晨曦Chrisulous.mp3
+add /data/Like_Music/

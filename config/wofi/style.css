@@ -1,7 +1,7 @@
 #window {
-    background-color: transparent;
+    background-color: rgba(46, 52, 64, 0.4);
     border-radius: 15px;
-    font-family: DejaVu Sans;
+    font-family: Roboto;
     animation: fadeIn;
     animation-duration: 0.2s;
 }
@@ -26,12 +26,12 @@
 
 #input {
     color: #e5e9f0;
-    border: 2px solid #8fbcbb;
-    background-color: #4c566a;
+    border: 0px solid #8fbcbb;
+    background-color: rgba(76,86,106,0.6);
     padding: 6px;
     margin: 15px;
     margin-bottom: 0px;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 5px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 #text {
-    font-size: 16px;
+    font-size: 20px;
     padding: 7px;
     color: #d8dee9;
 } 
