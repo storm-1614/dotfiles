@@ -1,0 +1,39 @@
+[[plugin.deps]]
+use = "imsi32/yatline"
+rev = "88bd1c5"
+hash = "981acbe9b758b1af3a8154c932bb936d"
+
+[[plugin.deps]]
+use = "llanosrocas/yaziline"
+rev = "6266926"
+hash = "9917ab5cb9bdbab7ca7f2501f84f0f11"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "398796d"
+hash = "73788c7dc5827ef4677c502c3ea8fa19"
+
+[[plugin.deps]]
+use = "walldmtd/fs-usage"
+rev = "d53b561"
+hash = "bc417830466fab3c407f5351a9f5fe04"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "398796d"
+hash = "3996fc74044bc44144b323686f887e1"
+
+[[plugin.deps]]
+use = "macydnah/office"
+rev = "41ebef8"
+hash = "5805affd3ae8adcb3c72b6997d21c0a6"
+
+[[plugin.deps]]
+use = "grappas/wl-clipboard"
+rev = "e9a38e4"
+hash = "6b8e5d6b09626facec713923d3ddb54b"
+
+[[flavor.deps]]
+use = "AdithyanA2005/nord"
+rev = "3a791e9"
+hash = "8c0450f0966288d1ad3173ed2502e3dd"

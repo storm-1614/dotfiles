@@ -1,35 +1,47 @@
-{   "custom/arch": {
+{
+    "custom/arch": {
         "format": "󰣇",
-        "on-click": "wofi --show drun"
+        "on-click": "rofi -show drun"
     },
-
-	"hyprland/submap": {
-    "format": "e  {}",
-    "max-length": 8,
-    "tooltip": false
-	},
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": true,
-    	 "on-scroll-up": "hyprctl dispatch workspace e-1",
-         "on-scroll-down": "hyprctl dispatch workspace e+1",
-         "format": "{icon}",
-         "format-icons": {
-             "1": "¹",
-             "2": "²",
-             "3": "³",
-             "4": "切⁴",
-             "5": "﬐⁵",
-			 "6": "⁶",
-			 "7": "⁷",
-			 "8": "⁸ﱘ" ,
-			 "9": "⁹",
-//			"urgent": "",
-             "focused": "",
-             "default": ""
-         },
-     },
+    "hyprland/submap": {
+        "format": "e  {}",
+        "max-length": 8,
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": true,
+        //         "on-scroll-down": "hyprctl dispatch workspace e+1",
+        //    	 "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "format": "{icon}",
+        "format-icons": {
+            "1": " ¹",
+            "2": " ²",
+            "3": " ³",
+            "4": " ⁴",
+            "5": "󱎐 ⁵",
+            "6": " ⁶",
+            "7": " ⁷",
+            "8": " ⁸",
+            "9": " ⁹",
+            "10": "10",
+            //			"urgent": "",
+            "focused": "",
+            "default": "$"
+        },
+    },
+    "hyprland/window": {
+        "format": "{title:.50}",
+        "icon": true,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "$1",
+            "(.*) - fish": "> [$1]"
+        },
+        "separate-outputs": true
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -77,57 +89,95 @@
         "spacing": 10
     },
     "clock": {
-		"interval": 1,
+        "interval": 1,
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format": "{:%H:%M:%S}",
+        "format": "{:%H:%M:%S}",
         "format-alt": "{:%Y-%m-%d %a %H:%M:%S}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": " {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": " {}% "
     },
     "temperature": {
-        // "thermal-zone": 2,
+        "thermal-zone": 6,
+        "interval": 5,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
+        "critical-threshold": 70,
         // "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "kitty -e watch -n 1 sensors",
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip-format": "{icon} {percent}%",
+        "on-click": "nwg-displays",
     },
     "battery": {
+        "interval": 5,
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {power}W",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "on-click-right": "gnome-power-statistics"
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        //    "interface": "wlp2s0",
+        "on-click": "kitty -e nmtui",
+        "format": "{ifname}",
+        "format-wifi": "{icon}  ",
+        "format-ethernet": " ",
+        "format-disconnected": "󰯡 ", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-icons": {
+            "wifi": [
+                "󰤟",
+                "󰤢",
+                "󰤥",
+                "󰤨"
+            ],
+        },
+        "max-length": 50
     },
     "pulseaudio": {
         // "scroll-step": 5, // %, can be a float
@@ -142,9 +192,40 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "format": "󰂲 ",
+        "format-on": " ",
+        "format-off": "󰂲 ",
+        "format-connected": "󰂰 ",
+        "format-connected-battery": "󰂰 ",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "kitty -e bluetoothctl",
+        "format-icons": {
+            "connected-battery": [
+                "󰤾",
+                "󰤿",
+                "󰥀",
+                "󰥁",
+                "󰥂",
+                "󰥃",
+                "󰥄",
+                "󰥅",
+                "󰥆",
+                "󰥈"
+            ],
+        }
     },
     "custom/media": {
         "format": "{icon} {}",
@@ -158,14 +239,16 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-	 "cava": {
-//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+    "cava": {
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 30,
         "autosens": 1,
         "sensitivity": 100,
         "bars": 14,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
+        "hide_on_silence": false,
+        // "format_silent": "quiet",
         "method": "pulse",
         "source": "auto",
         "stereo": true,
@@ -175,27 +258,45 @@
         "waves": false,
         "noise_reduction": 0.77,
         "input_delay": 2,
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
         "actions": {
-                   "on-click-right": "mode"
-                   }
+            "on-click-right": "mode"
+        }
     },
-	"wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 14,
-    "icon-theme": "Tela",
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-       "kitty"
-    ],
-    "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "icon-theme": "Tela",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+        }
     },
-    "rewrite": {
-        "Firefox Web Browser": "Firefox",
-        "Foot Server": "Terminal"
-    }
-}
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
 }
