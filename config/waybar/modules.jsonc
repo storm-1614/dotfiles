@@ -10,7 +10,7 @@
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
+        "all-outputs": false,
         "warp-on-scroll": true,
         //         "on-scroll-down": "hyprctl dispatch workspace e+1",
         //    	 "on-scroll-up": "hyprctl dispatch workspace e-1",
@@ -27,10 +27,10 @@
             "7": " ⁷",
             "8": " ⁸",
             "9": " ⁹",
-            "10": "10",
+//            "10": "10",
             //			"urgent": "",
             "focused": "",
-            "default": "$"
+//            "default": ""
         },
     },
     "hyprland/window": {
@@ -52,10 +52,13 @@
         }
     },
     "mpd": {
-        "format": " {title}",
+        "format": "  {title}",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
+        "on-click": "mpc prev",
+        "on-click-middle": "mpc toggle",
+        "on-click-right": "mpc next",
         "interval": 2,
         "consume-icons": {
             "on": " "
@@ -118,7 +121,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon}",
+        "format": " {icon}",
         "format-icons": [
             "",
             "",
@@ -258,20 +261,12 @@
         "waves": false,
         "noise_reduction": 0.77,
         "input_delay": 2,
-        "format-icons": [
-            "▁",
-            "▂",
-            "▃",
-            "▄",
-            "▅",
-            "▆",
-            "▇",
-            "█"
-        ],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
         "actions": {
-            "on-click-right": "mode"
-        }
+                   "on-click-right": "mode"
+                   }
     },
+
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 18,

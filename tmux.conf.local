@@ -278,7 +278,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" ❐ #S | #{pretty_pane_current_path} "
 #tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{pretty_pane_current_path} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} "
+tmux_conf_theme_status_right=" #{wakatime}#{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -460,6 +460,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
+set -g @plugin 'wiscaksono/tmux-wakatime'
 
 
 # -- custom variables ----------------------------------------------------------

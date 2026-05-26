@@ -2,8 +2,6 @@
     background-color: rgba(46, 52, 64, 0.4);
     border-radius: 15px;
     font-family: Roboto;
-    animation: fadeIn;
-    animation-duration: 0.2s;
 }
 
 @keyframes fadeIn {

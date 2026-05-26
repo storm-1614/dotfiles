@@ -1,4 +1,20 @@
 [mgr]
+prepend_keymap = [
+  { on = ["R","b"], run = "plugin recycle-bin",              desc = "Open Recycle Bin menu" },
+
+  { on = ["M","s"], run = "plugin sshfs -- menu",            desc = "Open SSHFS options" },
+  { on = ["M","m"], run = "plugin sshfs -- mount --jump",    desc = "Mount & jump" },
+  { on = ["M","u"], run = "plugin sshfs -- unmount",         desc = "Unmount SSHFS" },
+  { on = ["M","j"], run = "plugin sshfs -- jump",            desc = "Jump to mount" },
+  { on = ["M","a"], run = "plugin sshfs -- add",             desc = "Add SSH host" },
+  { on = ["M","r"], run = "plugin sshfs -- remove",          desc = "Remove SSH host" },
+  { on = ["M","h"], run = "plugin sshfs -- home",            desc = "Go to mount home" },
+  { on = ["M","c"], run = "cd ~/.ssh/",                      desc = "Go to ssh config" },
+
+  { on = ["c","m"], run = "plugin chmod",                    desc = "Chmod on selected files"},
+  { on = ["m","d"], run = "plugin mount",                    desc = "mount, unmount"},
+]
+
 
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
@@ -363,3 +379,4 @@ keymap = [
 	# Filtering
 	{ on = "f", run = "filter", desc = "Filter help items" },
 ]
+

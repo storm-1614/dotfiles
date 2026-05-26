@@ -1,6 +1,9 @@
 [Added Associations]
 image/jpeg=imv-6.desktop;imv-5.desktop;
 image/png=/home/storm/.local/share/applications/imv-7.desktop;imv-7.desktop;imv-4.desktop;imv-3.desktop;imv-2.desktop;
+inode/directory=yazi.desktop
+
+
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;
@@ -12,16 +15,19 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 
+x-scheme-handler/clash=clash-verge.desktop;
+x-scheme-handler/clash-verge=clash-verge.desktop;
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 application/epub+zip=org.pwmt.zathura.desktop
-clash=clash-verge-handler.desktop
-clash-verge=clash-verge-handler.desktop
+x-scheme-handler/clash=clash-verge.desktop;clash-verge-handler.desktop;
+x-scheme-handler/clash-verge=clash-verge.desktop;clash-verge-handler.desktop;
 image/jpeg=imv-6.desktop;
 image/png=imv-6.desktop;
+audio/mpeg=mpv.desktop;
+audio/flac=mpv.desktop;
 inode/directory=yazi.desktop
 x-scheme-handler/betterdiscord=discord.desktop
-x-scheme-handler/clash=clash-verge.desktop
 x-scheme-handler/etcher=balenaEtcher.desktop
 x-scheme-handler/lxmusic=lx-music-desktop.desktop
 x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
@@ -35,7 +41,6 @@ application/x-extension-shtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
-x-scheme-handler/clash-verge=clash-verge-handler.desktop
 application/rtf=wps-office-prometheus.desktop
 application/vnd.lotus-wordpro=libreoffice-writer.desktop;
 application/vnd.ms-excel=wps-office-prometheus.desktop
@@ -145,4 +150,47 @@ application/wps-office.wps=wps-office-prometheus.desktop
 application/wps-office.wpt=wps-office-prometheus.desktop
 application/wps-office.wpss=wps-office-prometheus.desktop
 application/wps-office.wpso=wps-office-prometheus.desktop
+x-scheme-handler/wakatime=desktop-wakatime.desktop
+
+# Archive Manager
+application/x-tar=org.kde.ark.desktop
+application/x-compressed-tar=org.kde.ark.desktop
+application/x-bzip-compressed-tar=org.kde.ark.desktop
+application/x-tarz=org.kde.ark.desktop
+application/x-xz-compressed-tar=org.kde.ark.desktop
+application/x-lzma-compressed-tar=org.kde.ark.desktop
+application/x-lzip-compressed-tar=org.kde.ark.desktop
+application/x-tzo=org.kde.ark.desktop
+application/x-lrzip-compressed-tar=org.kde.ark.desktop
+application/x-lz4-compressed-tar=org.kde.ark.desktop
+application/x-zstd-compressed-tar=org.kde.ark.desktop
+application/x-cd-image=org.kde.ark.desktop
+application/x-bcpio=org.kde.ark.desktop
+application/x-cpio=org.kde.ark.desktop
+application/x-cpio-compressed=org.kde.ark.desktop
+application/x-sv4cpio=org.kde.ark.desktop
+application/x-sv4crc=org.kde.ark.desktop
+application/x-source-rpm=org.kde.ark.desktop
+application/vnd.ms-cab-compressed=org.kde.ark.desktop
+application/x-xar=org.kde.ark.desktop
+application/x-iso9660-appimage=org.kde.ark.desktop
+application/x-archive=org.kde.ark.desktop
+application/vnd.rar=org.kde.ark.desktop
+application/x-rar=org.kde.ark.desktop
+application/x-7z-compressed=org.kde.ark.desktop
+application/zip=org.kde.ark.desktop
+application/x-compress=org.kde.ark.desktop
+application/gzip=org.kde.ark.desktop
+application/x-bzip=org.kde.ark.desktop
+application/x-lzma=org.kde.ark.desktop
+application/x-xz=org.kde.ark.desktop
+application/zstd=org.kde.ark.desktop
+application/x-lha=org.kde.ark.desktop
+application/x-010intel=010editor-import.desktop
+application/x-010motorola=010editor-import.desktop
+application/x-010script=010editor.desktop
+application/x-010template=010editor.desktop
+application/x-010project=010editor-project.desktop
+application/x-010workspace=010editor-project.desktop
+x-scheme-handler/ccswitch=cc-switch-handler.desktop
 

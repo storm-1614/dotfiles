@@ -9,6 +9,7 @@ A [Yazi](https://github.com/sxyazi/yazi) plugin to show the current partition's 
 ## Installation
 
 > [!IMPORTANT]
+>
 > - This plugin is only supported on Linux (uses `df`)
 >   - It *might* work with WSL, but that is untested
 > - Requires Yazi v25.5.31 or later
@@ -79,6 +80,14 @@ require("fs-usage"):setup({
     -- Usage bar style when the used space is above the warning threshold
     -- Options are the same as style_normal
     -- Default: {}
-    style_warning = {}
+    style_warning = {},
+
+    -- Bar padding
+    --   open: Character on the left (string)
+    --   close: Character on the right (string)
+    -- Example: { open = "█", close = "█" } for square corners,
+    --   or { open = "", close = "" } for no padding
+    -- Default: { open = "", close = "" }
+    padding = { open = "", close = "" }
 })
 ```

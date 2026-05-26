@@ -11,8 +11,8 @@ require("yaziline"):setup({
   separator_close = "",
   separator_open_thin = "",
   separator_close_thin = "",
-  separator_head = "",
-  separator_tail = "",
+  separator_head = "",
+  separator_tail = "",
 
   select_symbol = "",
   yank_symbol = "󰆐",
@@ -82,3 +82,5 @@ require("full-border"):setup {
 	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
 	type = ui.Border.ROUNDED,
 }
+
+require("recycle-bin"):setup()

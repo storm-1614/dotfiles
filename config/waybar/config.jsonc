@@ -17,10 +17,10 @@
 		"orientation": "horizontal",
 		"modules": [
 //			"cava",
-			"mpd",
             "backlight",
             "bluetooth",
             "network",
+			"mpd",
 			"pulseaudio",
 //           "cpu",
             "memory",
