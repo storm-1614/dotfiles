@@ -2,8 +2,6 @@
 image/jpeg=imv-6.desktop;imv-5.desktop;
 image/png=/home/storm/.local/share/applications/imv-7.desktop;imv-7.desktop;imv-4.desktop;imv-3.desktop;imv-2.desktop;
 inode/directory=yazi.desktop
-
-
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;
@@ -14,14 +12,15 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
-
 x-scheme-handler/clash=clash-verge.desktop;
 x-scheme-handler/clash-verge=clash-verge.desktop;
+text/plain=nvim.desktop;
+
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 application/epub+zip=org.pwmt.zathura.desktop
-x-scheme-handler/clash=clash-verge.desktop;clash-verge-handler.desktop;
-x-scheme-handler/clash-verge=clash-verge.desktop;clash-verge-handler.desktop;
+x-scheme-handler/clash=clash-verge.desktop;
+x-scheme-handler/clash-verge=clash-verge.desktop;
 image/jpeg=imv-6.desktop;
 image/png=imv-6.desktop;
 audio/mpeg=mpv.desktop;
@@ -151,8 +150,6 @@ application/wps-office.wpt=wps-office-prometheus.desktop
 application/wps-office.wpss=wps-office-prometheus.desktop
 application/wps-office.wpso=wps-office-prometheus.desktop
 x-scheme-handler/wakatime=desktop-wakatime.desktop
-
-# Archive Manager
 application/x-tar=org.kde.ark.desktop
 application/x-compressed-tar=org.kde.ark.desktop
 application/x-bzip-compressed-tar=org.kde.ark.desktop
@@ -193,4 +190,5 @@ application/x-010template=010editor.desktop
 application/x-010project=010editor-project.desktop
 application/x-010workspace=010editor-project.desktop
 x-scheme-handler/ccswitch=cc-switch-handler.desktop
-
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+text/plain=nvim.desktop

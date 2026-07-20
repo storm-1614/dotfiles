@@ -29,8 +29,8 @@ set inputbar-fg                 "#E5E9F0"
 set statusbar-bg                "#2E3440"
 set statusbar-fg                "#E5E9F0"
 
-set highlight-color             "#D08770"
-set highlight-active-color      "#BF616A"
+set highlight-color             "#D0877040"
+set highlight-active-color      "#BF616A40"
 
 set default-bg                  "#2E3440"
 set default-fg                  "#D8DEE9"
@@ -41,3 +41,4 @@ set render-loading-fg           "#434C5E"
 set recolor-lightcolor          "#2E3440"
 set recolor-darkcolor           "#ECEFF4"
 set recolor                     "true"
+
